@@ -89,12 +89,25 @@ async def main():
         print(f"Problem proposed (MOCK): '{proposal.get('problem_name')}'")
         print(f"Description: {proposal.get('description')}")
     else:
+        # Load existing problems from history.json to avoid duplicates
+        existing_problems = []
+        if os.path.exists('history.json'):
+            try:
+                with open('history.json') as f:
+                    history_data = json.load(f)
+                    existing_problems = [item.get('problem_name') for item in history_data if item.get('problem_name')]
+            except Exception as e:
+                print(f"[!] Could not load search history: {e}")
+                
+        avoid_list = ", ".join([f"'{name}'" for name in set(existing_problems)]) if existing_problems else "None"
+        
         prompt = (
             "Propose a classic or novel oracle-based quantum problem (e.g., Simon's period-finding, "
             "Grover's search, Hidden Shift, or Bernstein-Vazirani variants). Make sure to configure "
             "the required gate set (gates_to_use), max queries (max_queries), and linear solver flag "
             "(requires_linear_solver) correctly in your response schema to make the automated circuit "
-            "search successful and efficient. Keep functions simple and syntax-error free."
+            "search successful and efficient. Keep functions simple and syntax-error free.\n\n"
+            f"CRITICAL: Do NOT propose any of the following problems that we have already searched: {avoid_list}."
         )
         try:
             proposal = await safe_agent_call(theorist.propose_problem, prompt)
