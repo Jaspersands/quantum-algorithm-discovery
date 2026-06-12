@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-12T22:03:29.211398Z",
+  "last_updated": "2026-06-12T22:04:30.648027Z",
   "current_run": {
     "problem_name": "Grover's Search",
     "description": "Grover's search algorithm finds a marked item in an unstructured database. Given a function f(x) that is 0 everywhere except for a single secret input x_secret, where f(x_secret) = 1, Grover's algorithm can find x_secret with a quadratic speedup over classical search.",
-    "stage": "simulating",
-    "started_at": "2026-06-12T22:03:29.211419Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-12T22:04:30.648081Z"
   }
 }
