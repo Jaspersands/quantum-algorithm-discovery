@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-12T23:29:15.831239Z",
-  "current_run": {
-    "problem_name": "Quadratic Residue Parity Identification",
-    "description": "Given a secret s, identify if the input x is a quadratic residue modulo a prime derived from s, where the oracle returns 1 if x is a residue, 0 otherwise.",
-    "stage": "simulating",
-    "started_at": "2026-06-12T23:29:15.831257Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-12T23:29:17.311548Z",
+  "next_run_at": "2026-06-12T23:31:17.311499Z"
 }
