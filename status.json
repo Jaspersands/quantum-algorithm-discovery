@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-12T22:30:28.183425Z",
+  "last_updated": "2026-06-12T22:30:30.381811Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-12T22:30:28.183447Z"
+    "problem_name": "Parity Symmetry Constraint",
+    "description": "The oracle returns 1 if the input x has an even number of set bits matching the bits of secret s, and 0 otherwise. This evaluates the parity of the bitwise AND of x and s.",
+    "stage": "simulating",
+    "started_at": "2026-06-12T22:30:30.381836Z"
   }
 }
