@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-12T22:34:45.360738Z",
+  "last_updated": "2026-06-12T23:26:54.606663Z",
   "current_run": {
-    "problem_name": "Bitwise Cyclic Permutation Detection",
-    "description": "Given a secret bitmask s, determine if the input x bitwise-ANDed with s is equal to a cyclic left shift of x bitwise-ANDed with s by 1 position within the N-bit space.",
-    "stage": "simulating",
-    "started_at": "2026-06-12T22:34:45.360756Z"
+    "problem_name": "Quantum Algorithm Proposal",
+    "description": "Querying Theorist for a new quantum problem...",
+    "stage": "theorist",
+    "started_at": "2026-06-12T23:26:54.606695Z"
   }
 }
