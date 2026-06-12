@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-12T22:01:16.952976Z",
-  "current_run": {
-    "problem_name": "Simon's Period-Finding Problem",
-    "description": "Given a function f: {0,1}^N -> {0,1}^N that is promised to be 2-to-1 (i.e., f(x) = f(y) if and only if y = x or y = x XOR s for some non-zero secret s), find the period s.",
-    "stage": "analyzing",
-    "started_at": "2026-06-12T22:01:16.953013Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-12T22:01:21.634524Z"
 }
