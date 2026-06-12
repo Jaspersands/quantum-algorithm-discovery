@@ -5,6 +5,7 @@ import traceback
 from theorist import Theorist
 from synthesis import Synthesizer
 from analyzer import Analyzer, collect_scaling_data
+import web_updater
 
 MOCK_PROPOSAL = {
     "problem_name": "Bernstein-Vazirani",
@@ -80,6 +81,7 @@ async def main():
 
     # Step 1: Propose Problem
     print("\n[2/5] Querying Theorist agent for a new candidate quantum problem...")
+    web_updater.update_status('searching', 'theorist', 'Quantum Algorithm Proposal', 'Querying Theorist for a new quantum problem...')
     if is_mock:
         print("[!] GEMINI_API_KEY not found or agents failed to start.")
         print("[!] Falling back to mock Theorist Agent for Bernstein-Vazirani to test simulation pipeline...")
@@ -107,6 +109,7 @@ async def main():
 
     # Step 2: Simulate and Collect Scaling Data
     print("\n[3/5] Simulating quantum circuit search across different qubit scales...")
+    web_updater.update_status('searching', 'simulating', proposal.get('problem_name', 'Quantum Exploration'), proposal.get('description', ''))
     try:
         scaling_data = collect_scaling_data(proposal)
         if not scaling_data:
@@ -127,6 +130,7 @@ async def main():
 
     # Step 3: Synthesis Report
     print("\n[4/5] Running Synthesizer agent to document the circuit and explanation...")
+    web_updater.update_status('searching', 'synthesizing', proposal.get('problem_name', 'Quantum Exploration'), proposal.get('description', ''))
     target_data = scaling_data[-1]
     
     if is_mock:
@@ -170,6 +174,7 @@ async def main():
 
     # Step 4: Complexity Analysis
     print("\n[5/5] Running Complexity Analyzer agent to evaluate scaling and speedup...")
+    web_updater.update_status('searching', 'analyzing', proposal.get('problem_name', 'Quantum Exploration'), proposal.get('description', ''))
     if is_mock:
         analysis_report = {
             "quantum_query_complexity": "O(1)",
@@ -220,6 +225,15 @@ async def main():
         
     with open(os.path.join(results_dir, "analysis.json"), "w") as f:
         json.dump(analysis_report, f, indent=2)
+
+    web_updater.append_history(proposal, target_data, synthesis_report, analysis_report)
+    backlog = [
+        {"theme": f"Variations of {proposal.get('problem_name', 'current problem')}", "priority": "High"},
+        {"theme": "Grover search under alternative diffusion operators", "priority": "Medium"},
+        {"theme": "Multi-query Period Finding with S/T gates", "priority": "Low"}
+    ]
+    web_updater.update_queue(backlog)
+    web_updater.update_status('idle')
 
     print(f"\nAll reports and code saved to: {results_dir}/")
     print("==================================================")
