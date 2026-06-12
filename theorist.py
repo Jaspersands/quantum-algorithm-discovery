@@ -19,7 +19,9 @@ class Theorist:
         self.model = model
         self.system_instructions = (
             "You are an expert Quantum Complexity Theorist. Your task is to propose "
-            "novel or classic oracle-based problems where a quantum speedup might exist. "
+            "STRICTLY NOVEL, custom, or non-textbook oracle-based problems (NOT standard textbook "
+            "ones like Bernstein-Vazirani, Simon's, Deutsch-Jozsa, or Grover's). Propose creative "
+            "custom functions where a quantum speedup might be discovered by the search engine. "
             "To allow automated complexity scaling analysis, you MUST define your functions "
             "parameterized by the number of qubits N. Specifically, you must provide:\n"
             "1. base_function_code: A string containing a function `g(x, N)` representing a "
