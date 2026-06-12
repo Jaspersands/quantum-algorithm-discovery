@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-12T19:01:48.390818Z",
+  "last_updated": "2026-06-12T19:02:16.344128Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-12T19:01:48.390839Z"
+    "problem_name": "Simon's Problem (Boolean Oracle Variant)",
+    "description": "Find an N-bit secret string 's' such that a given Boolean oracle function f(x) (which returns 0 or 1) satisfies f(x) = f(y) if and only if y = x XOR s. This is a variant of the classic Simon's problem adapted for a single-bit oracle output. The quantum algorithm finds 's' with exponentially fewer queries than any classical algorithm.",
+    "stage": "simulating",
+    "started_at": "2026-06-12T19:02:16.344155Z"
   }
 }
