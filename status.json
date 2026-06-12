@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-12T22:32:34.036795Z",
-  "current_run": {
-    "problem_name": "Parity Symmetry Constraint",
-    "description": "The oracle returns 1 if the input x has an even number of set bits matching the bits of secret s, and 0 otherwise. This evaluates the parity of the bitwise AND of x and s.",
-    "stage": "analyzing",
-    "started_at": "2026-06-12T22:32:34.036841Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-12T22:32:38.053093Z"
 }
