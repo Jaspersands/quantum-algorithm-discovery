@@ -93,7 +93,8 @@ def evaluate_circuit(num_qubits, pre_gates, post_gates, mid_gates, max_queries, 
     secret_to_outcome = {}
     success_count = 0
     
-    for secret in secrets:
+    # Helper to evaluate a single secret configuration
+    def eval_secret(secret):
         qc = QuantumCircuit(num_qubits + 1, num_qubits)
         
         # Target qubit setup (|->)
@@ -127,8 +128,20 @@ def evaluate_circuit(num_qubits, pre_gates, post_gates, mid_gates, max_queries, 
             input_state = state_str[1:] # remove target qubit
             input_probs[input_state] = input_probs.get(input_state, 0.0) + prob
             
+        return input_probs
+
+    # Pass 1: Quick prune with a small deterministic subset of secrets
+    quick_secrets = secrets
+    if len(secrets) > 6:
+        # Sample 4 spread-out secrets
+        quick_secrets = [secrets[0], secrets[len(secrets)//3], secrets[2*len(secrets)//3], secrets[-1]]
+        # Remove duplicates if any
+        quick_secrets = list(dict.fromkeys(quick_secrets))
+
+    # Evaluate quick secrets
+    for secret in quick_secrets:
+        input_probs = eval_secret(secret)
         if requires_linear_solver:
-            # Simon's algorithm evaluation
             high_prob_outcomes = []
             total_prob = 0.0
             sorted_outcomes = sorted(input_probs.items(), key=lambda x: x[1], reverse=True)
@@ -138,38 +151,72 @@ def evaluate_circuit(num_qubits, pre_gates, post_gates, mid_gates, max_queries, 
                     total_prob += prob
                 if total_prob > 0.95:
                     break
-                    
             if total_prob < 0.95:
-                # Distribution too spread out
                 return 0.0, {}
-                
             ortho_secrets = find_orthogonal_secrets(high_prob_outcomes, num_qubits)
             if secret == 0:
                 if ortho_secrets == [0]:
                     success_count += 1
                     secret_to_outcome[secret] = [bin(y)[2:].zfill(num_qubits) for y in high_prob_outcomes]
                 else:
-                    return 0.0, {}  # early prune
+                    return 0.0, {}
             else:
                 if len(ortho_secrets) == 2 and secret in ortho_secrets:
                     success_count += 1
                     secret_to_outcome[secret] = [bin(y)[2:].zfill(num_qubits) for y in high_prob_outcomes]
                 else:
-                    return 0.0, {}  # early prune
+                    return 0.0, {}
         else:
-            # Standard unique mapping evaluation
             best_state = max(input_probs, key=input_probs.get)
             max_prob = input_probs[best_state]
-            
             if max_prob > 0.95:
-                # Must be a unique mapping
                 if best_state in secret_to_outcome.values():
-                    return 0.0, {}  # early prune (duplicate outcome)
+                    return 0.0, {}
                 secret_to_outcome[secret] = best_state
                 success_count += 1
             else:
-                return 0.0, {}  # early prune (probability too low)
-                
+                return 0.0, {}
+
+    # Pass 2: Full evaluation for all remaining secrets (only runs if Pass 1 succeeds)
+    remaining_secrets = [s for s in secrets if s not in quick_secrets]
+    for secret in remaining_secrets:
+        input_probs = eval_secret(secret)
+        if requires_linear_solver:
+            high_prob_outcomes = []
+            total_prob = 0.0
+            sorted_outcomes = sorted(input_probs.items(), key=lambda x: x[1], reverse=True)
+            for state_str, prob in sorted_outcomes:
+                if prob > 0.05:
+                    high_prob_outcomes.append(int(state_str, 2))
+                    total_prob += prob
+                if total_prob > 0.95:
+                    break
+            if total_prob < 0.95:
+                return 0.0, {}
+            ortho_secrets = find_orthogonal_secrets(high_prob_outcomes, num_qubits)
+            if secret == 0:
+                if ortho_secrets == [0]:
+                    success_count += 1
+                    secret_to_outcome[secret] = [bin(y)[2:].zfill(num_qubits) for y in high_prob_outcomes]
+                else:
+                    return 0.0, {}
+            else:
+                if len(ortho_secrets) == 2 and secret in ortho_secrets:
+                    success_count += 1
+                    secret_to_outcome[secret] = [bin(y)[2:].zfill(num_qubits) for y in high_prob_outcomes]
+                else:
+                    return 0.0, {}
+        else:
+            best_state = max(input_probs, key=input_probs.get)
+            max_prob = input_probs[best_state]
+            if max_prob > 0.95:
+                if best_state in secret_to_outcome.values():
+                    return 0.0, {}
+                secret_to_outcome[secret] = best_state
+                success_count += 1
+            else:
+                return 0.0, {}
+
     success_rate = success_count / len(secrets) if len(secrets) > 0 else 0.0
     return success_rate, secret_to_outcome
 
