@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-12T23:26:54.606663Z",
+  "last_updated": "2026-06-12T23:26:57.575434Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-12T23:26:54.606695Z"
+    "problem_name": "Quadratic Residue Parity Mapping",
+    "description": "The secret parameter s determines a quadratic form f(x) = (x^2 + s*x) mod P where P is the smallest prime greater than 2^N. The goal is to determine the secret s by identifying the parity of the quadratic residues.",
+    "stage": "simulating",
+    "started_at": "2026-06-12T23:26:57.575454Z"
   }
 }
