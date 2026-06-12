@@ -9,7 +9,7 @@ class SynthesisReport(pydantic.BaseModel):
     is_valid: bool
 
 class Synthesizer:
-    def __init__(self, model="gemini-2.5-flash"):
+    def __init__(self, model="gemini-2.5-flash-lite"):
         self.model = model
         self.system_instructions = (
             "You are an expert Quantum Circuit Synthesizer. You take a problem proposal "

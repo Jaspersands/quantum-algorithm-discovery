@@ -15,7 +15,7 @@ class ProblemProposal(pydantic.BaseModel):
     requires_linear_solver: bool
 
 class Theorist:
-    def __init__(self, model="gemini-2.5-flash"):
+    def __init__(self, model="gemini-2.5-flash-lite"):
         self.model = model
         self.system_instructions = (
             "You are an expert Quantum Complexity Theorist. Your task is to propose "

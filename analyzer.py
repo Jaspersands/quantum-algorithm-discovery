@@ -13,7 +13,7 @@ class AnalyzerReport(pydantic.BaseModel):
     analysis_text: str
 
 class Analyzer:
-    def __init__(self, model="gemini-2.5-flash"):
+    def __init__(self, model="gemini-2.5-flash-lite"):
         self.model = model
         self.system_instructions = (
             "You are an expert Quantum Complexity Analyzer. You take scaling data "
