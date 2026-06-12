@@ -267,6 +267,18 @@ def search_circuits(num_qubits, problem_proposal, gates_to_use=None, max_queries
             for mid in mid_combinations:
                 configs.append((pre, post, mid))
                 
+    # Safety guard: Cap search space to prevent CPU timeout on large gate configurations
+    MAX_CONFIGS = 50000
+    if len(configs) > MAX_CONFIGS:
+        print(f"[!] Search space too large ({len(configs)} configs). Sub-sampling to {MAX_CONFIGS} configurations...")
+        import random
+        random.seed(42)
+        # Keep the simplest configurations (the first 10,000) and sample the rest
+        if len(configs) > 10000:
+            configs = configs[:10000] + random.sample(configs[10000:], MAX_CONFIGS - 10000)
+        else:
+            configs = random.sample(configs, MAX_CONFIGS)
+                
     # Run sequentially (multiprocessing causes OpenMP deadlocks in Qiskit Aer backend)
     best_rate, best_config = _search_chunk((num_qubits, configs, problem_proposal, gates_to_use, max_queries, requires_linear_solver))
     return best_rate, best_config
