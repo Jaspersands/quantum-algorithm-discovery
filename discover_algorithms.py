@@ -124,6 +124,23 @@ async def main():
         try:
             proposal = await safe_agent_call(theorist.propose_problem, prompt)
             proposal['max_qubits_to_simulate'] = min(proposal.get('max_qubits_to_simulate', 3), 3)
+            
+            # Helper to strip markdown code fences from LLM responses
+            def clean_code(code_str):
+                if not code_str:
+                    return ""
+                code_str = code_str.strip()
+                if code_str.startswith("```"):
+                    lines = code_str.splitlines()
+                    start_idx = 1 if lines[0].startswith("```") else 0
+                    end_idx = len(lines) - 1 if lines[-1].startswith("```") else len(lines)
+                    code_str = "\n".join(lines[start_idx:end_idx]).strip()
+                return code_str
+
+            proposal['base_function_code'] = clean_code(proposal.get('base_function_code', ''))
+            proposal['oracle_generator_code'] = clean_code(proposal.get('oracle_generator_code', ''))
+            proposal['secrets_generator_code'] = clean_code(proposal.get('secrets_generator_code', ''))
+
             print(f"Problem proposed successfully: '{proposal.get('problem_name')}'")
             print(f"Description: {proposal.get('description')}")
             print(f"Simulating up to N = {proposal.get('max_qubits_to_simulate')} qubits (capped at 3 for VM performance).")
