@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-12T18:52:00.297554Z",
+  "last_updated": "2026-06-12T18:52:11.567148Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-12T18:52:00.297587Z"
+    "problem_name": "Bernstein-Vazirani",
+    "description": "The Bernstein-Vazirani problem asks to find a secret N-bit string 'a' given an oracle that computes f(x) = (a AND x) % 2, i.e., the dot product of x and a modulo 2. A quantum computer can find 'a' with a single query to the oracle.",
+    "stage": "simulating",
+    "started_at": "2026-06-12T18:52:11.567167Z"
   }
 }
