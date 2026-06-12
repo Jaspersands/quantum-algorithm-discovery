@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-12T17:11:26.430928Z",
+  "last_updated": "2026-06-12T17:12:39.927094Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-12T17:11:26.430951Z"
+    "problem_name": "Simon's Problem",
+    "description": "Given a black-box function f: {0,1}^N -> {0,1}^N such that f(x) = f(y) if and only if y = x XOR s for some secret N-bit string s. The problem is to find s. If s is 0, the function is a permutation; otherwise, it is 2-to-1.",
+    "stage": "simulating",
+    "started_at": "2026-06-12T17:12:39.927114Z"
   }
 }
