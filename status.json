@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-12T23:29:53.554474Z",
+  "last_updated": "2026-06-12T23:31:39.536538Z",
   "current_run": {
-    "problem_name": "Quadratic Form Parity Identification",
-    "description": "Given a secret N-bit integer s, identify the structure of a quadratic boolean function f(x) = sum(s_ij * x_i * x_j) mod 2 where the oracle returns the parity of bits selected by the hidden quadratic interaction matrix.",
-    "stage": "simulating",
-    "started_at": "2026-06-12T23:29:53.554493Z"
+    "problem_name": "Quantum Algorithm Proposal",
+    "description": "Querying Theorist for a new quantum problem...",
+    "stage": "theorist",
+    "started_at": "2026-06-12T23:31:39.536561Z"
   }
 }
