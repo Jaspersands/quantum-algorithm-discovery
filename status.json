@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-12T23:48:23.124081Z",
-  "current_run": {
-    "problem_name": "Quadratic Residue Subset Search",
-    "description": "Given a secret s, determine if a bitstring x corresponds to a quadratic residue modulo p where s modulates the offset. This is a degree-2 non-linear boolean function oracle.",
-    "stage": "analyzing",
-    "started_at": "2026-06-12T23:48:23.124135Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-12T23:48:27.406945Z"
 }
