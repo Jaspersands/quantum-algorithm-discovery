@@ -267,31 +267,8 @@ def search_circuits(num_qubits, problem_proposal, gates_to_use=None, max_queries
             for mid in mid_combinations:
                 configs.append((pre, post, mid))
                 
-    # Parallel or sequential execution
-    num_workers = min(os.cpu_count() or 1, 4)
-    if len(configs) < 200 or num_workers <= 1:
-        best_rate, best_config = _search_chunk((num_qubits, configs, problem_proposal, gates_to_use, max_queries, requires_linear_solver))
-    else:
-        chunk_size = (len(configs) + num_workers - 1) // num_workers
-        chunks = [configs[i:i + chunk_size] for i in range(0, len(configs), chunk_size)]
-        
-        tasks = [
-            (num_qubits, chunk, problem_proposal, gates_to_use, max_queries, requires_linear_solver)
-            for chunk in chunks
-        ]
-        
-        best_rate = 0.0
-        best_config = None
-        
-        with ProcessPoolExecutor(max_workers=num_workers) as executor:
-            results = executor.map(_search_chunk, tasks)
-            for rate, config in results:
-                if rate > best_rate:
-                    best_rate = rate
-                    best_config = config
-                    if best_rate >= 1.0:
-                        break
-                        
+    # Run sequentially (multiprocessing causes OpenMP deadlocks in Qiskit Aer backend)
+    best_rate, best_config = _search_chunk((num_qubits, configs, problem_proposal, gates_to_use, max_queries, requires_linear_solver))
     return best_rate, best_config
 
 
