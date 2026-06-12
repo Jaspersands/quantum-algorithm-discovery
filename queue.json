@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "theme": "Variations of Bernstein-Vazirani",
+    "priority": "High"
+  },
+  {
+    "theme": "Grover search under alternative diffusion operators",
+    "priority": "Medium"
+  },
+  {
+    "theme": "Multi-query Period Finding with S/T gates",
+    "priority": "Low"
+  }
+]
