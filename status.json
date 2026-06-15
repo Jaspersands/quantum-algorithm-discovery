@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T21:53:24.342657Z",
+  "last_updated": "2026-06-15T21:59:44.340536Z",
   "current_run": {
     "problem_name": "Nonlinear Modular Product Shift",
     "description": "This problem defines a function that depends on a secret modular inverse. Specifically, given a secret integer 'a' and a modulus 'M', the function f(x) returns 1 if (a * x) mod M has a specific property (e.g., being equal to a target value, or having a specific bit set), and 0 otherwise. The core challenge is to find 'a' given access to the oracle. This is nonlinear due to the modular multiplication and inverse. We will use a specific target property: (a * x) mod M is odd.",
-    "stage": "simulating",
-    "started_at": "2026-06-15T21:53:24.342679Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-15T21:59:44.340577Z"
   }
 }
