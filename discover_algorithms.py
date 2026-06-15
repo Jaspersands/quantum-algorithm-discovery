@@ -72,7 +72,7 @@ async def main():
     
     if not is_mock:
         try:
-            theorist = Theorist(model="gemini-2.5-flash")
+            theorist = Theorist(model="gemini-2.5-flash-lite")
             synthesizer = Synthesizer(model="gemini-flash-lite-latest")
             analyzer = Analyzer(model="gemini-flash-lite-latest")
         except Exception as e:

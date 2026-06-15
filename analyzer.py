@@ -11,6 +11,7 @@ class AnalyzerReport(pydantic.BaseModel):
     classical_complexity: str
     speedup_type: str
     analysis_text: str
+    potential_applications: str
 
 class Analyzer:
     def __init__(self, model="gemini-flash-lite-latest"):
@@ -21,7 +22,13 @@ class Analyzer:
             "complexity growth models (Linear, Polynomial, Exponential). You compare "
             "the quantum scaling to classical baselines and write a detailed analysis. "
             "Be mathematically precise and identify if there is an exponential, quadratic, "
-            "or linear speedup."
+            "or linear speedup.\n\n"
+            "Additionally, you must write a detailed 'potential_applications' section. In it, "
+            "you will map the abstract mathematical structure of the oracle (e.g. modular residue multiplication, "
+            "popcount parity, quadratic relations) to real-world software concepts and computer science domains. "
+            "Explain how this function relates to areas such as symmetric cryptanalysis (S-box structures, AES, "
+            "hash collision vulnerabilities), error-correcting codes, or search optimization, and whether "
+            "it could have practical utility."
         )
 
     async def analyze_scaling(self, problem: dict, scaling_data: list) -> dict:

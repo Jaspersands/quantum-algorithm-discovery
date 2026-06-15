@@ -181,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Code and theory text
         document.getElementById('modal-qiskit-code').innerText = run.synthesis_code || '# No code generated';
         document.getElementById('modal-analysis-text').innerText = run.analysis_text || 'No scaling details available.';
+        document.getElementById('modal-applications-text').innerText = run.potential_applications || 'No practical application mapping available yet.';
         document.getElementById('modal-base-code').innerText = run.base_function_code || '# N/A';
         document.getElementById('modal-oracle-code').innerText = run.oracle_generator_code || '# N/A';
 

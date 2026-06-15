@@ -63,6 +63,7 @@ def append_history(proposal, target_data, synthesis_report, analysis_report):
         "speedup_type": analysis_report.get('speedup_type', 'N/A'),
         "synthesis_code": synthesis_report.get('circuit_code', ''),
         "analysis_text": analysis_report.get('analysis_text', ''),
+        "potential_applications": analysis_report.get('potential_applications', 'No practical application mapping available yet.'),
         "base_function_code": proposal.get('base_function_code', ''),
         "oracle_generator_code": proposal.get('oracle_generator_code', '')
     }
