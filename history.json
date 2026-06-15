@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Nonlinear Quadratic Shift",
+    "description": "This problem aims to find a secret integer 's' such that f(x) = (x^2 + s*x) mod 2^N, where the oracle only provides the least significant bit of f(x). This is a non-linear function where a speedup may be possible.",
+    "completed_at": "2026-06-15T21:12:12.471997Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(N^(1/2))",
+    "quantum_gate_complexity": "O(N^2 log N)",
+    "speedup_type": "Exponential speedup",
+    "synthesis_code": "import numpy as np; from qiskit import QuantumCircuit; N = 3; s = 5; qc = QuantumCircuit(N); qc.h(range(N)); qc.barrier(); def oracle(circuit, secret, N): qc_oracle = QuantumCircuit(N); for x in range(2**N): if (x*x + secret*x) % (2**N) & 1: qc_oracle.z(0); circuit.compose(qc_oracle, inplace=True); oracle(qc, s, N); qc.h(range(N)); qc.measure_all()",
+    "analysis_text": "The problem of recovering the secret shift 's' from the least significant bit (LSB) of f(x) = x^2 + sx mod 2^N is an instance of a hidden subgroup problem or a hidden shift problem over the ring Z_2^N. Given that the LSB provides only partial parity information, the classical approach requires a brute-force search or a meet-in-the-middle strategy across the 2^N space, yielding exponential time. The quantum model leverages the Quantum Fourier Transform (QFT) to identify the periodicity induced by the quadratic shift, reducing query complexity to the square root of the search space (Grover-like) or better depending on the exploitation of the quadratic phase.",
+    "potential_applications": "The mathematical structure of mapping inputs through a quadratic shift and observing bitwise projections is isomorphic to the S-box construction in block ciphers like AES or the output transformation functions in lightweight hash functions. Specifically, recovering 's' is analogous to solving for hidden internal states or linear biases in S-box compositions. This has direct implications for algebraic cryptanalysis and side-channel resilience assessments, where an attacker seeks to extract secret keys from partial leakage bits. Furthermore, this structure mirrors parity-check matrices in error-correcting codes, suggesting utility in analyzing the weight distribution of non-linear code sequences.",
+    "base_function_code": "def g(x, N, s):\n    return (x*x + s*x) % (2**N)",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    def f(x):\n        val = (x*x + secret*x) % (2**N)\n        return val & 1\n    return f"
+  },
+  {
     "problem_name": "Bernstein-Vazirani",
     "description": "Find a hidden bitstring s in a function f(x) = s * x (mod 2).",
     "completed_at": "2026-06-15T20:42:34.043909Z",
