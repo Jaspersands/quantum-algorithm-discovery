@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-15T22:27:58.870727Z",
-  "current_run": {
-    "problem_name": "Nonlinear Ternary Majority Threshold",
-    "description": "Given a secret ternary string s of length N, find s such that f(x) = 1 if the majority of the bits in x AND s are 1, otherwise f(x) = 0. The function is defined as: f(x) = 1 iff (popcount(x AND s) > N/2), else 0.",
-    "stage": "simulating",
-    "started_at": "2026-06-15T22:27:58.870748Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-15T22:28:00.870765Z",
+  "next_run_at": "2026-06-15T22:30:00.870723Z"
 }
