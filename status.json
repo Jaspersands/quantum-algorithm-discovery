@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T17:31:47.574612Z",
+  "last_updated": "2026-06-15T17:32:12.852539Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-15T17:31:47.574635Z"
+    "problem_name": "Hidden Popcount Product Parity",
+    "description": "Given an oracle for a function f(x) defined by a secret N-bit integer 's'. The function f(x) returns 1 if the product of the population count (number of set bits) of (x AND s) and the population count of (x OR s) is odd, and 0 otherwise. The goal is to find the secret 's'. This function is non-linear and not a direct XOR sum, presenting a novel challenge for quantum algorithms.",
+    "stage": "simulating",
+    "started_at": "2026-06-15T17:32:12.852559Z"
   }
 }
