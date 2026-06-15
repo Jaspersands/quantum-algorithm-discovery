@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-15T19:19:24.814541Z",
-  "current_run": {
-    "problem_name": "Hidden Triple Bit Interaction Parity",
-    "description": "Given an oracle for f(x) = (x_a AND x_b) XOR x_c, where a, b, and c are distinct secret bit indices (0 <= a, b, c < N), find the secret tuple (a, b, c). This is a non-linear boolean function where x_k denotes the k-th bit of x.",
-    "stage": "simulating",
-    "started_at": "2026-06-15T19:19:24.814569Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-15T19:19:26.655876Z",
+  "next_run_at": "2026-06-15T19:21:26.655836Z"
 }
