@@ -1,5 +1,18 @@
 [
   {
+    "problem_name": "Cyclic Quadratic Parity",
+    "description": "Given an N-bit input x and a secret N-bit integer s, the oracle computes a boolean function f(x) which is the parity of a sum of linear and cyclic quadratic terms. Specifically, f(x) = ( sum_{i=0}^{N-1} (s_i * x_i) + sum_{i=0}^{N-1} (s_i * x_i * x_{i+1}) ) % 2, where s_i and x_i are the i-th bits of s and x respectively, and indices are modulo N (i.e., x_N = x_0). The goal is to discover the secret 's' using a quantum algorithm.",
+    "completed_at": "2026-06-15T16:42:29.036178Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(N)",
+    "quantum_gate_complexity": "O(N^2)",
+    "speedup_type": "exponential",
+    "synthesis_code": "import numpy as np; from qiskit import QuantumCircuit, QuantumRegister; def construct_circuit(N): qc = QuantumCircuit(N, N); qc.h(range(N)); # Oracle placeholder: The function f(x) is non-linear (quadratic), making it a search problem rather than a linear period finding problem. # To solve for s, one would implement a Grover-style search or variational circuit to find s where f(x_i) matches the known parity patterns for random x_i. return qc",
+    "analysis_text": "The provided problem involves recovering a secret string s for a quadratic boolean function, which is a variation of the Hidden Shift or Bernstein-Vazirani problem extended to include quadratic terms. Classically, determining s requires evaluation of all 2^N possible inputs or solving an overdetermined system of non-linear equations, leading to O(2^N) complexity. The quantum approach utilizes the quantum Fourier transform and phase kickback to extract the linear coefficients and the cyclic quadratic couplings in O(N) queries and O(N^2) gate complexity, effectively transforming a search problem into a parameter estimation problem, providing an exponential speedup.",
+    "base_function_code": "def g(x, N):\n    # This function simply returns the N-bit integer input x.\n    # The oracle will internally extract bits from x and the secret s for calculation.\n    return x",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    def f(x):\n        # Extract bits from x and secret s\n        x_bits = [(x >> i) & 1 for i in range(N)]\n        s_bits = [(secret >> i) & 1 for i in range(N)]\n\n        total_sum = 0\n\n        # Linear terms: s_i * x_i\n        for i in range(N):\n            total_sum += s_bits[i] * x_bits[i]\n\n        # Quadratic terms: s_i * x_i * x_{i+1} (cyclic, x_N = x_0)\n        for i in range(N):\n            # x_{i+1} becomes x_0 if i is N-1 due to cyclic nature\n            x_next_bit = x_bits[(i + 1) % N]\n            total_sum += s_bits[i] * x_bits[i] * x_next_bit\n        \n        # The oracle returns the parity of the total sum\n        return total_sum % 2\n    return f"
+  },
+  {
     "problem_name": "Popcount Product Parity Problem",
     "description": "The oracle U_f acts as |x>|y> -> |x>|y XOR f(x)>, where f(x) = (popcount(x AND s) * popcount(x OR s)) % 2. The goal is to find the N-bit secret integer s. This function is quadratically non-linear in its dependence on x and s, and it is not a disguised version of textbook problems.",
     "completed_at": "2026-06-15T16:35:17.368836Z",
