@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T17:45:35.591950Z",
+  "last_updated": "2026-06-15T17:46:39.310189Z",
   "current_run": {
     "problem_name": "Hidden Pair Selection Product",
     "description": "Given an oracle f(x) for an N-bit integer x, find the secret s which encodes a pair of distinct bit indices (p, q) (with p < q) such that f(x) = x_p * x_q. For N=1, there are no such pairs; the oracle is trivially defined as always 0, and the secret is 0. For N >= 2, the oracle function is robustly non-linear and non-constant.",
-    "stage": "synthesizing",
-    "started_at": "2026-06-15T17:45:35.591996Z"
+    "stage": "analyzing",
+    "started_at": "2026-06-15T17:46:39.310245Z"
   }
 }
