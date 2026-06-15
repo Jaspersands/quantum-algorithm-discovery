@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T19:21:29.932935Z",
+  "last_updated": "2026-06-15T19:22:52.831129Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-15T19:21:29.932957Z"
+    "problem_name": "Hidden Quadratic Pair Product Sum Parity",
+    "description": "Given an N-bit input x, an oracle computes a boolean function f(x). The function is defined by a secret pair of distinct indices (idx_a, idx_b) where 0 <= idx_a < idx_b < N. The oracle returns the parity of the product of bits at idx_a and idx_b XORed with the sum of all other bits. That is, f(x) = ((x_idx_a AND x_idx_b) XOR (SUM_{k not in {idx_a, idx_b}} x_k)) MOD 2. The goal is to find the secret pair (idx_a, idx_b). This problem requires N >= 2 for a non-empty secret space.",
+    "stage": "simulating",
+    "started_at": "2026-06-15T19:22:52.831156Z"
   }
 }
