@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T17:38:59.274703Z",
+  "last_updated": "2026-06-15T17:40:03.576447Z",
   "current_run": {
     "problem_name": "Hidden Cyclic Bit-Product Parity",
     "description": "Given an N-bit input x, the oracle computes a parity based on cyclic bit-products. A secret N-bit integer s specifies a cyclic shift amount. For each bit i from 0 to N-1, the oracle considers the product x_i * x_{(i+s) mod N}. The output of the oracle f(x) is the sum modulo 2 of these N products. The goal is to find s.",
-    "stage": "simulating",
-    "started_at": "2026-06-15T17:38:59.274724Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-15T17:40:03.576494Z"
   }
 }
