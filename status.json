@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-15T18:05:08.466338Z",
-  "current_run": {
-    "problem_name": "Hidden Bit-Product-Sum Parity",
-    "description": "Given an oracle for a boolean function f(x) which computes (x_i * x_j + x_k) mod 2 for unknown distinct bit indices i, j, and an unknown bit index k, find the triplet (i, j, k). The indices i and j are distinct, and k can be any valid index. All indices are derived from a single integer secret 's'. This is a non-linear problem.",
-    "stage": "analyzing",
-    "started_at": "2026-06-15T18:05:08.466415Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-15T18:05:20.524274Z"
 }
