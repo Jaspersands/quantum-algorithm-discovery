@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-15T16:35:13.285867Z",
-  "current_run": {
-    "problem_name": "Popcount Product Parity Problem",
-    "description": "The oracle U_f acts as |x>|y> -> |x>|y XOR f(x)>, where f(x) = (popcount(x AND s) * popcount(x OR s)) % 2. The goal is to find the N-bit secret integer s. This function is quadratically non-linear in its dependence on x and s, and it is not a disguised version of textbook problems.",
-    "stage": "analyzing",
-    "started_at": "2026-06-15T16:35:13.285927Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-15T16:35:19.419119Z"
 }
