@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T21:27:07.102644Z",
+  "last_updated": "2026-06-15T21:47:50.237625Z",
   "current_run": {
     "problem_name": "Nonlinear Threshold Majority",
     "description": "Given an N-bit integer x and a secret integer 's', the function f(x) outputs 1 if the majority of bits in (x XOR s) are 1, and 0 otherwise. This is a nonlinear function dependent on a threshold.",
-    "stage": "simulating",
-    "started_at": "2026-06-15T21:27:07.102664Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-15T21:47:50.237670Z"
   }
 }
