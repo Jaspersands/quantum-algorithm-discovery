@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T17:15:26.000325Z",
+  "last_updated": "2026-06-15T17:23:40.855789Z",
   "current_run": {
     "problem_name": "Hidden Cyclic Bit-OR Parameters",
     "description": "Given an N-bit input x, an oracle f_s(x) computes the logical OR of a contiguous cyclic segment of bits from x. The secret s encodes two parameters: s_idx, the starting index of the segment (0 to N-1), and k_val, the length of the segment (2 to N). The oracle returns 1 if at least one bit in the segment x_s_idx, x_(s_idx+1)%N, ..., x_(s_idx+k_val-1)%N is 1, and 0 otherwise. The goal is to determine s_idx and k_val. This function is equivalent to a boolean polynomial of degree k_val over GF(2). Note: If k_val equals N, the function is the OR of all bits, and s_idx is effectively irrelevant; in this case, s_idx is canonically set to 0 for unique secret representation.",
-    "stage": "simulating",
-    "started_at": "2026-06-15T17:15:26.000350Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-15T17:23:40.855826Z"
   }
 }
