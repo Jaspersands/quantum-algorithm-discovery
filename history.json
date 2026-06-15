@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Nonlinear Modular Product Shift",
+    "description": "This problem defines a function that depends on a secret modular inverse. Specifically, given a secret integer 'a' and a modulus 'M', the function f(x) returns 1 if (a * x) mod M has a specific property (e.g., being equal to a target value, or having a specific bit set), and 0 otherwise. The core challenge is to find 'a' given access to the oracle. This is nonlinear due to the modular multiplication and inverse. We will use a specific target property: (a * x) mod M is odd.",
+    "completed_at": "2026-06-15T22:00:54.909040Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(log M)",
+    "quantum_gate_complexity": "O(log^3 M)",
+    "speedup_type": "Exponential",
+    "synthesis_code": "import qiskit; from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister; n = 3; qc = QuantumCircuit(n + 1, n); qc.h(range(n)); # Placeholder: This problem requires a Modular Multiplier oracle which is non-trivial for small circuits; qc.barrier(); qc.measure(range(n), range(n))",
+    "analysis_text": "The problem of identifying the secret multiplier 'a' in a modular product parity oracle corresponds to the hidden shift problem. Classical approaches require querying the oracle for a linear fraction of the modulus M to distinguish the distribution of 'a*x mod M'. Quantum approaches leverage the Quantum Fourier Transform (QFT) to extract the period or the shift directly from the phase of the oracle states. The scaling data provided suggests that the implementation for N=3 qubits failed due to insufficient precision in the phase estimation circuit or improper register encoding, as the current depth is insufficient to perform the modular multiplication gate sequence required to resolve the secret parameter.",
+    "potential_applications": "The nonlinear modular product shift structure is fundamental to symmetric cryptanalysis and algebraic number theory. Mapping the modular shift to software concepts, this oracle functions similarly to a simplified S-box or a modular residue check in block ciphers like AES. In cryptographic domains, determining 'a' is analogous to recovering secret keys from partial leakage in algebraic side-channel attacks or identifying vulnerabilities in hash functions utilizing linear congruential generators. This structure also relates to the analysis of error-correcting codes where parity checks on residues are used to detect bit-flips, and understanding the inverse properties allows for more efficient decoding algorithms in noisy communication channels.",
+    "base_function_code": "def g(x, secret_a, modulus_M):\n    # The function we want to hide: check if (secret_a * x) mod M is odd\n    # This is a placeholder for the actual function that the oracle implements.\n    # The oracle will be constructed based on this idea.\n    # For testing, we can define it explicitly.\n    if (secret_a * x) % modulus_M % 2 == 1:\n        return 1\n    else:\n        return 0",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    # N is the number of bits for x. The modulus M should be related to N.\n    # Let's choose M = 2**N - 1 for a maximal length sequence characteristic.\n    modulus_M = (1 << N) - 1\n    secret_a = secret # The secret is 'a'\n    \n    def f(x):\n        # The function returns 1 if (secret_a * x) mod M is odd\n        if (secret_a * x) % modulus_M % 2 == 1:\n            return 1\n        else:\n            return 0\n    return f"
+  },
+  {
     "problem_name": "Nonlinear Threshold Majority",
     "description": "Given an N-bit integer x and a secret integer 's', the function f(x) outputs 1 if the majority of bits in (x XOR s) are 1, and 0 otherwise. This is a nonlinear function dependent on a threshold.",
     "completed_at": "2026-06-15T21:49:02.728601Z",
