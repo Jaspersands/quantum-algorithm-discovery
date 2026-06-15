@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T17:28:33.976352Z",
+  "last_updated": "2026-06-15T17:29:36.478331Z",
   "current_run": {
     "problem_name": "Hidden Cyclic Bit-Product-XOR Index",
     "description": "Given an oracle f(x) on N qubits, find the secret index s (an integer from 0 to N-1) such that f(x) = ( (x_s AND x_{(s+1)%N}) XOR x_{(s+2)%N} ). Here x_k denotes the k-th bit of x (0-indexed, LSB is x_0). This problem involves a degree-2 boolean function whose active bits are cyclically shifted by the secret index.",
-    "stage": "synthesizing",
-    "started_at": "2026-06-15T17:28:33.976435Z"
+    "stage": "analyzing",
+    "started_at": "2026-06-15T17:29:36.478413Z"
   }
 }
