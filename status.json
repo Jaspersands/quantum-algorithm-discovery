@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T16:51:27.055892Z",
+  "last_updated": "2026-06-15T16:52:48.572272Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-15T16:51:27.055913Z"
+    "problem_name": "Cyclic Quadratic Coefficients Problem",
+    "description": "Given an N-qubit oracle that computes a boolean function f(x) = sum_{k=0}^{N-1} (x_k * s_k * x_{(k+1)%N}) mod 2, where x_k is the k-th bit of x and s_k is the k-th bit of a secret N-bit integer s. The sum is over cyclic indices (i.e., (k+1)%N handles wrapping around). The goal is to determine the secret N-bit integer s. This function is non-linear in x, and the secret s acts as a set of coefficients determining which quadratic terms contribute to the parity.",
+    "stage": "simulating",
+    "started_at": "2026-06-15T16:52:48.572302Z"
   }
 }
