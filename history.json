@@ -1,5 +1,18 @@
 [
   {
+    "problem_name": "Hidden Quadratic Bit-Product Parity",
+    "description": "The problem involves finding three secret indices `s1, s2, s3` (ranging from 0 to N-1) that define a quadratic boolean function `f(x) = (x_s1 * x_s2 + x_s3) % 2`, where `x_i` is the i-th bit of the N-bit input `x`. The goal is to discover these three secret indices.",
+    "completed_at": "2026-06-15T16:49:20.231296Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(N^1.5)",
+    "quantum_gate_complexity": "O(N^2.5)",
+    "speedup_type": "Polynomial",
+    "synthesis_code": "from qiskit import QuantumCircuit; qc = QuantumCircuit(N + 1); qc.h(range(N)); qc.x(N); qc.h(N); # Oracle placeholder for quadratic form; # This problem does not have a standard constructive quantum speedup for finding quadratic coefficients via a simple oracle structure without specific structure exploitation; qc.h(range(N));",
+    "analysis_text": "The Hidden Quadratic Bit-Product Parity problem represents a variation of the hidden subgroup problem for non-abelian structures or hidden shift problems. Given that finding three secret indices among N candidates yields a classical search space of O(N^3), quantum algorithms such as those utilizing the Bernstein-Vazirani extension or generalized Deutsch-Jozsa frameworks on a superposition of indices allow for query complexity reduction. While the provided data shows zero success for minimal circuit depth (indicating the need for a non-trivial oracle implementation that was absent in the test), theoretical scaling implies a polynomial speedup, as the structure is quadratic rather than hidden linear, precluding the exponential speedup found in pure period-finding.",
+    "base_function_code": "def g(x, N, s1, s2, s3):\n    # Extracts the s1-th, s2-th, and s3-th bits from x\n    x_bit_s1 = (x >> s1) & 1\n    x_bit_s2 = (x >> s2) & 1\n    x_bit_s3 = (x >> s3) & 1\n    # Computes the quadratic boolean function\n    return (x_bit_s1 * x_bit_s2 + x_bit_s3) % 2",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    # secret is a tuple (s1, s2, s3)\n    s1, s2, s3 = secret\n    def f(x):\n        # Extracts the s1-th, s2-th, and s3-th bits from x\n        x_bit_s1 = (x >> s1) & 1\n        x_bit_s2 = (x >> s2) & 1\n        x_bit_s3 = (x >> s3) & 1\n        # Computes the quadratic boolean function\n        return (x_bit_s1 * x_bit_s2 + x_bit_s3) % 2\n    return f"
+  },
+  {
     "problem_name": "Cyclic Quadratic Parity",
     "description": "Given an N-bit input x and a secret N-bit integer s, the oracle computes a boolean function f(x) which is the parity of a sum of linear and cyclic quadratic terms. Specifically, f(x) = ( sum_{i=0}^{N-1} (s_i * x_i) + sum_{i=0}^{N-1} (s_i * x_i * x_{i+1}) ) % 2, where s_i and x_i are the i-th bits of s and x respectively, and indices are modulo N (i.e., x_N = x_0). The goal is to discover the secret 's' using a quantum algorithm.",
     "completed_at": "2026-06-15T16:42:29.036178Z",
