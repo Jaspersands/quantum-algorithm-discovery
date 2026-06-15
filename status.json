@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-15T21:20:35.767777Z",
-  "current_run": {
-    "problem_name": "Cyclic Majority Threshold",
-    "description": "Given a secret integer 's' from 0 to 2^N - 1, the oracle computes f(x) = 1 if the number of set bits in (x AND s) is strictly greater than N/2, and 0 otherwise. This is a non-linear function based on a bitwise AND and a majority threshold.",
-    "stage": "analyzing",
-    "started_at": "2026-06-15T21:20:35.767828Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-15T21:20:41.834647Z"
 }
