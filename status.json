@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-15T20:27:19.123293Z",
-  "current_run": {
-    "problem_name": "Hidden Adjacent Bit Product Mask Parity",
-    "description": "Given an oracle for a function f(x), find an N-1 bit secret integer s such that f(x) = (sum_{i=0}^{N-2} (x_i * x_{i+1} * s_i)) mod 2, where x_i is the i-th bit of x, and s_i is the i-th bit of s. The sum is over GF(2). This is a non-linear quadratic boolean function where the secret acts as a mask on adjacent bit products.",
-    "stage": "simulating",
-    "started_at": "2026-06-15T20:27:19.123319Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-15T20:27:21.051701Z",
+  "next_run_at": "2026-06-15T20:29:21.051663Z"
 }
