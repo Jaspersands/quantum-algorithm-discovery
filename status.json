@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T21:24:55.136358Z",
+  "last_updated": "2026-06-15T21:24:59.329792Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-15T21:24:55.136398Z"
+    "problem_name": "Quadratic Congruential Generator Seed",
+    "description": "Given a function that computes the next state of a Quadratic Congruential Generator (QCG) based on a secret multiplier and increment, find the secret multiplier and increment. The function is f(x) = (a*x^2 + b*x + c) mod M, where 'a', 'b', and 'c' are fixed constants and 'M' is a power of 2. The oracle reveals the output of this function for a given input x. The goal is to find the secret 'a' and 'b' (where 'c' is a known constant and M is a known power of 2). This problem is non-linear due to the x^2 term. We are looking for 'a' and 'b' such that f(x) for a set of inputs x reveals the secrets. This is a variation of finding coefficients in a polynomial, but with a quadratic term and a modulo operation.",
+    "stage": "simulating",
+    "started_at": "2026-06-15T21:24:59.329815Z"
   }
 }
