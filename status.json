@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T23:55:20.003265Z",
+  "last_updated": "2026-06-15T23:55:22.651242Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-15T23:55:20.003290Z"
+    "problem_name": "Hidden Cyclic Bit-AND Mask",
+    "description": "Given an oracle that computes f(x) = (x_0 AND x_1 AND ... AND x_{N-1}) XOR secret_mask for a cyclic shift of x, find the secret_mask.",
+    "stage": "simulating",
+    "started_at": "2026-06-15T23:55:22.651264Z"
   }
 }
