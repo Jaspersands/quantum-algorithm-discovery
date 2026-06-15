@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-15T22:50:03.344959Z",
-  "current_run": {
-    "problem_name": "Non-linear Quadratic Pairwise XOR",
-    "description": "This problem involves finding a secret pair of indices (i, j) such that a target quadratic function based on these indices, involving pairwise XORs of input bits, evaluates to 1 for a specific input. Specifically, f(x) = ((x_i XOR x_j) AND (x_i OR x_j)) XOR (x_i AND x_j) for a secret pair (i, j) and a random input x, where the function is constructed to be non-linear and dependent on the relationships between specific bits.",
-    "stage": "analyzing",
-    "started_at": "2026-06-15T22:50:03.344997Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-15T22:50:10.041661Z",
+  "next_run_at": "2026-06-15T22:52:10.041472Z"
 }
