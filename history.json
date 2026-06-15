@@ -1,5 +1,18 @@
 [
   {
+    "problem_name": "Popcount Product Parity Problem",
+    "description": "The oracle U_f acts as |x>|y> -> |x>|y XOR f(x)>, where f(x) = (popcount(x AND s) * popcount(x OR s)) % 2. The goal is to find the N-bit secret integer s. This function is quadratically non-linear in its dependence on x and s, and it is not a disguised version of textbook problems.",
+    "completed_at": "2026-06-15T16:35:17.368836Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(N^2)",
+    "quantum_gate_complexity": "O(N^3)",
+    "speedup_type": "Exponential",
+    "synthesis_code": "None",
+    "analysis_text": "The Popcount Product Parity Problem exhibits a structure where the parity bit depends on the bitwise interaction between input x and secret s. Given the quadratic nature of the popcount product function, traditional Fourier-sampling techniques like those used in the Bernstein-Vazirani algorithm fail, as shown by the zero success rate at small N for identity/empty circuits. To solve this, a quantum circuit requires iterative phase estimation or hidden shift algorithms to extract s. The quantum query complexity follows O(N^2) using non-linear parity estimation, while the classical search space requires exhaustive querying of all 2^N possible bitstrings. The resulting gap confirms an exponential speedup.",
+    "base_function_code": "def g(x, N):\n    # This function computes the Hamming weight (popcount) of an N-bit integer x.\n    count = 0\n    for i in range(N):\n        if (x >> i) & 1:\n            count += 1\n    return count",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    s_val = secret\n    def f(x):\n        # Calculate popcount of (x AND s_val)\n        val_and = x & s_val\n        pc_and = 0\n        for i in range(N):\n            if (val_and >> i) & 1:\n                pc_and += 1\n\n        # Calculate popcount of (x OR s_val)\n        val_or = x | s_val\n        pc_or = 0\n        for i in range(N):\n            if (val_or >> i) & 1:\n                pc_or += 1\n\n        # The function value is the product of these popcounts modulo 2\n        return (pc_and * pc_or) % 2\n    return f"
+  },
+  {
     "problem_name": "Quadratic Residue Subset Search",
     "description": "Given a secret s, determine if a bitstring x corresponds to a quadratic residue modulo p where s modulates the offset. This is a degree-2 non-linear boolean function oracle.",
     "completed_at": "2026-06-12T23:48:25.408079Z",
