@@ -1,5 +1,18 @@
 [
   {
+    "problem_name": "Hidden Cyclic Bit-OR Parameters",
+    "description": "Given an N-bit input x, an oracle f_s(x) computes the logical OR of a contiguous cyclic segment of bits from x. The secret s encodes two parameters: s_idx, the starting index of the segment (0 to N-1), and k_val, the length of the segment (2 to N). The oracle returns 1 if at least one bit in the segment x_s_idx, x_(s_idx+1)%N, ..., x_(s_idx+k_val-1)%N is 1, and 0 otherwise. The goal is to determine s_idx and k_val. This function is equivalent to a boolean polynomial of degree k_val over GF(2). Note: If k_val equals N, the function is the OR of all bits, and s_idx is effectively irrelevant; in this case, s_idx is canonically set to 0 for unique secret representation.",
+    "completed_at": "2026-06-15T17:24:47.084159Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(N)",
+    "quantum_gate_complexity": "O(N)",
+    "speedup_type": "Polynomial speedup",
+    "synthesis_code": "N = 4; secret = 5; s_idx = 1; k_val = 3; qc = QuantumCircuit(N + 1, N); qc.h(range(N)); qc.x(N); qc.h(N); qc.barrier(); # Oracle Implementation for OR(s_idx, k_val) using MCMT; def oracle(qc, s_idx, k_val, N): for i in range(k_val): qc.x((s_idx + i) % N); qc.mct([i for i in range(N)], N); for i in range(k_val): qc.x((s_idx + i) % N); oracle(qc, s_idx, k_val, N); qc.barrier(); qc.h(range(N)); qc.measure(range(N), range(N))",
+    "analysis_text": "The Hidden Cyclic Bit-OR problem requires identifying both the starting index and the length of a cyclic bit segment. Classically, determining these parameters with a black-box oracle requires querying the function for various segments, leading to an O(N^2) complexity in the worst case to cover all combinations of start and length. Quantum algorithms leverage parallel evaluation through superposition, reducing the search space effectively. The provided scaling data indicates a shift from small N implementations to larger N complexity constraints. Because the function is equivalent to a boolean polynomial of degree k_val, quantum algorithms can extract the parity or structure of the bit-OR segments more efficiently than brute-force sampling. The speedup is polynomial as the oracle complexity is linear with respect to N, offering a reduction over the classical quadratic search space.",
+    "base_function_code": "def g(x, N):\n  # This function is a placeholder; the oracle constructs the OR logic directly.\n  # It returns the input value x itself, as bit extraction and OR logic are handled inside the oracle.\n  return x",
+    "oracle_generator_code": "def make_oracle(secret, N):\n  # Secret encoding: secret = s_idx + (k_val - 2) * N\n  # s_idx ranges from 0 to N-1\n  # k_val ranges from 2 to N\n  s_idx = secret % N\n  k_val = (secret // N) + 2\n\n  def f(x):\n    current_sum = 0\n    for i in range(k_val):\n      bit_pos = (s_idx + i) % N\n      current_sum += (x >> bit_pos) & 1\n    # The oracle returns 1 if at least one bit in the segment is 1 (OR function)\n    return 1 if current_sum >= 1 else 0\n  return f"
+  },
+  {
     "problem_name": "Hidden Cyclic Adjacent Bit Product Mask",
     "description": "Given an oracle for f(x) = (popcount(g(x, N) & secret)) % 2, where g(x, N) computes an N-bit integer mask representing N adjacent bit products (x_i * x_{(i+1)%N} for i=0 to N-1), and 'secret' is an N-bit integer masking these products. The i-th bit of g(x, N) corresponds to the product x_i * x_{(i+1)%N}. The task is to find the N-bit integer 'secret'. This problem features a non-linear g(x,N) function, making f(x) a non-linear boolean function.",
     "completed_at": "2026-06-15T17:02:23.879586Z",
