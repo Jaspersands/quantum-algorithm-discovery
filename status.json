@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-15T16:49:17.471651Z",
-  "current_run": {
-    "problem_name": "Hidden Quadratic Bit-Product Parity",
-    "description": "The problem involves finding three secret indices `s1, s2, s3` (ranging from 0 to N-1) that define a quadratic boolean function `f(x) = (x_s1 * x_s2 + x_s3) % 2`, where `x_i` is the i-th bit of the N-bit input `x`. The goal is to discover these three secret indices.",
-    "stage": "analyzing",
-    "started_at": "2026-06-15T16:49:17.471700Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-15T16:49:22.364265Z"
 }
