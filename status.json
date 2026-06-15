@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-15T21:51:15.243493Z",
-  "current_run": {
-    "problem_name": "Hidden Modular Quadratic Sum",
-    "description": "This problem hides a secret modular parameter 'a' and a modular base 'm' that defines a quadratic function f(x) = (a * x^2) mod m. The goal is to find 'a' and 'm' given an oracle that computes f(x). This is a non-linear function and the modular arithmetic introduces complexity beyond simple linear relations.",
-    "stage": "simulating",
-    "started_at": "2026-06-15T21:51:15.243520Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-15T21:51:17.083338Z",
+  "next_run_at": "2026-06-15T21:53:17.083300Z"
 }
