@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T23:53:12.003669Z",
+  "last_updated": "2026-06-15T23:53:15.172855Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-15T23:53:12.003692Z"
+    "problem_name": "Nonlinear Cyclic Majority of Products",
+    "description": "Given an N-bit secret integer 's', find 's' such that a function f(x) = (x_1*x_2 + x_3*x_4 + ... ) mod 2 is evaluated for a randomly chosen input x. The function is a sum of products of adjacent pairs of bits, where the products are then OR-ed together cyclically. Specifically, f(x) = (x[0]*x[1] + x[2]*x[3] + ... + x[N-2]*x[N-1]) mod 2 for even N. For odd N, the last bit is ignored in the summation, but can be part of the overall cyclic structure. The goal is to find 's' by querying an oracle for f(x). This is a non-linear function and not a standard hidden shift or linear problem.",
+    "stage": "simulating",
+    "started_at": "2026-06-15T23:53:15.172876Z"
   }
 }
