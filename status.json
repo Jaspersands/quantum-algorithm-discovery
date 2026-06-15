@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T22:25:47.172016Z",
+  "last_updated": "2026-06-15T22:25:50.185256Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-15T22:25:47.172039Z"
+    "problem_name": "Hidden Fractional Quadratic Bit Product",
+    "description": "This problem aims to find a secret value 's' such that for a given function f, f(x) = (x . s)^2 mod P, where '.' denotes the bitwise AND, and P is a prime number. The challenge is that the oracle only reveals f(x) for specific x, and we need to deduce 's'. This is a non-linear function and its quantum solvability is non-trivial.",
+    "stage": "simulating",
+    "started_at": "2026-06-15T22:25:50.185278Z"
   }
 }
