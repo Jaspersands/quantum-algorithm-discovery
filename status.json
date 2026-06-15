@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T23:23:03.878298Z",
+  "last_updated": "2026-06-15T23:45:32.253390Z",
   "current_run": {
     "problem_name": "Hidden Quadratic Polynomial Property",
     "description": "Given an N-bit integer x, determine if a hidden secret N-bit integer 's' satisfies a specific quadratic polynomial property. The property is defined as: (x AND s) XOR ((x XOR s) AND s) == 0. This is a non-linear function that depends on the bitwise AND and XOR operations between the input x and the secret s, and it is not directly a linear function or a simple majority/threshold function. The problem aims to find the secret 's' by querying an oracle that tells us if the property holds for a given 'x'.",
-    "stage": "simulating",
-    "started_at": "2026-06-15T23:23:03.878321Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-15T23:45:32.253439Z"
   }
 }
