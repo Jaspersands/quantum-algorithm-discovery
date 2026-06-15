@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T22:27:55.172356Z",
+  "last_updated": "2026-06-15T22:27:58.870727Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-15T22:27:55.172397Z"
+    "problem_name": "Nonlinear Ternary Majority Threshold",
+    "description": "Given a secret ternary string s of length N, find s such that f(x) = 1 if the majority of the bits in x AND s are 1, otherwise f(x) = 0. The function is defined as: f(x) = 1 iff (popcount(x AND s) > N/2), else 0.",
+    "stage": "simulating",
+    "started_at": "2026-06-15T22:27:58.870748Z"
   }
 }
