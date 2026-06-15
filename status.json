@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-15T23:48:57.161073Z",
-  "current_run": {
-    "problem_name": "Nonlinear Modular Product Parity",
-    "description": "This problem involves finding a secret integer 's' such that for a secret modulus 'm', the parity of the product (x * s) mod m is hidden. Specifically, the oracle computes the parity of (x * s) mod m for a given x. This is a nonlinear function due to the modular multiplication.",
-    "stage": "simulating",
-    "started_at": "2026-06-15T23:48:57.161096Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-15T23:48:58.825352Z",
+  "next_run_at": "2026-06-15T23:50:58.825309Z"
 }
