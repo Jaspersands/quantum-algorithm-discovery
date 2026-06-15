@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T20:50:02.516526Z",
+  "last_updated": "2026-06-15T20:50:05.749834Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-15T20:50:02.516550Z"
+    "problem_name": "Nonlinear Quadratic Shift",
+    "description": "This problem aims to find a secret integer 's' such that f(x) = (x^2 + s*x) mod 2^N, where the oracle only provides the least significant bit of f(x). This is a non-linear function where a speedup may be possible.",
+    "stage": "simulating",
+    "started_at": "2026-06-15T20:50:05.749858Z"
   }
 }
