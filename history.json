@@ -1,5 +1,18 @@
 [
   {
+    "problem_name": "Hidden Cyclic Bit-Product-XOR Index",
+    "description": "Given an oracle f(x) on N qubits, find the secret index s (an integer from 0 to N-1) such that f(x) = ( (x_s AND x_{(s+1)%N}) XOR x_{(s+2)%N} ). Here x_k denotes the k-th bit of x (0-indexed, LSB is x_0). This problem involves a degree-2 boolean function whose active bits are cyclically shifted by the secret index.",
+    "completed_at": "2026-06-15T17:29:40.357446Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(1)",
+    "quantum_gate_complexity": "O(N)",
+    "speedup_type": "Constant factor/Polynomial",
+    "synthesis_code": "None",
+    "analysis_text": "The problem asks for the secret shift index s of a cyclic boolean function. Given the oracle returns a degree-2 polynomial, the solution typically requires identifying the bit-wise structure of the circuit. The provided scaling data indicates the algorithm is highly sensitive to the number of qubits, with N=2 achieving perfect success but N=3 failing entirely due to the absence of implemented logic (depth 0). A generalized solution using quantum Fourier transform or bit-wise query estimation scales linearly in terms of circuit width (N) and query depth, offering at best a polynomial speedup over a classical brute-force approach which also searches the O(N) space.",
+    "base_function_code": "def g(x, N):\n    # This function is a placeholder as the problem's core logic\n    # depends entirely on the secret index 's' which defines the bit positions.\n    # The oracle_generator_code will provide the full function definition.\n    return 0",
+    "oracle_generator_code": "def make_oracle(secret_s, N):\n    # secret_s is the hidden index (0 to N-1)\n    def f(x):\n        # Extract bits of x, assuming x is an N-bit integer\n        x_bits = [(x >> i) & 1 for i in range(N)]\n        \n        # Get the three bits involved based on the secret index s\n        bit_s = x_bits[secret_s]\n        bit_s_plus_1 = x_bits[(secret_s + 1) % N]\n        bit_s_plus_2 = x_bits[(secret_s + 2) % N]\n        \n        # Compute (bit_s AND bit_s_plus_1) XOR bit_s_plus_2\n        term1 = bit_s & bit_s_plus_1\n        term2 = bit_s_plus_2\n        \n        return (term1 ^ term2)\n    return f"
+  },
+  {
     "problem_name": "Hidden Cyclic Bit-OR Parameters",
     "description": "Given an N-bit input x, an oracle f_s(x) computes the logical OR of a contiguous cyclic segment of bits from x. The secret s encodes two parameters: s_idx, the starting index of the segment (0 to N-1), and k_val, the length of the segment (2 to N). The oracle returns 1 if at least one bit in the segment x_s_idx, x_(s_idx+1)%N, ..., x_(s_idx+k_val-1)%N is 1, and 0 otherwise. The goal is to determine s_idx and k_val. This function is equivalent to a boolean polynomial of degree k_val over GF(2). Note: If k_val equals N, the function is the OR of all bits, and s_idx is effectively irrelevant; in this case, s_idx is canonically set to 0 for unique secret representation.",
     "completed_at": "2026-06-15T17:24:47.084159Z",
