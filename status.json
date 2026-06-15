@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-15T16:42:25.456621Z",
-  "current_run": {
-    "problem_name": "Cyclic Quadratic Parity",
-    "description": "Given an N-bit input x and a secret N-bit integer s, the oracle computes a boolean function f(x) which is the parity of a sum of linear and cyclic quadratic terms. Specifically, f(x) = ( sum_{i=0}^{N-1} (s_i * x_i) + sum_{i=0}^{N-1} (s_i * x_i * x_{i+1}) ) % 2, where s_i and x_i are the i-th bits of s and x respectively, and indices are modulo N (i.e., x_N = x_0). The goal is to discover the secret 's' using a quantum algorithm.",
-    "stage": "analyzing",
-    "started_at": "2026-06-15T16:42:25.456676Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-15T16:42:31.155420Z"
 }
