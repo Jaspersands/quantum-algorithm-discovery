@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Cyclic Majority of Products",
+    "description": "Given an N-bit integer x, compute f(x) = 1 if the majority of products of adjacent bit pairs (x_i * x_{i+1} for i=0 to N-2, and x_{N-1} * x_0) is 1, and 0 otherwise. The secret is the threshold for majority, which can be 1 or 2.",
+    "completed_at": "2026-06-15T22:23:40.406087Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(N)",
+    "quantum_gate_complexity": "O(N)",
+    "speedup_type": "None",
+    "synthesis_code": "None",
+    "analysis_text": "The problem 'Cyclic Majority of Products' involves a linear scan over the bitstring to evaluate circular adjacencies, specifically computing the parity or majority of boolean products. Since this involves a local operation on N bits requiring only a single pass to aggregate the products, the quantum and classical query complexities are both O(N). Because the state space does not exhibit structure amenable to quantum superposition acceleration (such as period finding or hidden subgroup problems), there is no quantum advantage over a classical linear-time algorithm. The Qiskit data showing zero success rate for small N suggests insufficient gate overhead or incorrect circuit synthesis for the non-oracle component, likely indicating the circuit implementation is either missing essential CNOT chains for bit-pair products or lacks the logic to evaluate the final majority threshold.",
+    "potential_applications": "The mathematical structure of cyclic product-summation maps directly to cellular automata analysis and periodic correlation functions in symmetric cryptography. Specifically, the bitwise multiplication x_i * x_{i+1} is equivalent to a logical AND operation, which is the foundational block of non-linear feedback shift registers (NFSRs) and S-box components in stream ciphers like Trivium. This specific oracle relates to 'Boolean threshold functions,' which are critical in analyzing the algebraic immunity of symmetric primitives against algebraic attacks. Furthermore, in computer science, this maps to autocorrelation detection in signal processing and parity-check weight analysis in cyclic error-correcting codes (e.g., cyclic Hamming or BCH codes), where weight distribution across cyclic shifts determines the error-correction radius of the code.",
+    "base_function_code": "def g(x, N, secret_threshold):\n    bits = [(x >> i) & 1 for i in range(N)]\n    products = []\n    for i in range(N - 1):\n        products.append(bits[i] * bits[i+1])\n    products.append(bits[N-1] * bits[0])\n    return 1 if sum(products) >= secret_threshold else 0",
+    "oracle_generator_code": "def make_oracle(secret_threshold, N):\n    def f(x):\n        bits = [(x >> i) & 1 for i in range(N)]\n        products = []\n        for i in range(N - 1):\n            products.append(bits[i] * bits[i+1])\n        products.append(bits[N-1] * bits[0])\n        return 1 if sum(products) >= secret_threshold else 0\n    return f"
+  },
+  {
     "problem_name": "Nonlinear Modular Product Shift",
     "description": "This problem defines a function that depends on a secret modular inverse. Specifically, given a secret integer 'a' and a modulus 'M', the function f(x) returns 1 if (a * x) mod M has a specific property (e.g., being equal to a target value, or having a specific bit set), and 0 otherwise. The core challenge is to find 'a' given access to the oracle. This is nonlinear due to the modular multiplication and inverse. We will use a specific target property: (a * x) mod M is odd.",
     "completed_at": "2026-06-15T22:00:54.909040Z",
