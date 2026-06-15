@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T17:01:16.650552Z",
+  "last_updated": "2026-06-15T17:02:19.607882Z",
   "current_run": {
     "problem_name": "Hidden Cyclic Adjacent Bit Product Mask",
     "description": "Given an oracle for f(x) = (popcount(g(x, N) & secret)) % 2, where g(x, N) computes an N-bit integer mask representing N adjacent bit products (x_i * x_{(i+1)%N} for i=0 to N-1), and 'secret' is an N-bit integer masking these products. The i-th bit of g(x, N) corresponds to the product x_i * x_{(i+1)%N}. The task is to find the N-bit integer 'secret'. This problem features a non-linear g(x,N) function, making f(x) a non-linear boolean function.",
-    "stage": "synthesizing",
-    "started_at": "2026-06-15T17:01:16.650613Z"
+    "stage": "analyzing",
+    "started_at": "2026-06-15T17:02:19.607927Z"
   }
 }
