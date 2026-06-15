@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T17:12:06.576810Z",
+  "last_updated": "2026-06-15T17:12:32.250414Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-15T17:12:06.576832Z"
+    "problem_name": "Hidden Cyclic XOR Product Parity",
+    "description": "Given an oracle f(x) such that f(x) = g(x XOR s) for some secret N-bit integer s, where g(y) is the parity of the sum of cyclic adjacent bit products of y. Specifically, g(y) = (y_0 y_1 + y_1 y_2 + ... + y_{N-2} y_{N-1} + y_{N-1} y_0) mod 2, where y_i is the i-th bit of y (LSB is y_0). The goal is to find the secret s.",
+    "stage": "simulating",
+    "started_at": "2026-06-15T17:12:32.250440Z"
   }
 }
