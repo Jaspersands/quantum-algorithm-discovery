@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T21:22:46.638745Z",
+  "last_updated": "2026-06-15T21:22:50.135709Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-15T21:22:46.638768Z"
+    "problem_name": "Twisted Modular Product Oracle",
+    "description": "Given an oracle that computes f(x) = (a * x + b) mod M for a secret 'a' and a secret 'b', where 'x' is an N-bit integer, and the operation is a twisted modular multiplication. The 'twist' is introduced by a fixed, non-linear function g(x) applied before multiplication, such that f(x) = (a * g(x) + b) mod M. The goal is to find 'a' and 'b'. This is non-linear due to g(x).",
+    "stage": "simulating",
+    "started_at": "2026-06-15T21:22:50.135736Z"
   }
 }
