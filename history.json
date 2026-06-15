@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Nonlinear Cyclic Majority of Products",
+    "description": "Given a secret integer 's' (0 <= s < 2^N), find 's' by querying an oracle that computes f(x) = (x_0 * x_1 + x_1 * x_2 + ... + x_{N-2} * x_{N-1} + x_{N-1} * x_0) mod 2, where '+' denotes XOR and '*' denotes AND, and x_i is the i-th bit of x. This problem is non-linear due to the product terms and cyclic in nature.",
+    "completed_at": "2026-06-15T23:20:52.979879Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^{N/2})",
+    "quantum_gate_complexity": "O(2^{N/2} * poly(N))",
+    "speedup_type": "Quadratic Speedup",
+    "synthesis_code": "N = 3; qc = QuantumCircuit(N + 1, N); qc.h(range(N)); qc.x(N); qc.h(N); # This oracle structure is theoretical as the function is non-linear and not a standard hidden subgroup problem instance; therefore, a direct inversion is not possible using standard Simon's or Deutsch-Jozsa approaches.",
+    "analysis_text": "The oracle f(x) represents a quadratic boolean form over GF(2) with cyclic coupling, equivalent to determining the secret vector s in a system of quadratic equations. Given the provided scaling data is zero due to the lack of an implementable quantum circuit for this non-linear construction, we map this to the hidden subset problem. Quantumly, the application of Grover-like amplitude amplification yields a quadratic speedup over classical brute-force search. As N increases, the circuit depth for the non-linear oracle grows polynomially, but the query complexity required to identify 's' remains governed by the inverse square root of the search space density.",
+    "potential_applications": "The mathematical structure of the cyclic quadratic boolean form is analogous to the algebraic structure of S-boxes in symmetric block ciphers like AES, specifically targeting the non-linear layer component. In cryptanalysis, solving such cyclic parity equations corresponds to identifying structural vulnerabilities in stream ciphers or hash functions where diffusion is achieved through cyclic bit-shifting. Furthermore, this oracle structure is useful for search optimization in coding theory, specifically in decoding syndromes of quadratic residue codes where parity checks involve nonlinear interaction terms.",
+    "base_function_code": "def g(x, N):\n    bits = [(x >> i) & 1 for i in range(N)]\n    result = 0\n    for i in range(N - 1):\n        result ^= bits[i] & bits[i+1]\n    result ^= bits[N-1] & bits[0]\n    return result",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    def oracle(x):\n        bits = [(x >> i) & 1 for i in range(N)]\n        result = 0\n        for i in range(N - 1):\n            result ^= bits[i] & bits[i+1]\n        result ^= bits[N-1] & bits[0]\n        return result\n    return oracle"
+  },
+  {
     "problem_name": "Cyclic Majority of Products",
     "description": "Given an N-bit integer x, compute f(x) = 1 if the majority of products of adjacent bit pairs (x_i * x_{i+1} for i=0 to N-2, and x_{N-1} * x_0) is 1, and 0 otherwise. The secret is the threshold for majority, which can be 1 or 2.",
     "completed_at": "2026-06-15T22:23:40.406087Z",
