@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-15T22:30:04.157325Z",
+  "last_updated": "2026-06-15T22:30:15.639705Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-15T22:30:04.157349Z"
+    "problem_name": "Non-linear Quadratic Pairwise XOR",
+    "description": "This problem involves finding a secret pair of indices (i, j) such that a target quadratic function based on these indices, involving pairwise XORs of input bits, evaluates to 1 for a specific input. Specifically, f(x) = ((x_i XOR x_j) AND (x_i OR x_j)) XOR (x_i AND x_j) for a secret pair (i, j) and a random input x, where the function is constructed to be non-linear and dependent on the relationships between specific bits.",
+    "stage": "simulating",
+    "started_at": "2026-06-15T22:30:15.639731Z"
   }
 }
