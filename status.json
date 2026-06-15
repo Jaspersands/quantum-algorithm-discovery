@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-15T17:49:13.992811Z",
-  "current_run": {
-    "problem_name": "Adjacent Bit-Pair Parity",
-    "description": "Given an oracle U_f that computes f(x) = popcount((x AND (x >> 1)) XOR secret_mask) % 2, the goal is to determine the secret_mask, an N-bit integer. The function (x AND (x >> 1)) detects patterns of adjacent '11' bits in x, then this intermediate result is XORed with a secret mask. Finally, the parity of the set bits (popcount) of the result is computed. This problem involves identifying a quadratic boolean function with an added secret mask.",
-    "stage": "simulating",
-    "started_at": "2026-06-15T17:49:13.992830Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-15T17:49:15.836319Z",
+  "next_run_at": "2026-06-15T17:51:15.836274Z"
 }
