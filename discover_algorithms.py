@@ -72,9 +72,9 @@ async def main():
     
     if not is_mock:
         try:
-            theorist = Theorist()
-            synthesizer = Synthesizer()
-            analyzer = Analyzer()
+            theorist = Theorist(model="gemini-2.5-flash")
+            synthesizer = Synthesizer(model="gemini-flash-lite-latest")
+            analyzer = Analyzer(model="gemini-flash-lite-latest")
         except Exception as e:
             print(f"[!] Failed to initialize agent clients: {e}. Falling back to mock mode.")
             is_mock = True

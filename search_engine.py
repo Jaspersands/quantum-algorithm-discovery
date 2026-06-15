@@ -307,24 +307,38 @@ def search_circuits(num_qubits, problem_proposal, gates_to_use=None, max_queries
             for l2 in all_layers:
                 post_combinations.append([l1, l2])
                 
-    # Generate Cartesian product of configurations
-    configs = []
-    for pre in pre_combinations:
-        for post in post_combinations:
-            for mid in mid_combinations:
-                configs.append((pre, post, mid))
-                
-    # Safety guard: Cap search space to prevent CPU timeout on large gate configurations
+    # Generate Cartesian product of configurations using memory-efficient index sampling if needed
+    total_configs = len(pre_combinations) * len(post_combinations) * len(mid_combinations)
     MAX_CONFIGS = 50000
-    if len(configs) > MAX_CONFIGS:
-        print(f"[!] Search space too large ({len(configs)} configs). Sub-sampling to {MAX_CONFIGS} configurations...")
+    
+    if total_configs > MAX_CONFIGS:
+        print(f"[!] Search space too large ({total_configs} configs). Sub-sampling to {MAX_CONFIGS} configurations...")
         import random
         random.seed(42)
+        
         # Keep the simplest configurations (the first 10,000) and sample the rest
-        if len(configs) > 10000:
-            configs = configs[:10000] + random.sample(configs[10000:], MAX_CONFIGS - 10000)
-        else:
-            configs = random.sample(configs, MAX_CONFIGS)
+        keep_count = min(10000, total_configs)
+        sampled_indices = list(range(keep_count))
+        
+        if total_configs > keep_count:
+            remaining_sample_count = MAX_CONFIGS - keep_count
+            sampled_indices.extend(random.sample(range(keep_count, total_configs), remaining_sample_count))
+            
+        configs = []
+        len_mid = len(mid_combinations)
+        len_post = len(post_combinations)
+        for idx in sampled_indices:
+            mid_idx = idx % len_mid
+            rem = idx // len_mid
+            post_idx = rem % len_post
+            pre_idx = rem // len_post
+            configs.append((pre_combinations[pre_idx], post_combinations[post_idx], mid_combinations[mid_idx]))
+    else:
+        configs = []
+        for pre in pre_combinations:
+            for post in post_combinations:
+                for mid in mid_combinations:
+                    configs.append((pre, post, mid))
                 
     # Run sequentially (multiprocessing causes OpenMP deadlocks in Qiskit Aer backend)
     best_rate, best_config = _search_chunk((num_qubits, configs, problem_proposal, gates_to_use, max_queries, requires_linear_solver))
