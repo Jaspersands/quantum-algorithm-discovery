@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Nonlinear Threshold Majority",
+    "description": "Given an N-bit integer x and a secret integer 's', the function f(x) outputs 1 if the majority of bits in (x XOR s) are 1, and 0 otherwise. This is a nonlinear function dependent on a threshold.",
+    "completed_at": "2026-06-15T21:49:02.728601Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(N^(1/2))",
+    "quantum_gate_complexity": "O(N log N)",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "None",
+    "analysis_text": "The problem of determining the majority bit of a parity-transformed N-bit string (x XOR s) corresponds to a threshold function. Classically, computing this requires a single pass over the bitstring, resulting in O(N) complexity. Using Grover's search framework or amplitude amplification, one can identify the hidden parameter 's' or verify the threshold condition in O(sqrt(N)) queries. The simulation data showing zero success indicates that the implementation lacks a proper phase oracle construction, which requires a quantum comparator circuit (using adder trees and threshold logic) to map the Hamming weight of the XORed bits to a phase shift.",
+    "potential_applications": "The structure of the Nonlinear Threshold Majority function is fundamental to symmetric cryptography, specifically in the analysis of S-box nonlinearity and the Boolean algebraic properties of round functions in block ciphers like AES. In cryptanalysis, this function models the 'correlation immunity' of a Boolean function; if an oracle can determine the threshold of an XOR-sum efficiently, it can identify biases in linear cryptanalysis attacks. Beyond security, this function maps to the design of error-correcting codes, particularly in decoding syndrome bits for threshold-based decoders, and in neural network architectures where threshold activation functions (like the Heaviside step function) are used for binary neural network inference optimization.",
+    "base_function_code": "def g(x, N, secret):\n    # Calculates the majority of set bits in (x XOR secret)\n    val = x ^ secret\n    set_bits = bin(val).count('1')\n    return 1 if set_bits > N / 2 else 0",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    def f(x):\n        # Calculates the majority of set bits in (x XOR secret)\n        val = x ^ secret\n        set_bits = bin(val).count('1')\n        return 1 if set_bits > N / 2 else 0\n    return f"
+  },
+  {
     "problem_name": "Cyclic Majority Threshold",
     "description": "Given a secret integer 's' from 0 to 2^N - 1, the oracle computes f(x) = 1 if the number of set bits in (x AND s) is strictly greater than N/2, and 0 otherwise. This is a non-linear function based on a bitwise AND and a majority threshold.",
     "completed_at": "2026-06-15T21:20:39.600994Z",
