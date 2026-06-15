@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-15T21:12:09.167566Z",
-  "current_run": {
-    "problem_name": "Nonlinear Quadratic Shift",
-    "description": "This problem aims to find a secret integer 's' such that f(x) = (x^2 + s*x) mod 2^N, where the oracle only provides the least significant bit of f(x). This is a non-linear function where a speedup may be possible.",
-    "stage": "analyzing",
-    "started_at": "2026-06-15T21:12:09.167607Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-15T21:12:14.527496Z"
 }
