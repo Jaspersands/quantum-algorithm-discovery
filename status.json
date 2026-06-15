@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-15T23:20:43.067116Z",
-  "current_run": {
-    "problem_name": "Nonlinear Cyclic Majority of Products",
-    "description": "Given a secret integer 's' (0 <= s < 2^N), find 's' by querying an oracle that computes f(x) = (x_0 * x_1 + x_1 * x_2 + ... + x_{N-2} * x_{N-1} + x_{N-1} * x_0) mod 2, where '+' denotes XOR and '*' denotes AND, and x_i is the i-th bit of x. This problem is non-linear due to the product terms and cyclic in nature.",
-    "stage": "analyzing",
-    "started_at": "2026-06-15T23:20:43.067174Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-15T23:20:55.018560Z"
 }
