@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-15T18:33:22.401499Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Product of Three Bits",
-    "description": "Given an oracle for f(x), where f(x) = (x_i * x_j * x_{(i+j) mod N}) mod 2, the goal is to find the secret indices (i, j) encoded within an integer 'secret'. The indices i and j are derived from 'secret' as i = secret % N and j = (secret // N) % N. This function is non-linear, with the potential to be cubic (degree 3) depending on the chosen secret and N.",
-    "stage": "analyzing",
-    "started_at": "2026-06-15T18:33:22.401551Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-15T18:33:27.048449Z"
 }
