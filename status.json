@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-16T07:23:07.044259Z",
-  "current_run": {
-    "problem_name": "Nonlinear Twisted Majority Threshold",
-    "description": "Given an oracle that computes f(x) = (majority(x_1, ..., x_N) XOR x_k) >= T for a secret k and threshold T, where majority is the majority bit of x, find the secret index k.",
-    "stage": "simulating",
-    "started_at": "2026-06-16T07:23:07.044282Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-16T07:23:08.743762Z",
+  "next_run_at": "2026-06-16T07:25:08.743721Z"
 }
