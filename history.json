@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Asymmetric Quadratic Function Search",
+    "description": "This problem involves finding a secret 's' for a non-linear, asymmetric quadratic function f(x) = (x & s) * ((x >> 1) & s) mod 2^N. The function's output is the parity of the product of two shifted and masked versions of x with the secret s. This function is asymmetric and non-linear, making it distinct from standard linear problems like Bernstein-Vazirani.",
+    "completed_at": "2026-06-16T08:40:34.134678Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^(N/2))",
+    "quantum_gate_complexity": "O(N^2 * 2^(N/2))",
+    "speedup_type": "Quadratic (Grover-like search)",
+    "synthesis_code": "from qiskit import QuantumCircuit; def create_circuit(N, s): qc = QuantumCircuit(N + 1, N); qc.h(range(N)); qc.x(N); qc.h(N); # Oracle placeholder; qc.h(range(N)); qc.measure(range(N), range(N)); return qc",
+    "analysis_text": "The provided function f(x) = (x & s) * ((x >> 1) & s) mod 2^N represents a non-linear bitwise interaction. Because f(x) lacks the algebraic structure required for period-finding (Shor's) or linear property extraction (Bernstein-Vazirani), it remains an unstructured black-box search problem. The scaling data (0% success for N=2,3) suggests that the oracle implementation is either improperly defined or requires specific ancillary registers for modular multiplication that are not yet provisioned. Based on the non-linearity of the quadratic bitwise mask, the optimal quantum approach is a Grover-based search over the space of s, yielding a quadratic speedup over brute-force classical search.",
+    "potential_applications": "The function f(x) maps to cryptanalytic primitives involving S-box non-linearity. The bitwise mask operation (x & s) and bit-shifting are fundamental components of lightweight block ciphers like SIMON or SPECK. Specifically, this structure mimics the interaction between state bits and key bits in rounds of a cipher. Finding 's' is equivalent to a differential-linear cryptanalysis attack where the attacker attempts to recover secret key bits from the parity distribution of the output. This has direct utility in evaluating the vulnerability of hardware-oriented primitives against algebraic side-channel attacks and identifying collision susceptibilities in non-linear hash functions.",
+    "base_function_code": "def g(x, N, s):\n    # Calculates (x AND s) * ((x >> 1) AND s) mod 2^N\n    # The result is then the parity of this product.\n    # Note: The product itself can be large, but we only care about its parity.\n    # For practical simulation, we take the product modulo 2 for parity.\n    term1 = x & s\n    term2 = (x >> 1) & s\n    product = term1 * term2\n    return product & 1",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    # This function creates the oracle for f(x) = parity(((x & secret) * ((x >> 1) & secret)))\n    # The secret is an integer representing the N-bit secret.\n    s = secret\n    def f(x):\n        term1 = x & s\n        term2 = (x >> 1) & s\n        product = term1 * term2\n        return product & 1\n    return f"
+  },
+  {
     "problem_name": "Nonlinear Cyclic Bit-wise AND-XOR",
     "description": "This problem seeks to find a secret 'mask' string 's' of length N. The oracle computes f(x) = (x & s) XOR (x ^ s), where '&' is bitwise AND, '^' is bitwise XOR, and 's' is the secret mask. This function is non-linear and involves a combination of AND and XOR operations, making it distinct from standard linear problems.",
     "completed_at": "2026-06-16T08:31:55.291778Z",
