@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-16T15:57:22.594017Z",
+  "last_updated": "2026-06-16T15:58:25.948597Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-16T15:57:22.594041Z"
+    "problem_name": "Hidden Modular Product Shift",
+    "description": "This problem defines a function f(x) = (a * x) mod M for a secret 'a' and a modulus 'M', where 'M' is a power of 2. The goal is to find 'a' given access to the oracle. This is a non-linear function in general, and finding 'a' requires probing the oracle. The choice of M as a power of 2 simplifies some quantum computations related to modular arithmetic.",
+    "stage": "simulating",
+    "started_at": "2026-06-16T15:58:25.948621Z"
   }
 }
