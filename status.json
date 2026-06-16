@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-16T07:09:36.661621Z",
+  "last_updated": "2026-06-16T07:10:39.656132Z",
   "current_run": {
     "problem_name": "Hidden Cyclic Quadratic Bit Product",
     "description": "This problem hides a secret integer s. The oracle computes f(x) = (x * (x <<< 1)) & s (mod 2^N), where <<< denotes cyclic left shift. The goal is to find s.",
-    "stage": "simulating",
-    "started_at": "2026-06-16T07:09:36.661643Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-16T07:10:39.656201Z"
   }
 }
