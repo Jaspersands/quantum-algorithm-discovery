@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-16T08:42:44.241429Z",
-  "current_run": {
-    "problem_name": "Twisted XOR Sum of Subsets",
-    "description": "This problem involves finding a secret mask 's' such that for a given input 'x', the output is determined by the XOR sum of 'x' with 's', but only for elements in 'x' that correspond to a '1' in a cyclically shifted version of 's'. Specifically, f(x) = (x XOR s) & (rotate_left(s, 1) mod 2^N). The rotation adds a non-linear, cyclic dependency. The goal is to find the secret mask 's'.",
-    "stage": "simulating",
-    "started_at": "2026-06-16T08:42:44.241459Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-16T08:42:46.201774Z",
+  "next_run_at": "2026-06-16T08:44:46.201732Z"
 }
