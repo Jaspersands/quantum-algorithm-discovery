@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-16T08:47:00.538936Z",
-  "current_run": {
-    "problem_name": "Nonlinear Cyclic Majority of Pairs",
-    "description": "Given an N-bit integer x, a secret N-bit integer s, and a secret N-bit integer k, determine if the majority of pairs of bits (x_i, x_{i+1} mod N) are such that their bitwise AND is equal to the corresponding bits in k. Formally, we want to find s such that for all i in [0, N-1], the function f(x) = 1 if sum_{i=0}^{N-1} ((x_i AND x_{i+1 mod N}) == k_i) > N/2, and 0 otherwise. This is a non-linear function of x and depends on two secret values s and k.",
-    "stage": "simulating",
-    "started_at": "2026-06-16T08:47:00.538958Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-16T08:47:02.371407Z",
+  "next_run_at": "2026-06-16T08:49:02.371343Z"
 }
