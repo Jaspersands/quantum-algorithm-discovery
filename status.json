@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-16T08:34:02.171961Z",
+  "last_updated": "2026-06-16T08:34:05.089724Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-16T08:34:02.171985Z"
+    "problem_name": "Hidden Non-Adjacent Bit Product Parity",
+    "description": "This problem hides a secret bitmask `s` of length `N`. The oracle computes `f(x) = (x & (x >> 2)) & s`. The goal is to find `s` by querying the oracle.",
+    "stage": "simulating",
+    "started_at": "2026-06-16T08:34:05.089756Z"
   }
 }
