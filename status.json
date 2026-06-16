@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-16T07:01:59.046121Z",
+  "last_updated": "2026-06-16T07:02:02.397198Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-16T07:01:59.046155Z"
+    "problem_name": "Modular Product Parity Check",
+    "description": "Given an N-bit integer x, and a secret N-bit integer 's', this problem checks if the modular product of x and 's' (modulo 2^N) has an odd parity. The function f(x) returns 1 if the parity of (x * s) mod 2^N is odd, and 0 otherwise. This is a non-linear function of 's' due to the modular multiplication and parity check. This problem aims to find 's'.",
+    "stage": "simulating",
+    "started_at": "2026-06-16T07:02:02.397223Z"
   }
 }
