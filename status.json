@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-16T08:13:38.302483Z",
+  "last_updated": "2026-06-16T08:30:46.267990Z",
   "current_run": {
     "problem_name": "Nonlinear Cyclic Bit-wise AND-XOR",
     "description": "This problem seeks to find a secret 'mask' string 's' of length N. The oracle computes f(x) = (x & s) XOR (x ^ s), where '&' is bitwise AND, '^' is bitwise XOR, and 's' is the secret mask. This function is non-linear and involves a combination of AND and XOR operations, making it distinct from standard linear problems.",
-    "stage": "simulating",
-    "started_at": "2026-06-16T08:13:38.302504Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-16T08:30:46.268038Z"
   }
 }
