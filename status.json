@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-16T08:49:05.608585Z",
+  "last_updated": "2026-06-16T08:49:10.542746Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-16T08:49:05.608610Z"
+    "problem_name": "Hidden Cyclic Ternary Majority",
+    "description": "This problem involves finding a secret ternary secret value 's' such that for a given N-bit input 'x', a function 'f(x)' returns 1 if the ternary majority of 'x' and 's' (where 's' is treated as a N-bit number with ternary digits conceptually) matches a secret threshold, and 0 otherwise. The ternary majority is computed by summing the ternary representations of 'x' and 's' digit by digit, then taking the majority of each resulting digit column. A quantum speedup is hypothesized for identifying 's' due to the non-linear and cyclic nature of the ternary majority operation.",
+    "stage": "simulating",
+    "started_at": "2026-06-16T08:49:10.542769Z"
   }
 }
