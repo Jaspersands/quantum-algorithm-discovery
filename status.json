@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-16T16:03:16.277048Z",
+  "last_updated": "2026-06-16T16:10:25.273460Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-16T16:03:16.277069Z"
+    "problem_name": "Hidden Non-linear Ternary Majority of Products",
+    "description": "This problem defines a hidden function f(x) = (x_i * x_{i+1} * x_{i+2}) AND (x_j * x_{j+1} * x_{j+2}) for specific secret indices i and j, where indices are taken cyclically. The function outputs 1 if the majority of these two ternary products is 1, and 0 otherwise. This is a non-linear boolean function involving products and majority voting.",
+    "stage": "simulating",
+    "started_at": "2026-06-16T16:10:25.273482Z"
   }
 }
