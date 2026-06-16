@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-16T00:09:07.797834Z",
+  "last_updated": "2026-06-16T00:09:17.456088Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-16T00:09:07.797856Z"
+    "problem_name": "Hidden Weighted Subset Sum",
+    "description": "Given an oracle that computes a weighted subset sum modulo M, find the secret weights. The function for a given input x is f(x) = (sum_{i=0}^{N-1} w_i * x_i) mod M, where w_i are secret weights. We are looking for a specific property of the weights, not the weights themselves. Specifically, we want to find a secret integer 's' such that for a randomly chosen input x, the oracle output is (sum_{i=0}^{N-1} x_i * s_i) mod M where s_i are the secret weights. This is a variation where the oracle does not directly reveal a secret binary string, but a secret 'pattern' of weights that are then used in a linear combination.",
+    "stage": "simulating",
+    "started_at": "2026-06-16T00:09:17.456111Z"
   }
 }
