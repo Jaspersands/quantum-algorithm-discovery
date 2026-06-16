@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-16T07:18:36.678256Z",
-  "current_run": {
-    "problem_name": "Hidden Modular Quadratic Product",
-    "description": "This problem aims to find a secret modular constant 's' by querying an oracle that computes the product of two inputs modulo 's', but the oracle is only accessible indirectly. Specifically, the oracle is defined as f(x, y) = (x * y mod s) mod M for a fixed, unknown M, where 's' is the secret. The function provided to the oracle will be f(x) = (x * x mod s) mod M, where M is a fixed, public constant. The goal is to recover 's'. This is non-linear due to the quadratic term and the modular arithmetic.",
-    "stage": "simulating",
-    "started_at": "2026-06-16T07:18:36.678284Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-16T07:18:38.288649Z",
+  "next_run_at": "2026-06-16T07:20:38.288608Z"
 }
