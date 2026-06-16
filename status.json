@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-16T08:36:10.146165Z",
+  "last_updated": "2026-06-16T08:36:13.739318Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-16T08:36:10.146187Z"
+    "problem_name": "Asymmetric Quadratic Function Search",
+    "description": "This problem involves finding a secret 's' for a non-linear, asymmetric quadratic function f(x) = (x & s) * ((x >> 1) & s) mod 2^N. The function's output is the parity of the product of two shifted and masked versions of x with the secret s. This function is asymmetric and non-linear, making it distinct from standard linear problems like Bernstein-Vazirani.",
+    "stage": "simulating",
+    "started_at": "2026-06-16T08:36:13.739342Z"
   }
 }
