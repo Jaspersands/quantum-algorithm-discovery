@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-16T08:00:21.282192Z",
-  "current_run": {
-    "problem_name": "Hidden Modular Ternary Threshold",
-    "description": "Given a secret integer 's' and a modulus 'M', find 's' such that a function f(x) = (ax + b mod M) % 3, where 'a' and 'b' are publicly known coefficients, results in a ternary output (0, 1, or 2). The oracle computes f(x) and marks the state if f(x) equals a target value (e.g., 1). This problem combines modular arithmetic with a thresholding on a ternary output, making it non-linear and distinct from standard linear problems.",
-    "stage": "simulating",
-    "started_at": "2026-06-16T08:00:21.282214Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-16T08:00:22.935215Z",
+  "next_run_at": "2026-06-16T08:02:22.935167Z"
 }
