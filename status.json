@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-16T07:14:07.044434Z",
+  "last_updated": "2026-06-16T07:15:08.408041Z",
   "current_run": {
     "problem_name": "Hidden Non-Adjacent Bit Product Parity",
     "description": "Given an N-bit secret integer 's', the oracle computes f(x) = (x_i * x_j) mod 2, where i and j are non-adjacent indices determined by 's'. The goal is to find the pair of non-adjacent indices (i, j) that define the function.",
-    "stage": "simulating",
-    "started_at": "2026-06-16T07:14:07.044469Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-16T07:15:08.408103Z"
   }
 }
