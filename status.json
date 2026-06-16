@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-16T08:34:05.089724Z",
-  "current_run": {
-    "problem_name": "Hidden Non-Adjacent Bit Product Parity",
-    "description": "This problem hides a secret bitmask `s` of length `N`. The oracle computes `f(x) = (x & (x >> 2)) & s`. The goal is to find `s` by querying the oracle.",
-    "stage": "simulating",
-    "started_at": "2026-06-16T08:34:05.089756Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-16T08:34:06.818082Z",
+  "next_run_at": "2026-06-16T08:36:06.817970Z"
 }
