@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-16T08:05:40.983793Z",
+  "last_updated": "2026-06-16T08:06:47.859800Z",
   "current_run": {
     "problem_name": "Hidden Quadratic Congruence",
     "description": "This problem searches for a secret integer 'a' such that for a hidden quadratic function f(x) = (ax^2 mod M) mod 2, all inputs x produce f(x) = 0. This is a non-linear problem beyond simple linear functions.",
-    "stage": "synthesizing",
-    "started_at": "2026-06-16T08:05:40.983826Z"
+    "stage": "analyzing",
+    "started_at": "2026-06-16T08:06:47.859854Z"
   }
 }
