@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-16T07:07:17.908188Z",
-  "current_run": {
-    "problem_name": "Modular Product Parity Check",
-    "description": "Given an N-bit integer x, and a secret N-bit integer 's', this problem checks if the modular product of x and 's' (modulo 2^N) has an odd parity. The function f(x) returns 1 if the parity of (x * s) mod 2^N is odd, and 0 otherwise. This is a non-linear function of 's' due to the modular multiplication and parity check. This problem aims to find 's'.",
-    "stage": "analyzing",
-    "started_at": "2026-06-16T07:07:17.908231Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-16T07:07:28.665910Z"
 }
