@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-16T07:09:33.808988Z",
+  "last_updated": "2026-06-16T07:09:36.661621Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-16T07:09:33.809009Z"
+    "problem_name": "Hidden Cyclic Quadratic Bit Product",
+    "description": "This problem hides a secret integer s. The oracle computes f(x) = (x * (x <<< 1)) & s (mod 2^N), where <<< denotes cyclic left shift. The goal is to find s.",
+    "stage": "simulating",
+    "started_at": "2026-06-16T07:09:36.661643Z"
   }
 }
