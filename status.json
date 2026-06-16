@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-16T07:27:20.195194Z",
+  "last_updated": "2026-06-16T07:27:25.121355Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-16T07:27:20.195217Z"
+    "problem_name": "Hidden Majority of Bitwise Products",
+    "description": "This problem involves finding a secret binary string s of length N. The oracle computes f(x) = 1 if the majority of the bitwise products of adjacent bits in x are equal to the corresponding bits in s, and f(x) = 0 otherwise. Specifically, for an input x = x_{N-1}...x_1x_0, let p_i = x_i * x_{i-1} for i = 1 to N-1. The function returns 1 if the count of indices i where p_i == s_i is greater than (N-1)/2, and 0 otherwise. This is a non-linear function due to the bitwise products and the majority function.",
+    "stage": "simulating",
+    "started_at": "2026-06-16T07:27:25.121394Z"
   }
 }
