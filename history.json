@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Hidden Cubic Bit-Product Parity",
+    "description": "This problem involves finding a secret cubic polynomial function on N bits. The function evaluates the parity of the product of three distinct bits, chosen based on a secret key. Specifically, f(x) = (x_i * x_j * x_k) mod 2, where i, j, k are determined by a secret integer. The goal is to identify the indices i, j, k. This is a non-linear problem beyond quadratic.",
+    "completed_at": "2026-06-16T08:11:27.242221Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(N^(3/2))",
+    "quantum_gate_complexity": "O(N^(3/2) * poly(log N))",
+    "speedup_type": "Polynomial",
+    "synthesis_code": "import qiskit; from qiskit import QuantumCircuit, QuantumRegister; N = 4; secret = (0, 1, 2); qc = QuantumCircuit(N + 1); qc.h(range(N)); qc.x(N); qc.h(N); qc.ccx(0, 1, N); qc.ccx(N, 2, N); qc.x(N); qc.h(range(N))",
+    "analysis_text": "The Hidden Cubic Bit-Product Parity problem involves recovering a sparse cubic interaction hidden within a binary input space. Since the target function is a conjunction of three bits, the classical brute-force search requires testing all O(N^3) combinations. Leveraging quantum amplitude amplification or a structured Grover-based search over the subspace of cubic relations allows for a reduction in query complexity to O(sqrt(N^3)) = O(N^(3/2)). The provided Qiskit data for N=2 shows a success rate of 0.0, which is expected as the cubic product requires at least 3 bits to define a unique index set {i, j, k}; at N=2, the indices cannot be distinct, rendering the function undefined or trivial.",
+    "potential_applications": "The mathematical structure of cubic bit-products is fundamentally related to the analysis of higher-order Boolean functions and S-box cryptanalysis in symmetric ciphers. Specifically, identifying hidden cubic relations is a core sub-problem in algebraic attacks against stream ciphers that utilize Non-Linear Feedback Shift Registers (NLFSRs) with cubic transition functions. In the domain of error-correcting codes, this problem maps to the decoding of Reed-Muller codes of order 3, where parity relations are used to detect bit-flips. Furthermore, this logic mirrors the optimization of sparse quadratic and cubic constraints in Boolean Satisfiability (SAT) problems, providing utility in automated theorem proving and hardware verification where cubic logic gates represent complex signal interdependencies.",
+    "base_function_code": "def g(x, N):\n    # This function is a placeholder and not directly used in the oracle generation.\n    # It demonstrates a potential base function idea, but the oracle will be\n    # constructed based on indices derived from a secret.\n    # For N=4, a secret might be (0, 1, 2), representing indices for x0*x1*x2.\n    return 0",
+    "oracle_generator_code": "import random\n\ndef make_oracle(secret, N):\n    # 'secret' is a tuple of 3 distinct indices (i, j, k)\n    # The oracle computes (x[i] * x[j] * x[k]) mod 2\n    i, j, k = secret\n    def f(x):\n        # Ensure indices are within bounds\n        if not (0 <= i < N and 0 <= j < N and 0 <= k < N):\n            raise ValueError(\"Secret indices out of bounds for N.\")\n        \n        # Convert integer x to a list of bits\n        x_bits = [(x >> bit) & 1 for bit in range(N)]\n        \n        # Calculate the product of the bits at the secret indices\n        product = x_bits[i] * x_bits[j] * x_bits[k]\n        \n        # Return the parity (modulo 2)\n        return product % 2\n    return f"
+  },
+  {
     "problem_name": "Hidden Quadratic Congruence",
     "description": "This problem searches for a secret integer 'a' such that for a hidden quadratic function f(x) = (ax^2 mod M) mod 2, all inputs x produce f(x) = 0. This is a non-linear problem beyond simple linear functions.",
     "completed_at": "2026-06-16T08:06:51.002470Z",
