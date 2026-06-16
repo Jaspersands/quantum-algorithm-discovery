@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-16T08:11:14.295401Z",
-  "current_run": {
-    "problem_name": "Hidden Cubic Bit-Product Parity",
-    "description": "This problem involves finding a secret cubic polynomial function on N bits. The function evaluates the parity of the product of three distinct bits, chosen based on a secret key. Specifically, f(x) = (x_i * x_j * x_k) mod 2, where i, j, k are determined by a secret integer. The goal is to identify the indices i, j, k. This is a non-linear problem beyond quadratic.",
-    "stage": "analyzing",
-    "started_at": "2026-06-16T08:11:14.295449Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-16T08:11:29.493209Z"
 }
