@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-16T09:00:53.499403Z",
-  "current_run": {
-    "problem_name": "Cyclic Majority XOR of Products",
-    "description": "Given an N-bit secret s, find s where the function f(x) outputs 1 if the cyclic majority of bitwise products of x with itself shifted by s is 1, and 0 otherwise. Specifically, f(x) = Majority( (x_i & x_{i+s \text{ mod } N}) for i=0 to N-1 ) where Majority returns 1 if more than N/2 bits are 1, and 0 otherwise.",
-    "stage": "analyzing",
-    "started_at": "2026-06-16T09:00:53.499459Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-16T09:00:58.895133Z"
 }
