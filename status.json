@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-16T15:55:17.232745Z",
-  "current_run": {
-    "problem_name": "Hidden Quadratic Residue Sum",
-    "description": "Given an N-bit integer 'a' and a prime modulus 'p' (where p is typically small and fixed for a given N, or chosen such that the number of quadratic residues is manageable), find 'a' such that for a hidden secret 's', the sum of the quadratic residues modulo p of the bits of x XOR s is equal to a target value.",
-    "stage": "simulating",
-    "started_at": "2026-06-16T15:55:17.232774Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-16T15:55:19.202694Z",
+  "next_run_at": "2026-06-16T15:57:19.202655Z"
 }
