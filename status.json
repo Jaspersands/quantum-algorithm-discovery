@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-17T07:43:30.746536Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Triple Bit Product Parity",
-    "description": "This problem is a variant of hidden subgroup problems. Given an N-bit integer x, the oracle computes f(x) = (x_i * x_{i+1} * x_{i+2}) mod 2 for a secret cyclic shift i. The goal is to find the secret shift i. This function is non-linear and cyclic. It's not a direct application of Simon's or Bernstein-Vazirani.",
-    "stage": "analyzing",
-    "started_at": "2026-06-17T07:43:30.746587Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-17T07:43:35.545789Z"
 }
