@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-17T07:29:05.691243Z",
-  "current_run": {
-    "problem_name": "Hidden Modular Product Sum Parity",
-    "description": "This problem aims to find a secret integer 's' (modulo 2^N) such that for a given set of random integers 'a_i', the parity of the sum of products (a_i * s) mod 2^N is revealed for each 'a_i'. Specifically, f(x) = (\bigoplus_{i=1}^k (a_i * x) \text{ mod } 2^N) \text{ mod } 2. The challenge lies in the combined modular product and sum operations before the final parity bit, which is non-linear and custom.",
-    "stage": "simulating",
-    "started_at": "2026-06-17T07:29:05.691271Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-17T07:29:07.228694Z",
+  "next_run_at": "2026-06-17T07:31:07.228644Z"
 }
