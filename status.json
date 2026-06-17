@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-17T08:56:12.575929Z",
-  "current_run": {
-    "problem_name": "Cyclic Majority of XORed Products",
-    "description": "Given an N-bit secret s, find it by querying an oracle that computes the majority of XORed products of adjacent bits of its input x, masked by the secret s. Specifically, the oracle returns 1 if the majority of (x_i XOR x_{i+1}) AND s_i is 1 for i in [0, N-2], and 0 otherwise. This is a non-linear function involving both XOR and AND operations on the input and a secret mask.",
-    "stage": "simulating",
-    "started_at": "2026-06-17T08:56:12.575956Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-17T08:56:14.567017Z",
+  "next_run_at": "2026-06-17T08:58:14.566974Z"
 }
