@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-17T07:24:45.709529Z",
-  "current_run": {
-    "problem_name": "Hidden Modular Product of Exponents",
-    "description": "This problem involves a secret integer `s` and a modulus `M`. The function `f(x)` outputs 1 if the product of `x` and `s` modulo `M` has a specific property (e.g., is even), and 0 otherwise. The goal is to find `s` by querying the oracle.",
-    "stage": "simulating",
-    "started_at": "2026-06-17T07:24:45.709552Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-17T07:24:48.449571Z",
+  "next_run_at": "2026-06-17T07:26:48.449525Z"
 }
