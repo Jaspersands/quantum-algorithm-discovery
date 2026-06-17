@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-17T07:09:33.585299Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Cubic Majority of Products",
-    "description": "This problem aims to find a secret N-bit integer 's' by querying an oracle that reveals whether a cyclic majority of bitwise products of a given input 'x' with 's' is 1. Specifically, the oracle computes f(x) = ( (x_0 * s_0) + (x_1 * s_1) + ... + (x_{N-1} * s_{N-1}) ) mod 2, then checks if the cyclic majority of (x_i * s_i) for i=0..N-1 is 1. This is a non-linear function based on cyclic shifts and majority voting of products.",
-    "stage": "simulating",
-    "started_at": "2026-06-17T07:09:33.585322Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-17T07:09:35.240359Z",
+  "next_run_at": "2026-06-17T07:11:35.240318Z"
 }
