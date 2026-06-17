@@ -1,4 +1,5 @@
 {
-  "status": "idle",
-  "last_updated": "2026-06-17T22:23:02.391087Z"
+  "status": "sleeping",
+  "last_updated": "2026-06-17T22:23:03.927759Z",
+  "next_run_at": "2026-06-17T22:25:03.927716Z"
 }
