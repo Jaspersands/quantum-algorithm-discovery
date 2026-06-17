@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-17T07:22:33.888716Z",
+  "last_updated": "2026-06-17T07:22:37.163291Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-17T07:22:33.888738Z"
+    "problem_name": "Hidden Bilinear Form Modulo Prime",
+    "description": "Given an N-bit integer x, find a secret N-bit integer 's' and a secret N-bit integer 't' such that f(x) = (x . s) * (x . t) mod p, where p is a fixed prime (e.g., 3), and '.' denotes the dot product. The oracle computes f(x) for a given x.",
+    "stage": "simulating",
+    "started_at": "2026-06-17T07:22:37.163312Z"
   }
 }
