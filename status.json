@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-17T07:36:03.261226Z",
+  "last_updated": "2026-06-17T07:36:09.952206Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-17T07:36:03.261248Z"
+    "problem_name": "Hidden Subset Majority Product",
+    "description": "Given an N-bit integer x, a secret integer `s` in the range [0, 2^N - 1], and a secret integer `t` in the range [0, N-1], the oracle computes 1 if the majority of the bits in `x` are 1 in the positions indicated by the set bits of `s`, and the result is also equal to the (t+1)-th bit of `x`. Otherwise, it computes 0. The goal is to find `s` and `t`.",
+    "stage": "simulating",
+    "started_at": "2026-06-17T07:36:09.952236Z"
   }
 }
