@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-17T07:18:10.895473Z",
-  "current_run": {
-    "problem_name": "Nonlinear Cyclic XOR of Products",
-    "description": "This problem involves finding a secret N-bit integer 's' such that a given function f(x) = (x_1*x_2 + x_3*x_4 + ... + x_{N-1}*x_N) XOR s (mod 2), where the product terms are grouped cyclically. The oracle computes this function.",
-    "stage": "analyzing",
-    "started_at": "2026-06-17T07:18:10.895511Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-17T07:18:16.186135Z"
 }
