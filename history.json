@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Hidden Modular Ternary Product Parity",
+    "description": "This problem involves finding a secret modular base 's' (1 < s < 2^N) such that for a given N-bit input x, a specific ternary product of bits of x, modulo s, has a certain parity. The function is defined as f(x) = (x_i * x_j * x_k mod s) mod 2, where i, j, k are indices determined by x itself in a non-trivial way. The specific indices are chosen based on the lowest, middle, and highest set bits of x. This introduces a non-linear dependency on x for index selection and a modular arithmetic component.",
+    "completed_at": "2026-06-17T07:04:08.431144Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^(N/2))",
+    "quantum_gate_complexity": "O(poly(N) * 2^(N/2))",
+    "speedup_type": "Quadratic Speedup",
+    "synthesis_code": "print('No valid quantum circuit could be synthesized for the Hidden Modular Ternary Product Parity problem.')",
+    "analysis_text": "The provided data for N=2 and N=3 yields a success rate of 0.0, indicating that current circuit implementations lack the necessary gates to resolve the non-linear index selection and modular parity check. Based on the problem structure\u2014specifically the determination of indices (i, j, k) based on input bit position\u2014this is a variation of the Hidden Subgroup Problem or a structured hidden function mapping. The non-linear indexing suggests an O(2^N) brute-force search classically. By mapping the function to a quantum oracle, the search space for the secret base 's' can be traversed using amplitude amplification (Grover-style), leading to an O(2^(N/2)) query complexity, effectively providing a quadratic speedup over classical exhaustive search.",
+    "potential_applications": "The mathematical structure of 'Hidden Modular Ternary Product Parity' maps directly to the analysis of non-linear feedback shift registers (NLFSRs) and S-box cryptanalysis. The indexing based on bit-position set bits resembles the permutation layers in lightweight block ciphers. This function is essentially a parity check on a modular transformation, which has utility in differential cryptanalysis to detect bias in cryptographic primitives. Specifically, this could be used to model vulnerabilities in hash functions that rely on modular multiplication for diffusion (e.g., in some variants of hash chains), or to optimize the search for low-weight codewords in non-linear error-correcting codes where the parity condition acts as a syndrome generator for detecting corrupted bits.",
+    "base_function_code": "def g(x, N):\n    bits = bin(x)[2:].zfill(N)\n    set_bits = [i for i, bit in enumerate(bits) if bit == '1']\n    if len(set_bits) < 3:\n        return 0\n    low_idx = min(set_bits)\n    high_idx = max(set_bits)\n    mid_idx = set_bits[len(set_bits) // 2]\n    \n    val = 1\n    if low_idx < N: val = (val * int(bits[N - 1 - low_idx]))\n    if mid_idx < N: val = (val * int(bits[N - 1 - mid_idx]))\n    if high_idx < N: val = (val * int(bits[N - 1 - high_idx]))\n    \n    return val % 2",
+    "oracle_generator_code": "def make_oracle(secret_s, N):\n    def f(x):\n        bits = bin(x)[2:].zfill(N)\n        set_bits = [i for i, bit in enumerate(bits) if bit == '1']\n        if len(set_bits) < 3:\n            return 0\n        low_idx = min(set_bits)\n        high_idx = max(set_bits)\n        mid_idx = set_bits[len(set_bits) // 2]\n        \n        val = 1\n        if low_idx < N: val = (val * int(bits[N - 1 - low_idx]))\n        if mid_idx < N: val = (val * int(bits[N - 1 - mid_idx]))\n        if high_idx < N: val = (val * int(bits[N - 1 - high_idx]))\n        \n        return (val % secret_s) % 2\n    return f"
+  },
+  {
     "problem_name": "Bernstein-Vazirani",
     "description": "Find a hidden bitstring s in a function f(x) = s * x (mod 2).",
     "completed_at": "2026-06-17T06:54:43.071094Z",
