@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-17T07:20:21.552633Z",
+  "last_updated": "2026-06-17T07:20:28.956205Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-17T07:20:21.552664Z"
+    "problem_name": "Hidden Quadratic Congruence of Differences",
+    "description": "Given an oracle that computes f(x) = (s1*x^2 + s2*x + s3) mod p for a prime p, where s1, s2, s3 are secret coefficients and x is an N-bit integer, find s1, s2, s3. This is a quadratic congruence, but with an emphasis on differences of inputs to probe the quadratic nature non-linearly.",
+    "stage": "simulating",
+    "started_at": "2026-06-17T07:20:28.956233Z"
   }
 }
