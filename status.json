@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-17T07:31:47.242599Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Modular Quadratic Congruence",
-    "description": "This problem hides a secret 'a' such that f(x) = (x^2 + ax) mod p = 0, where p is a prime number.",
-    "stage": "simulating",
-    "started_at": "2026-06-17T07:31:47.242624Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-17T07:31:49.034257Z",
+  "next_run_at": "2026-06-17T07:33:49.034210Z"
 }
