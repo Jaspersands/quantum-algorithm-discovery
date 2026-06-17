@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-17T07:01:59.306393Z",
+  "last_updated": "2026-06-17T07:03:02.814931Z",
   "current_run": {
     "problem_name": "Hidden Modular Ternary Product Parity",
     "description": "This problem involves finding a secret modular base 's' (1 < s < 2^N) such that for a given N-bit input x, a specific ternary product of bits of x, modulo s, has a certain parity. The function is defined as f(x) = (x_i * x_j * x_k mod s) mod 2, where i, j, k are indices determined by x itself in a non-trivial way. The specific indices are chosen based on the lowest, middle, and highest set bits of x. This introduces a non-linear dependency on x for index selection and a modular arithmetic component.",
-    "stage": "simulating",
-    "started_at": "2026-06-17T07:01:59.306426Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-17T07:03:02.814997Z"
   }
 }
