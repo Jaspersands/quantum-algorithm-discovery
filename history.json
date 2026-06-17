@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Bernstein-Vazirani",
+    "description": "Find a hidden bitstring s in a function f(x) = s * x (mod 2).",
+    "completed_at": "2026-06-17T08:19:25.873123Z",
+    "success_rate": 1.0,
+    "quantum_query_complexity": "O(1)",
+    "quantum_gate_complexity": "O(N)",
+    "speedup_type": "Linear",
+    "synthesis_code": "from qiskit import QuantumCircuit\nqc = QuantumCircuit(N + 1, N)\nqc.x(N)\nqc.h(range(N + 1))\nqc.compose(oracle, inplace=True)\nqc.h(range(N))\nqc.measure(range(N), range(N))\n",
+    "analysis_text": "The quantum algorithm runs in 1 query, whereas classical deterministic search requires N queries. Thus, we achieve a linear speedup. The gate complexity is linear O(N) due to the single-qubit Hadamard gates applied before and after the oracle.",
+    "potential_applications": "No practical application mapping available yet.",
+    "base_function_code": "def g(x, N):\n    return 0\n",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    def f(x):\n        dot = 0\n        for i in range(N):\n            if (secret & (1 << i)) and (x & (1 << i)):\n                dot ^= 1\n        return dot\n    return f\n"
+  },
+  {
     "problem_name": "Hidden Modular Product Modulo Prime",
     "description": "This problem aims to find a secret integer 's' such that the function f(x) = (x * s) mod p is revealed, where p is a prime number. The oracle computes f(x) for a given x. The non-linearity comes from the modular multiplication. We are looking for 's' in the range [0, p-1].",
     "completed_at": "2026-06-17T08:04:05.694048Z",
