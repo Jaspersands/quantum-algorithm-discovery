@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-17T07:07:22.878533Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Modular Product Parity",
-    "description": "This problem involves finding a secret integer 's' within a certain range. The oracle computes the parity of the product of 'x' and 's' modulo a prime number 'p', but with a twist: the product is cyclically shifted based on the bits of 'x'. Specifically, the function computed by the oracle is f(x) = ( (x <<< (x mod N)) * s ) mod p mod 2, where '<<< denotes a cyclic left shift and N is the number of bits.",
-    "stage": "simulating",
-    "started_at": "2026-06-17T07:07:22.878557Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-17T07:07:25.088721Z",
+  "next_run_at": "2026-06-17T07:09:25.088678Z"
 }
