@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-17T07:45:48.326415Z",
+  "last_updated": "2026-06-17T07:56:21.868130Z",
   "current_run": {
     "problem_name": "Hidden Twisted Cubic Bit Product",
     "description": "This problem aims to find a secret value 's' (an N-bit integer) such that a function f(x) related to a 'twisted cubic bit product' depends on 's'. Specifically, f(x) = (x_0 * x_1 * x_2 + s * x_0 * x_1) mod 2, where x_i are the bits of x and multiplication is standard integer multiplication before the modulo operation. This function is non-linear and involves a cubic term and a quadratic term, making it distinct from standard textbook problems.",
-    "stage": "simulating",
-    "started_at": "2026-06-17T07:45:48.326439Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-17T07:56:21.868178Z"
   }
 }
