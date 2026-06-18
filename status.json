@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-18T05:09:30.960515Z",
+  "last_updated": "2026-06-18T05:10:33.301746Z",
   "current_run": {
     "problem_name": "Hidden Ternary Cyclic AND",
     "description": "This problem searches for a secret ternary value 's' (0, 1, or 2) such that for a given N-bit input x, the function f(x) reveals information about whether the bitwise AND of x with a cyclically shifted version of itself equals 's'. Specifically, f(x) = 1 if (x & (x >> 1)) & 0x1 == s and 0 otherwise, where '>> 1' is a cyclic right shift. This is non-linear and involves a ternary secret.",
-    "stage": "synthesizing",
-    "started_at": "2026-06-18T05:09:30.960570Z"
+    "stage": "analyzing",
+    "started_at": "2026-06-18T05:10:33.301804Z"
   }
 }
