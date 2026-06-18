@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-18T04:50:34.104000Z",
+  "last_updated": "2026-06-18T04:55:39.640227Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-18T04:50:34.104023Z"
+    "problem_name": "Hidden Twisted Cubic Bit Product",
+    "description": "This problem defines a function f(x) that reveals a secret 's' by evaluating a twisted cubic polynomial based on a subset of bits of x. The function is defined as f(x) = (s_0*x_0 + s_1*x_1 + s_2*x_2)^3 mod 2, where s is the secret string of length 3 and x_i are bits of x. The specific twist is that only the first 3 bits of x are used in the computation. The problem requires finding the secret s.",
+    "stage": "simulating",
+    "started_at": "2026-06-18T04:55:39.640251Z"
   }
 }
