@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-18T08:29:26.817966Z",
-  "current_run": {
-    "problem_name": "Hidden Modular Twisted Product",
-    "description": "This problem is a variation of modular arithmetic problems. Given a secret integer 's' and a modulus 'M', the oracle computes f(x) = (s*x + (x mod 2) * (x >> 1)) mod M. The goal is to find 's'. This function is non-linear due to the (x mod 2) * (x >> 1) term.",
-    "stage": "simulating",
-    "started_at": "2026-06-18T08:29:26.817990Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-18T08:29:28.823349Z",
+  "next_run_at": "2026-06-18T08:31:28.823311Z"
 }
