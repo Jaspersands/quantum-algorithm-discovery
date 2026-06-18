@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-18T08:19:25.086571Z",
+  "last_updated": "2026-06-18T08:19:31.402972Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-18T08:19:25.086597Z"
+    "problem_name": "Hidden Ternary Majority of Products",
+    "description": "This problem involves finding a secret ternary value 's' (0, 1, or 2) for N bits. The function is defined as f(x) = (x_0*x_1*x_2 + x_1*x_2*x_3 + ... + x_{N-3}*x_{N-2}*x_{N-1}) mod 3, where the secret 's' is implicitly encoded in the behavior of the function, making it a 'majority' of products in a ternary field. The challenge is to identify 's' by querying an oracle that computes f(x). This function is non-linear and involves ternary arithmetic, making it distinct from standard binary problems.",
+    "stage": "simulating",
+    "started_at": "2026-06-18T08:19:31.403001Z"
   }
 }
