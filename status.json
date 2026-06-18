@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-18T07:32:51.039916Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Majority of Quadratic Terms",
-    "description": "Given an N-bit secret integer 's', and a function f(x) = ( (x_i * x_{i+1}) + (x_{i+1} * x_{i+2}) + ... + (x_{N-1} * x_0) ) mod 2, where the sum is over all adjacent pairs cyclically. The function f(x) returns 1 if the majority of these quadratic terms are 1, and 0 otherwise. The goal is to find 's'. This problem is non-linear due to the quadratic terms and cyclic nature.",
-    "stage": "simulating",
-    "started_at": "2026-06-18T07:32:51.039944Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-18T07:32:53.371728Z",
+  "next_run_at": "2026-06-18T07:34:53.371678Z"
 }
