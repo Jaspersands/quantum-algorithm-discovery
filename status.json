@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-18T12:58:53.636428Z",
+  "last_updated": "2026-06-18T12:59:59.232744Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-18T12:58:53.636454Z"
+    "problem_name": "Hidden Modified Majority of Products",
+    "description": "This problem defines a function f(x) based on a secret value 's'. The function calculates the majority of bitwise products of adjacent pairs in 'x', with a twist: the product is modified by XORing with 's' before taking the majority. Specifically, for an N-bit input x, let x_i be the i-th bit. The function computes p_i = x_i * x_{i+1} for i = 0 to N-2. Then, it computes a modified product m_i = p_i XOR s. The output f(x) is the majority of these modified products {m_0, m_1, ..., m_{N-2}}.",
+    "stage": "simulating",
+    "started_at": "2026-06-18T12:59:59.232778Z"
   }
 }
