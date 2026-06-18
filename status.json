@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-18T08:21:36.150708Z",
+  "last_updated": "2026-06-18T08:21:40.159540Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-18T08:21:36.150729Z"
+    "problem_name": "Hidden Weighted Majority of Products",
+    "description": "This problem hides a secret integer 's' by defining an oracle that computes the weighted majority of bitwise products of the input 'x' with 's'. Specifically, for an N-bit input 'x', the function f(x) = (sum_{i=0}^{N-1} (x_i * s_i * i)) mod 2, where x_i and s_i are the i-th bits of x and s, respectively. The goal is to find 's'. This is non-linear due to the product of bits and the linear weighting.",
+    "stage": "simulating",
+    "started_at": "2026-06-18T08:21:40.159566Z"
   }
 }
