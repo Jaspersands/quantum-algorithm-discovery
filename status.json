@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-18T08:16:01.079984Z",
+  "last_updated": "2026-06-18T08:17:15.191483Z",
   "current_run": {
     "problem_name": "Hidden Modular Twisted Product Parity",
     "description": "Given an N-bit integer 's', find it by querying an oracle that computes the parity of a 'twisted' modular product. The function is f(x) = ( (s * x + (x^2 mod M)) mod M ) . x mod 2, where M is a secret prime number slightly larger than 2^N. The 'twisted' part comes from adding the quadratic term (x^2 mod M) before the modular multiplication with 's'. This non-linearity and modular arithmetic makes it distinct from standard linear or simple quadratic functions.",
-    "stage": "synthesizing",
-    "started_at": "2026-06-18T08:16:01.080028Z"
+    "stage": "analyzing",
+    "started_at": "2026-06-18T08:17:15.191527Z"
   }
 }
