@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-18T06:59:08.118862Z",
+  "last_updated": "2026-06-18T07:00:12.359568Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-18T06:59:08.118885Z"
+    "problem_name": "Hidden Balanced Ternary Product Parity",
+    "description": "This problem involves finding a secret integer 's' such that for a given function f(x), f(x) = (x * (x XOR s) MOD 3) MOD 2 is revealed for certain inputs x. The function is designed to be non-linear and involves balanced ternary representation. The goal is to find 's' by querying an oracle that computes f(x).",
+    "stage": "simulating",
+    "started_at": "2026-06-18T07:00:12.359602Z"
   }
 }
