@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-18T07:11:58.359960Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Triple Bit AND",
-    "description": "This problem is a variation of hidden shift/period finding problems. Given an oracle that computes $f(x) = (x_i \text{ AND } x_{i+1} \text{ AND } x_{i+2})$ where indices are taken cyclically modulo N. The goal is to find the secret offset 's' that determines the cyclic shift for the AND operation.",
-    "stage": "analyzing",
-    "started_at": "2026-06-18T07:11:58.360001Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-18T07:12:37.875715Z"
 }
