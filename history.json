@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Hidden Weighted Majority of Products",
+    "description": "This problem hides a secret integer 's' by defining an oracle that computes the weighted majority of bitwise products of the input 'x' with 's'. Specifically, for an N-bit input 'x', the function f(x) = (sum_{i=0}^{N-1} (x_i * s_i * i)) mod 2, where x_i and s_i are the i-th bits of x and s, respectively. The goal is to find 's'. This is non-linear due to the product of bits and the linear weighting.",
+    "completed_at": "2026-06-18T08:27:16.284850Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(N)",
+    "quantum_gate_complexity": "O(N)",
+    "speedup_type": "Exponential speedup",
+    "synthesis_code": "None",
+    "analysis_text": "The provided oracle function f(x) = (sum_{i=0}^{N-1} x_i * s_i * i) mod 2 is essentially a hidden linear form masked by positional weights. Mathematically, this is equivalent to evaluating the inner product of x with a vector s' where s'_i = s_i * i. Because the oracle is a parity function of bitwise interactions, it falls under the framework of the Bernstein-Vazirani algorithm. While the provided scaling data shows zero success due to a missing implementation of the oracle circuit, the mathematical structure implies that a quantum algorithm utilizing a Walsh-Hadamard transform on N qubits can extract the bitstring s in O(1) queries (or O(N) gate complexity) as opposed to O(2^N) brute-force searches.",
+    "potential_applications": "The function represents a structure similar to linear cryptanalysis of S-box components. In symmetric cryptography, identifying internal bit-masking structures (like those found in simplified versions of block ciphers or hash functions) relies on detecting biased linear combinations of input/output bits. The mapping of the index 'i' acts as a weight, which is analogous to differential cryptanalysis techniques where specific bit-paths are targeted. This problem relates to finding parity-based vulnerabilities in pseudorandom number generators and can be applied to optimization problems involving Boolean satisfiability where constraints are weighted by index-based costs, effectively aiding in searching for hidden keys in protocols that rely on index-dependent bitwise obfuscation.",
+    "base_function_code": "def g(x, N):\n    s_str = str(x)\n    s = [int(bit) for bit in s_str.zfill(N)]\n    weight = list(range(N))\n    result = 0\n    for i in range(N):\n        result = (result + s[i] * i) % 2\n    return result",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    s_bits = [(secret >> i) & 1 for i in range(N)]\n    def oracle(x):\n        x_bits = [(x >> i) & 1 for i in range(N)]\n        weighted_product_sum = 0\n        for i in range(N):\n            weighted_product_sum = (weighted_product_sum + x_bits[i] * s_bits[i] * i) % 2\n        return weighted_product_sum\n    return oracle"
+  },
+  {
     "problem_name": "Hidden Modular Twisted Product Parity",
     "description": "Given an N-bit integer 's', find it by querying an oracle that computes the parity of a 'twisted' modular product. The function is f(x) = ( (s * x + (x^2 mod M)) mod M ) . x mod 2, where M is a secret prime number slightly larger than 2^N. The 'twisted' part comes from adding the quadratic term (x^2 mod M) before the modular multiplication with 's'. This non-linearity and modular arithmetic makes it distinct from standard linear or simple quadratic functions.",
     "completed_at": "2026-06-18T08:17:18.067673Z",
