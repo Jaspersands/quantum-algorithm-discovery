@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-18T07:14:47.464886Z",
-  "current_run": {
-    "problem_name": "Hidden Modular Product of Pairs",
-    "description": "Find a secret integer 's' such that for a given N, a function f(x) = ( (x * (x >> 1)) % s ) % 2 for all N-bit integers x, where 's' is the secret. This problem is designed to be non-linear due to the modular arithmetic and pairwise multiplication.",
-    "stage": "simulating",
-    "started_at": "2026-06-18T07:14:47.464919Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-18T07:14:49.105319Z",
+  "next_run_at": "2026-06-18T07:16:49.105281Z"
 }
