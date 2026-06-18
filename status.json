@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-18T22:32:17.490224Z",
+  "last_updated": "2026-06-18T22:33:21.185335Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-18T22:32:17.490250Z"
+    "problem_name": "Hidden Twisted Adjacent Bit Pair Sum Parity",
+    "description": "Given an oracle that computes the parity of the sum of twisted adjacent bit pairs of a secret number, find the secret number. The function is f(x) = ( (x_0 + x_1 + C) % 2 ) ^ ( (x_1 + x_2 + C) % 2 ) ^ ... ^ ( (x_{N-2} + x_{N-1} + C) % 2 ) where C is a secret constant and x_i are bits of x. The parity is taken over all such adjacent pairs.",
+    "stage": "simulating",
+    "started_at": "2026-06-18T22:33:21.185358Z"
   }
 }
