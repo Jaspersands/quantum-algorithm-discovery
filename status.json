@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-18T07:24:23.693495Z",
+  "last_updated": "2026-06-18T07:25:26.507395Z",
   "current_run": {
     "problem_name": "Hidden Non-Adjacent Quadratic Product",
     "description": "This problem searches for a secret 's' where the function f(x) = (x_i * x_j) mod 2 for non-adjacent indices i, j is revealed. Specifically, for a secret 's', the function is f(x) = (x_i * x_{i+2}) mod 2, where indices are taken modulo N. The goal is to find 's'. This is a non-linear problem involving products of bits at a fixed non-adjacent distance.",
-    "stage": "synthesizing",
-    "started_at": "2026-06-18T07:24:23.693633Z"
+    "stage": "analyzing",
+    "started_at": "2026-06-18T07:25:26.507447Z"
   }
 }
