@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Bernstein-Vazirani",
+    "description": "Find a hidden bitstring s in a function f(x) = s * x (mod 2).",
+    "completed_at": "2026-06-18T13:30:33.696989Z",
+    "success_rate": 1.0,
+    "quantum_query_complexity": "O(1)",
+    "quantum_gate_complexity": "O(N)",
+    "speedup_type": "Linear",
+    "synthesis_code": "from qiskit import QuantumCircuit\nqc = QuantumCircuit(N + 1, N)\nqc.x(N)\nqc.h(range(N + 1))\nqc.compose(oracle, inplace=True)\nqc.h(range(N))\nqc.measure(range(N), range(N))\n",
+    "analysis_text": "The quantum algorithm runs in 1 query, whereas classical deterministic search requires N queries. Thus, we achieve a linear speedup. The gate complexity is linear O(N) due to the single-qubit Hadamard gates applied before and after the oracle.",
+    "potential_applications": "No practical application mapping available yet.",
+    "base_function_code": "def g(x, N):\n    return 0\n",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    def f(x):\n        dot = 0\n        for i in range(N):\n            if (secret & (1 << i)) and (x & (1 << i)):\n                dot ^= 1\n        return dot\n    return f\n"
+  },
+  {
     "problem_name": "Hidden Modified Majority of Products",
     "description": "This problem defines a function f(x) based on a secret value 's'. The function calculates the majority of bitwise products of adjacent pairs in 'x', with a twist: the product is modified by XORing with 's' before taking the majority. Specifically, for an N-bit input x, let x_i be the i-th bit. The function computes p_i = x_i * x_{i+1} for i = 0 to N-2. Then, it computes a modified product m_i = p_i XOR s. The output f(x) is the majority of these modified products {m_0, m_1, ..., m_{N-2}}.",
     "completed_at": "2026-06-18T13:15:19.295882Z",
