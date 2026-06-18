@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-18T22:30:12.536148Z",
-  "current_run": {
-    "problem_name": "Hidden Modular Sum of Bitwise ANDs",
-    "description": "Given an N-bit integer 'secret', find it where the oracle computes f(x) = (sum_{i=0}^{N-2} (x_i AND x_{i+1})) mod M, where M is a prime number greater than 2. The goal is to find the 'secret' value that determines the function. This problem is non-linear due to the AND operations and the summation, and not a direct disguise of standard problems.",
-    "stage": "simulating",
-    "started_at": "2026-06-18T22:30:12.536176Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-18T22:30:14.252448Z",
+  "next_run_at": "2026-06-18T22:32:14.252246Z"
 }
