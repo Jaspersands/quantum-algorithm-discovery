@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Hidden Ternary Cyclic AND",
+    "description": "This problem searches for a secret ternary value 's' (0, 1, or 2) such that for a given N-bit input x, the function f(x) reveals information about whether the bitwise AND of x with a cyclically shifted version of itself equals 's'. Specifically, f(x) = 1 if (x & (x >> 1)) & 0x1 == s and 0 otherwise, where '>> 1' is a cyclic right shift. This is non-linear and involves a ternary secret.",
+    "completed_at": "2026-06-18T05:10:36.108761Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(sqrt(2^N))",
+    "quantum_gate_complexity": "O(N * poly(log N))",
+    "speedup_type": "Quadratic speedup (Grover-like search)",
+    "synthesis_code": "None",
+    "analysis_text": "The provided problem involves finding a secret ternary value s hidden within a cyclic bitwise AND transformation. Given that the function f(x) is essentially a boolean predicate defined over N-bit inputs, searching for an input x that maps to s behaves as an unstructured search problem. Since the operation is non-linear and sensitive to the bitwise structure, the quantum oracle requires O(N) gate depth to implement the cyclic shift and AND operation. The simulation data showing zero success rate for N=2 and N=3 implies that the current circuit implementation lacks the necessary phase estimation or Grover diffusion operators to resolve the ternary constraint. Theoretically, the algorithm would reach a quadratic speedup over the brute-force O(2^N) classical search.",
+    "potential_applications": "The mathematical structure of the hidden cyclic AND operation corresponds to the analysis of S-box components in symmetric cryptography, specifically linear and differential cryptanalysis. The cyclic shift property mimics the diffusion layers in block ciphers like AES or PRESENT. Identifying inputs that satisfy specific cyclic bitwise conditions is useful in finding 'weak keys' or detecting collisions in hash functions that utilize bitwise non-linear permutations. Furthermore, this logic is applicable to error-correcting code analysis, where cyclic properties are used to identify weight distributions in linear block codes, potentially aiding in decoding algorithms that rely on syndrome detection for patterns with specific bitwise overlaps.",
+    "base_function_code": "def g(x, N):\n    # For simplicity, we'll simulate the ternary secret as an integer 0, 1, or 2.\n    # The actual oracle will depend on the chosen secret.\n    # This base function is just a placeholder.\n    return (x & (x >> 1)) & 1",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    # secret is an integer: 0, 1, or 2\n    def f(x):\n        # Cyclic right shift by 1\n        shifted_x = (x >> 1) | ((x & 1) << (N - 1))\n        # Bitwise AND\n        bitwise_and = x & shifted_x\n        # Check against the secret ternary value\n        if (bitwise_and & 1) == secret:\n            return 1\n        else:\n            return 0\n    return f"
+  },
+  {
     "problem_name": "Hidden Twisted Cubic Bit Product",
     "description": "This problem defines a function f(x) that reveals a secret 's' by evaluating a twisted cubic polynomial based on a subset of bits of x. The function is defined as f(x) = (s_0*x_0 + s_1*x_1 + s_2*x_2)^3 mod 2, where s is the secret string of length 3 and x_i are bits of x. The specific twist is that only the first 3 bits of x are used in the computation. The problem requires finding the secret s.",
     "completed_at": "2026-06-18T04:57:46.278074Z",
