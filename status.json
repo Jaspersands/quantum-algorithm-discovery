@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-18T07:35:07.272867Z",
-  "current_run": {
-    "problem_name": "Hidden Modular Product of Powers",
-    "description": "This problem searches for a secret integer 's' (0 <= s < 2^N) such that for a given random integer 'a' (0 < a < 2^N), the function f(x) = (x^s mod a) mod 2. The oracle computes f(x). The challenge is to find 's' given access to the oracle. This is a non-linear function in 's' and involves modular arithmetic and exponentiation, making it distinct from linear problems.",
-    "stage": "simulating",
-    "started_at": "2026-06-18T07:35:07.272894Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-18T07:35:09.018789Z",
+  "next_run_at": "2026-06-18T07:37:09.018654Z"
 }
