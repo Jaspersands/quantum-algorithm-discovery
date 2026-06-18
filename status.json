@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-18T07:16:52.342632Z",
+  "last_updated": "2026-06-18T07:16:56.741281Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-18T07:16:52.342655Z"
+    "problem_name": "Hidden Quadratic Polynomial Parity",
+    "description": "This problem involves a hidden quadratic polynomial function f(x) = sum(a_ij * x_i * x_j) mod 2, where a_ij are secret coefficients and x is an N-bit integer. The goal is to find the secret coefficients.",
+    "stage": "simulating",
+    "started_at": "2026-06-18T07:16:56.741307Z"
   }
 }
