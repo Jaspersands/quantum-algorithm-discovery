@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-19T07:58:43.081165Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Bitwise AND of Pairs",
-    "description": "Given an N-bit integer 'secret', the function f(x) returns 1 if the bitwise AND of all adjacent pairs of bits in x equals the bitwise AND of all adjacent pairs of bits in 'secret', and 0 otherwise. This function is nonlinear due to the bitwise AND operations on pairs of bits and the cyclic nature of the comparison.",
-    "stage": "analyzing",
-    "started_at": "2026-06-19T07:58:43.081221Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-19T07:58:48.066091Z"
 }
