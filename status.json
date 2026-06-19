@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-19T07:27:48.209994Z",
+  "last_updated": "2026-06-19T07:27:51.416315Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-19T07:27:48.210017Z"
+    "problem_name": "Hidden Modular Product Shift",
+    "description": "Find a secret integer 's' such that f(x) = (x*s) mod (2^N - 1) for a specific N. This is a non-linear function in modular arithmetic. The secret 's' is not necessarily restricted to be a simple linear shift, but rather a value in modular multiplication.",
+    "stage": "simulating",
+    "started_at": "2026-06-19T07:27:51.416340Z"
   }
 }
