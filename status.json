@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-19T07:42:32.742363Z",
+  "last_updated": "2026-06-19T07:42:36.864201Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-19T07:42:32.742404Z"
+    "problem_name": "Hidden Quantum Polynomial State Preparation",
+    "description": "This problem involves finding a secret integer 's' (the 'degree') of a polynomial p(x) = a_k x^k + ... + a_1 x + a_0 mod M, where the coefficients a_i are determined by a secret state or basis, and the oracle computes p(x) for a given input x. The quantum challenge is to efficiently determine the secret coefficients or basis that define the polynomial function, particularly when the coefficients themselves are encoded in a quantum state that needs to be 'learned' by querying the oracle. The base function defines a general polynomial, and the oracle makes it specific by encoding coefficients into a secret quantum state.",
+    "stage": "simulating",
+    "started_at": "2026-06-19T07:42:36.864227Z"
   }
 }
