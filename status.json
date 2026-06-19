@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-19T08:15:22.751768Z",
-  "current_run": {
-    "problem_name": "Hidden Twisted Cubic Bit Product Parity",
-    "description": "Given an N-bit secret integer `s`, this problem aims to find `s` such that the function `f(x)` outputs the parity of a twisted cubic bit product of `x` and `s`. Specifically, `f(x) = ((x_i * x_{i+1} * x_{i+2}) * s) % 2` for a twisted index `i` depending on `s` and `x`, where `x_i` is the i-th bit of x. The twist involves a non-linear dependency on both `x` and `s` that is not a simple product.",
-    "stage": "analyzing",
-    "started_at": "2026-06-19T08:15:22.751818Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-19T08:15:27.641556Z"
 }
