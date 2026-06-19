@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-19T07:35:54.554117Z",
+  "last_updated": "2026-06-19T07:36:00.714789Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-19T07:35:54.554139Z"
+    "problem_name": "Hidden Cubic Bit Sum Parity",
+    "description": "Given an N-bit integer x, a function f(x) returns 1 if the sum of the cubes of its bits is odd, and 0 otherwise. The goal is to find the secret N-bit integer 's' that defines the function: f(x) = (s_0^3 + s_1^3 + ... + s_{N-1}^3) mod 2, where s_i is the i-th bit of s. This is a non-linear function of the secret bits.",
+    "stage": "simulating",
+    "started_at": "2026-06-19T07:36:00.714814Z"
   }
 }
