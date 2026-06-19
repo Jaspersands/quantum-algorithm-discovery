@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-19T07:23:30.093836Z",
+  "last_updated": "2026-06-19T07:23:33.712775Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-19T07:23:30.093859Z"
+    "problem_name": "Hidden Cubic Polynomial Modulo N",
+    "description": "Given an oracle that computes f(x) = (a*x^3 + b*x^2 + c*x + d) mod N, where N is known and a, b, c, d are secret coefficients, find the coefficients. This is a non-linear problem involving modular arithmetic and cubic terms.",
+    "stage": "simulating",
+    "started_at": "2026-06-19T07:23:33.712796Z"
   }
 }
