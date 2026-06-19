@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-19T07:07:56.367064Z",
+  "last_updated": "2026-06-19T07:08:01.983609Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-19T07:07:56.367087Z"
+    "problem_name": "Hidden Ternary Product XOR Parity",
+    "description": "Given an N-bit secret value 's', the oracle computes f(x) = (x_0 * x_1 * x_2) XOR (x_3 * x_4 * x_5) XOR ... XOR (x_{3k} * x_{3k+1} * x_{3k+2}) XOR (s_0 * s_1 * s_2) XOR (s_3 * s_4 * s_5) ... for bits of x and s. The goal is to find the secret value 's' where the input bits are grouped in threes. If N is not a multiple of 3, the remaining bits are ignored in the XOR summation. The oracle returns 1 if the computed value is odd, and 0 if even. This problem is designed to hide a secret s based on a specific ternary product pattern, making it non-linear and not a direct mapping to existing known quantum algorithms.",
+    "stage": "simulating",
+    "started_at": "2026-06-19T07:08:01.983630Z"
   }
 }
