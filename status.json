@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-19T08:21:48.743423Z",
+  "last_updated": "2026-06-19T08:21:52.288954Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-19T08:21:48.743447Z"
+    "problem_name": "Hidden Weighted Pairwise XOR Sum Parity",
+    "description": "This problem searches for a secret 'mask' (an N-bit integer) such that for a given input x, the parity of the XOR sum of weighted pairs of bits of x is equal to a target value (0 or 1). The weights are determined by the secret mask. Specifically, f(x) = (sum_{i=0}^{N-2} (mask_i * (x_i XOR x_{i+1}))) mod 2. This is a non-linear function of the mask and involves pairwise interactions.",
+    "stage": "simulating",
+    "started_at": "2026-06-19T08:21:52.288976Z"
   }
 }
