@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-19T07:25:43.665464Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Polynomial Modulo Prime",
-    "description": "Find a secret polynomial P(x) = a_k * x^k + ... + a_1 * x + a_0 (mod p) where the coefficients a_i are secret and the function maps integers x to P(x) mod p. The secret is the list of coefficients [a_0, a_1, ..., a_k]. This is a non-linear problem due to the polynomial terms. The 'cyclic' nature refers to how we might evaluate this over a finite field, but for simplicity here, we treat x as a standard integer and p as a prime.",
-    "stage": "simulating",
-    "started_at": "2026-06-19T07:25:43.665490Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-19T07:25:45.077873Z",
+  "next_run_at": "2026-06-19T07:27:45.077832Z"
 }
