@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-19T08:00:52.905126Z",
+  "last_updated": "2026-06-19T08:00:59.117971Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-19T08:00:52.905147Z"
+    "problem_name": "Hidden Weighted Cubic Bit Product Sum",
+    "description": "Given a secret integer 's', an N-bit integer 'x' is mapped to the parity of a weighted sum of products of three bits of 'x', where the weights are derived from 's'. Specifically, f(x) = (sum_{i<j<k} w_ijk * x_i * x_j * x_k) mod 2, where the weights w_ijk are determined by the bits of 's'. This problem is non-linear due to the cubic terms and the custom weighting scheme derived from 's'.",
+    "stage": "simulating",
+    "started_at": "2026-06-19T08:00:59.117994Z"
   }
 }
