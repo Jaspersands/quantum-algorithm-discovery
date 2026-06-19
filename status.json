@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-19T07:48:59.946663Z",
+  "last_updated": "2026-06-19T07:49:03.720697Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-19T07:48:59.946688Z"
+    "problem_name": "Hidden Cyclic Bitwise AND of Pairs",
+    "description": "Given an N-bit integer 'secret', the function f(x) returns 1 if the bitwise AND of all adjacent pairs of bits in x equals the bitwise AND of all adjacent pairs of bits in 'secret', and 0 otherwise. This function is nonlinear due to the bitwise AND operations on pairs of bits and the cyclic nature of the comparison.",
+    "stage": "simulating",
+    "started_at": "2026-06-19T07:49:03.720720Z"
   }
 }
