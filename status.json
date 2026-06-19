@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-19T07:10:06.815134Z",
+  "last_updated": "2026-06-19T07:11:13.671192Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-19T07:10:06.815156Z"
+    "problem_name": "Hidden Modular Quadratic Congruence",
+    "description": "This problem searches for a secret integer 's' such that for a given input 'x', the function f(x) = (x^2 + s*x) mod M, where M is a fixed, publicly known modulus. The oracle returns 1 if f(x) matches a target value (implicitly 0 for simplicity here, meaning x^2 + s*x must be a multiple of M), and 0 otherwise. This is a non-linear function involving modular arithmetic and a quadratic term, deviating from linear systems and simple parity checks.",
+    "stage": "simulating",
+    "started_at": "2026-06-19T07:11:13.671219Z"
   }
 }
