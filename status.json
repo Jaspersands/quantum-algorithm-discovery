@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-19T04:45:32.662188Z",
+  "last_updated": "2026-06-19T04:45:33.912946Z",
   "current_run": {
     "problem_name": "Bernstein-Vazirani",
     "description": "Find a hidden bitstring s in a function f(x) = s * x (mod 2).",
-    "stage": "simulating",
-    "started_at": "2026-06-19T04:45:32.662312Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-19T04:45:33.912970Z"
   }
 }
