@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-19T07:00:37.118727Z",
-  "current_run": {
-    "problem_name": "Hidden Non-Adjacent Quadratic Bit Product Parity",
-    "description": "Given an N-bit secret integer s, the oracle computes f(x) = (x_i * x_j + x_k * x_l + ... ) mod 2, where the pairs (i,j), (k,l), ... are fixed and non-adjacent indices determined by the secret s. Specifically, s encodes a permutation of indices determining which non-adjacent pairs are multiplied and summed for the parity. The goal is to find the encoding s.",
-    "stage": "simulating",
-    "started_at": "2026-06-19T07:00:37.118756Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-19T07:00:38.653935Z",
+  "next_run_at": "2026-06-19T07:02:38.653862Z"
 }
