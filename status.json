@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-19T07:13:19.189758Z",
+  "last_updated": "2026-06-19T07:13:22.326258Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-19T07:13:19.189782Z"
+    "problem_name": "Hidden Cyclic AND-XOR of Products",
+    "description": "This problem hides a secret integer 's' by defining a function f(x) = (x & (x << 1)) ^ (x & (x >> 1)) mod 2^N, where '<<' and '>>' denote cyclic bit shifts. The oracle outputs 1 if f(x) equals a specific target value derived from 's', and 0 otherwise. This function is non-linear and combines bitwise AND and XOR operations with cyclic shifts.",
+    "stage": "simulating",
+    "started_at": "2026-06-19T07:13:22.326280Z"
   }
 }
