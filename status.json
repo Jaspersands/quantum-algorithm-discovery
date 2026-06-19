@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-19T08:18:36.628547Z",
+  "last_updated": "2026-06-19T08:19:38.760448Z",
   "current_run": {
     "problem_name": "Hidden Ternary Majority of Products with Offset",
     "description": "Given a function f(x) that computes the ternary majority of three specific bit pairs from x, plus a secret offset, find the secret offset. The function is f(x) = (majority(x[i], x[j], x[k]) + s) mod 3. The indices i, j, k and the offset s are secret.",
-    "stage": "synthesizing",
-    "started_at": "2026-06-19T08:18:36.628598Z"
+    "stage": "analyzing",
+    "started_at": "2026-06-19T08:19:38.760509Z"
   }
 }
