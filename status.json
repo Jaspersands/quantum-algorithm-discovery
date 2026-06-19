@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-19T07:46:50.282876Z",
-  "current_run": {
-    "problem_name": "Hidden Non-Linear Modular Product Sum",
-    "description": "Given an oracle that computes a secret non-linear function f(x) = (secret_a * x_0 * x_1 + secret_b * x_2 * x_3 + secret_c) mod M, where x is an N-bit integer and secret_a, secret_b, secret_c are secret parameters. The goal is to find the secret parameters.",
-    "stage": "analyzing",
-    "started_at": "2026-06-19T07:46:50.282927Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-19T07:46:55.195886Z"
 }
