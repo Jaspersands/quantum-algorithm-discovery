@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Hidden XOR Product of Adjacent Pairs",
+    "description": "Given an N-bit secret integer s, find s such that the function f(x) = (x & (x >> 1)) ^ s outputs 1 if the XOR sum of the products of adjacent bits of x is equal to a secret value, and 0 otherwise. Specifically, we are looking for a secret 's' such that f(x) = ((x_0 * x_1) ^ (x_1 * x_2) ^ ... ^ (x_{N-2} * x_{N-1})) == s. Note: bitwise operations are performed on the binary representation of x.",
+    "completed_at": "2026-06-20T07:14:57.760290Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(N)",
+    "quantum_gate_complexity": "O(N^2)",
+    "speedup_type": "Exponential speedup",
+    "synthesis_code": "None",
+    "analysis_text": "The problem of identifying the secret XOR-sum signature of adjacent bitwise products is equivalent to determining the coefficients of a quadratic Boolean form. Classically, recovering the internal structure of this bitwise transformation requires exhaustive search or Gaussian elimination on a system of quadratic equations over GF(2), which is generally NP-hard for arbitrary N. The quantum approach leverages the Deutsch-Jozsa or Bernstein-Vazirani framework to extract the hidden linear/quadratic parity map, reducing the query complexity to O(N) by evaluating the phase accumulation across superposition states.",
+    "potential_applications": "The function represents a specific quadratic form mapping similar to those found in S-box construction for symmetric cryptographic primitives like AES or lightweight block ciphers. Specifically, the XOR-sum of adjacent bit products acts as a parity-based check function. This is highly applicable to cryptanalysis, particularly in assessing the algebraic immunity of Boolean functions used in stream ciphers. Furthermore, such structures are isomorphic to syndrome decoding in specific error-correcting codes, and solving these could identify vulnerabilities in nonlinear feedback shift registers or provide pathways for optimized search in combinatorial optimization problems where the objective function is defined by localized quadratic bit interactions.",
+    "base_function_code": "def g(x, N):\n    if N < 2:\n        return 0\n    xor_sum = 0\n    for i in range(N - 1):\n        # Extract bits i and i+1\n        bit_i = (x >> i) & 1\n        bit_i_plus_1 = (x >> (i + 1)) & 1\n        xor_sum ^= (bit_i & bit_i_plus_1)\n    return xor_sum",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    def oracle(x):\n        if N < 2:\n            return 0\n        xor_sum = 0\n        for i in range(N - 1):\n            bit_i = (x >> i) & 1\n            bit_i_plus_1 = (x >> (i + 1)) & 1\n            xor_sum ^= (bit_i & bit_i_plus_1)\n        return 1 if xor_sum == secret else 0\n    return oracle"
+  },
+  {
     "problem_name": "Bernstein-Vazirani",
     "description": "Find a hidden bitstring s in a function f(x) = s * x (mod 2).",
     "completed_at": "2026-06-20T07:02:09.190328Z",
