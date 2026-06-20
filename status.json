@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-20T07:19:13.287880Z",
+  "last_updated": "2026-06-20T07:19:22.008517Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-20T07:19:13.287904Z"
+    "problem_name": "Hidden Bilinear Form Shift",
+    "description": "This problem seeks to find a secret vector 's' such that f(x) = (x . M . x) mod 2, where M is a fixed symmetric bilinear form matrix. The oracle computes f(x). This is a non-linear problem where the function is quadratic. The function is of the form f(x) = sum_{i<j} M_{ij} x_i x_j mod 2, where M is a symmetric matrix and M_{ii}=0. This can be seen as a specific type of quadratic boolean function.",
+    "stage": "simulating",
+    "started_at": "2026-06-20T07:19:22.008546Z"
   }
 }
