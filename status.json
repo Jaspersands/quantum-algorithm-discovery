@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-20T08:12:16.535556Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Mixed Degree Polynomial",
-    "description": "This problem involves finding a secret integer `s` that defines a polynomial function f(x) = (s*x) mod 2^N + (s*x)^2 mod 2^N, where N is the number of bits. The function is designed to be non-linear and of mixed degree to explore potential quantum speedups beyond linear problems. The oracle will reveal f(x) for a given x.",
-    "stage": "analyzing",
-    "started_at": "2026-06-20T08:12:16.535602Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-20T08:12:21.747002Z"
 }
