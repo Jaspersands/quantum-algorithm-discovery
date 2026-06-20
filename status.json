@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-20T07:45:58.703945Z",
+  "last_updated": "2026-06-20T07:46:02.377578Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-20T07:45:58.703968Z"
+    "problem_name": "Hidden Modular Twisted Cubic Product",
+    "description": "This problem is a variation of modular arithmetic problems. Given a secret integer 's', the oracle computes f(x) = ( (x^3) * s ) mod M for a fixed modulus M. The goal is to find 's'. This function is non-linear due to the cubic term and the modular multiplication, and it is not a direct analogue of textbook problems. The modular arithmetic and the cubic term make it a novel challenge.",
+    "stage": "simulating",
+    "started_at": "2026-06-20T07:46:02.377603Z"
   }
 }
