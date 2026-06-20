@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-20T07:54:47.264702Z",
+  "last_updated": "2026-06-20T07:55:52.204870Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-20T07:54:47.264725Z"
+    "problem_name": "Hidden Modular Quadratic Congruence with Permutation",
+    "description": "This problem seeks to find a secret N-bit integer 's' such that for a hidden permutation 'p' of {0, 1, ..., N-1}, the function f(x) = (sum_{i=0}^{N-1} (s_i * x_i)^2 mod M) p(x) mod M is revealed, where p(x) is a permutation of the bits of x, and M is a prime number. The goal is to find 's' and 'p'. This is a non-linear function involving quadratic terms and a permutation, making it distinct from standard linear problems.",
+    "stage": "simulating",
+    "started_at": "2026-06-20T07:55:52.204889Z"
   }
 }
