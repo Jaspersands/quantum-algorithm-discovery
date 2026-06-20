@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-20T07:48:11.157612Z",
-  "current_run": {
-    "problem_name": "Hidden Modular Arithmetic Product Sum",
-    "description": "This problem involves finding a secret integer 's' by querying an oracle that computes a non-linear function based on modular arithmetic and sums of products of bits of the input. Specifically, the oracle computes f(x) = (sum_{i=0}^{N-1} (x_i * x_{i+1} mod M)) mod M, where the sum is over products of adjacent bits of x, and M is a secret modulus. The goal is to find 's' which influences the output in a non-trivial way, possibly through a relation like f(x) = (g(x) + s) mod M, where g(x) is a function that is periodic with period related to 's'. This is designed to be non-linear and not easily reducible to linear algebraic problems over GF(2).",
-    "stage": "simulating",
-    "started_at": "2026-06-20T07:48:11.157640Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-20T07:48:12.797429Z",
+  "next_run_at": "2026-06-20T07:50:12.797386Z"
 }
