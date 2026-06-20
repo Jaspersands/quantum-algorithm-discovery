@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-20T08:00:11.454264Z",
-  "current_run": {
-    "problem_name": "Hidden Affine Subspace Property",
-    "description": "Given an oracle that computes $f(x) = (a \ncdot x + b) \ncdot x \npmod 2$, where $a$ and $b$ are secret bitstrings and 'ncdot' denotes the dot product modulo 2, find the secret bitstrings $a$ and $b$. This function is quadratic in $x$ and depends on two secret parameters.",
-    "stage": "simulating",
-    "started_at": "2026-06-20T08:00:11.454292Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-20T08:00:13.344111Z",
+  "next_run_at": "2026-06-20T08:02:13.344066Z"
 }
