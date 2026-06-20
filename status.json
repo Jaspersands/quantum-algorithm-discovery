@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-20T07:39:36.764321Z",
-  "current_run": {
-    "problem_name": "Custom Modular Arithmetic Product Oracle",
-    "description": "Given an oracle that computes f(x) = (secret * x) mod M for a secret integer 'secret' and a modulus M, find the secret. This is a variation of modular arithmetic problems but with a specific focus on the product operation and a fixed modulus M to simplify the search space for secrets.",
-    "stage": "simulating",
-    "started_at": "2026-06-20T07:39:36.764346Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-20T07:39:38.478686Z",
+  "next_run_at": "2026-06-20T07:41:38.478645Z"
 }
