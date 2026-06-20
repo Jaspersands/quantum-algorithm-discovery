@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-20T07:37:21.505847Z",
+  "last_updated": "2026-06-20T07:37:28.647995Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-20T07:37:21.505868Z"
+    "problem_name": "Hidden Cyclic Quadratic Congruence",
+    "description": "This problem aims to find a secret quadratic polynomial over GF(2^N) by querying an oracle. The function is of the form f(x) = (ax^2 + bx + c) mod p, where p is a prime larger than 2^N, and a, b, c are secret coefficients. The oracle reveals f(x) for a given x. The 'cyclic' nature implies we are looking for a specific structure within the polynomial, possibly related to its behavior under cyclic shifts of the input or coefficients. We are looking for a specific structure in the quadratic polynomial: f(x) = (a*x*(x+1) + b*x + c) mod p, where 'a', 'b', 'c' are secrets.",
+    "stage": "simulating",
+    "started_at": "2026-06-20T07:37:28.648020Z"
   }
 }
