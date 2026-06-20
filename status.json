@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-20T07:52:24.562487Z",
-  "current_run": {
-    "problem_name": "Hidden Modular Product of Selected Bits",
-    "description": "This problem seeks to find a secret integer 's' modulo M. The oracle function f(x) checks if the product of bits of 'x' at positions determined by the secret 's' (where the s-th bit of 'x' is 1) is congruent to a target value 't' modulo M. The secret 's' is a bitmask, and the target 't' is a constant.",
-    "stage": "analyzing",
-    "started_at": "2026-06-20T07:52:24.562540Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-20T07:52:42.780483Z"
 }
