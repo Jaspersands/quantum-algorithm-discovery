@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-20T07:58:03.190174Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Bitwise Triple Product Parity",
-    "description": "Given a secret N-bit integer 's', find 's' where the oracle computes f(x) = (x_0 * x_1 * x_2 + x_3 * x_4 * x_5 + ... ) mod 2, where the indices are taken cyclically modulo N. This is a nonlinear function that involves products of triples of bits, with cyclic shifts.",
-    "stage": "simulating",
-    "started_at": "2026-06-20T07:58:03.190198Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-20T07:58:04.566933Z",
+  "next_run_at": "2026-06-20T08:00:04.566890Z"
 }
