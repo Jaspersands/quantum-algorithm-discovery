@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-20T07:04:15.054075Z",
+  "last_updated": "2026-06-20T07:04:19.258042Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-20T07:04:15.054098Z"
+    "problem_name": "Hidden XOR Product of Adjacent Pairs",
+    "description": "Given an N-bit secret integer s, find s such that the function f(x) = (x & (x >> 1)) ^ s outputs 1 if the XOR sum of the products of adjacent bits of x is equal to a secret value, and 0 otherwise. Specifically, we are looking for a secret 's' such that f(x) = ((x_0 * x_1) ^ (x_1 * x_2) ^ ... ^ (x_{N-2} * x_{N-1})) == s. Note: bitwise operations are performed on the binary representation of x.",
+    "stage": "simulating",
+    "started_at": "2026-06-20T07:04:19.258070Z"
   }
 }
