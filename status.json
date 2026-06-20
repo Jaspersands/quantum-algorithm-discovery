@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-20T07:23:39.056178Z",
-  "current_run": {
-    "problem_name": "Hidden Non-linear Modular Product Sum",
-    "description": "Given a secret integer `s` and a modulus `m`, we want to find `s` such that the function f(x) = (x * (x+1) * (x+2) + s) mod m is revealed. This function is non-linear due to the product of consecutive integers and involves modular arithmetic.",
-    "stage": "simulating",
-    "started_at": "2026-06-20T07:23:39.056198Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-20T07:23:40.679173Z",
+  "next_run_at": "2026-06-20T07:25:40.679126Z"
 }
