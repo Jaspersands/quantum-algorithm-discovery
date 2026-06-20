@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-20T08:14:26.708866Z",
+  "last_updated": "2026-06-20T08:14:30.301573Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-20T08:14:26.708888Z"
+    "problem_name": "Hidden Majority of Pairwise Cyclic Products",
+    "description": "Given an N-bit secret integer `s`, the oracle computes f(x) = ( (x_0 * x_1 + x_1 * x_2 + ... + x_{N-2} * x_{N-1} + x_{N-1} * x_0) mod 2 ) XOR ( (s_0 * s_1 + s_1 * s_2 + ... + s_{N-2} * s_{N-1} + s_{N-1} * s_0) mod 2 ). The goal is to find the secret `s`.",
+    "stage": "simulating",
+    "started_at": "2026-06-20T08:14:30.301597Z"
   }
 }
