@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-20T07:50:15.892898Z",
+  "last_updated": "2026-06-20T07:50:21.258627Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-20T07:50:15.892920Z"
+    "problem_name": "Hidden Modular Product of Selected Bits",
+    "description": "This problem seeks to find a secret integer 's' modulo M. The oracle function f(x) checks if the product of bits of 'x' at positions determined by the secret 's' (where the s-th bit of 'x' is 1) is congruent to a target value 't' modulo M. The secret 's' is a bitmask, and the target 't' is a constant.",
+    "stage": "simulating",
+    "started_at": "2026-06-20T07:50:21.258650Z"
   }
 }
