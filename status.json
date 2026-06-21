@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-21T08:00:03.677839Z",
+  "last_updated": "2026-06-21T08:00:08.308103Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-21T08:00:03.677866Z"
+    "problem_name": "Hidden Cyclic Bitwise XOR Sum of Quadratic Terms",
+    "description": "Given an N-bit secret integer 's', this problem aims to find 's' by querying an oracle that computes the parity of the bitwise XOR sum of quadratic terms derived from cyclic shifts of the input. Specifically, for an input x, the oracle computes f(x) = ( (x_0*x_1) ^ (x_1*x_2) ^ ... ^ (x_{N-1}*x_0) ) ^ ( (x_0*x_2) ^ (x_1*x_3) ^ ... ^ (x_{N-1}*x_1) ) ... XORed with similar terms involving the secret 's'. This is a highly non-linear function.",
+    "stage": "simulating",
+    "started_at": "2026-06-21T08:00:08.308129Z"
   }
 }
