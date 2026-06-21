@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-21T08:34:09.749991Z",
+  "last_updated": "2026-06-21T08:34:15.063964Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-21T08:34:09.750014Z"
+    "problem_name": "Hidden Quadratic Residue Majority",
+    "description": "This problem hides a secret integer 's' such that a quadratic function involving modular exponentiation and a majority vote is satisfied. Specifically, we seek 's' where for a majority of inputs 'x', the Legendre symbol (x^2 + s mod p) equals 1, where 'p' is a prime.",
+    "stage": "simulating",
+    "started_at": "2026-06-21T08:34:15.063985Z"
   }
 }
