@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-21T07:20:35.473026Z",
-  "current_run": {
-    "problem_name": "Hidden Modular Quadratic Congruence",
-    "description": "Given a secret integer 'a' and a modulus 'm', find 'a' such that f(x) = (a*x^2 + x) mod m is constant for all x in {0, 1, ..., m-1}. This is a variation of modular arithmetic problems, focusing on quadratic and linear components.",
-    "stage": "simulating",
-    "started_at": "2026-06-21T07:20:35.473060Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-21T07:20:37.099146Z",
+  "next_run_at": "2026-06-21T07:22:37.099096Z"
 }
