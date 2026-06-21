@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Hidden Modular Product of Rotated Bits",
+    "description": "This problem involves finding a secret integer 's' such that a function f(x) = (x * (x >> 1)) mod s is hidden. The oracle computes this value and returns 1 if the result matches a target value (e.g., 0) and 0 otherwise. This is non-linear due to the bitwise rotation and product, and modular arithmetic.",
+    "completed_at": "2026-06-21T07:57:56.741658Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(sqrt(s))",
+    "quantum_gate_complexity": "O(log^2 s)",
+    "speedup_type": "Quadratic (Grover-style speedup)",
+    "synthesis_code": "None",
+    "analysis_text": "The provided oracle describes a non-linear hidden shift problem involving a bitwise-rotated product (x * (x >> 1)) mod s. Given the lack of algebraic structure (like that found in Hidden Subgroup Problems), the current approach relies on unstructured search. The quantum query complexity for finding the secret s is bounded by O(sqrt(s)) via Grover's algorithm, providing a quadratic speedup over the classical O(s) brute-force search. The Qiskit scaling data, while limited, suggests that the circuit implementation is highly sensitive to depth and qubit overhead; the drop to 0.0 success rate at N=3 indicates that the oracle implementation for the non-linear bitwise operation is not currently mapping correctly to the circuit register, likely due to insufficient ancilla qubits for the modular product.",
+    "potential_applications": "The function (x * (x >> 1)) mod s mimics the non-linear transformation layers found in block ciphers, specifically resembling S-box constructions or the mixing functions used in hash algorithms (e.g., bitwise rotations and modular multiplication). The potential application lies in differential cryptanalysis and preimage attacks, where identifying 's' (or key components) hidden within such non-linear mappings allows for the reversal of cryptographic primitives. Furthermore, this structure relates to quadratic residuosity problems and hidden number problems, which are foundational to breaking lightweight symmetric encryption schemes and identifying vulnerabilities in pseudo-random number generators (PRNGs) that utilize similar modular feedback loops.",
+    "base_function_code": "def g(x, N, s_val, target_val):\n    rotated_x = (x >> 1) | ((x & 1) << (N - 1)) # Rotate bits to the right\n    product = x * rotated_x\n    return 1 if (product % s_val) == target_val else 0",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    s_val = secret\n    target_val = 0 # For simplicity, we seek x where the modular product is 0\n    def oracle(x):\n        rotated_x = (x >> 1) | ((x & 1) << (N - 1)) # Rotate bits to the right\n        product = x * rotated_x\n        return 1 if (product % s_val) == target_val else 0\n    return oracle"
+  },
+  {
     "problem_name": "Hidden Modular Cubic Bit-Product Parity",
     "description": "This problem involves finding a secret integer 's' such that for a given N-bit input 'x', the function f(x) = (x[0]*x[1]*x[2] + x[1]*x[2]*x[3] + ... + x[N-3]*x[N-2]*x[N-1]) mod (s+1) is a specific target value (e.g., 0). This is a non-linear function involving cubic products of adjacent bits and modular arithmetic, making it distinct from linear or simpler quadratic functions.",
     "completed_at": "2026-06-21T07:43:47.042933Z",
