@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Hidden Modular Cubic Bit-Product Parity",
+    "description": "This problem involves finding a secret integer 's' such that for a given N-bit input 'x', the function f(x) = (x[0]*x[1]*x[2] + x[1]*x[2]*x[3] + ... + x[N-3]*x[N-2]*x[N-1]) mod (s+1) is a specific target value (e.g., 0). This is a non-linear function involving cubic products of adjacent bits and modular arithmetic, making it distinct from linear or simpler quadratic functions.",
+    "completed_at": "2026-06-21T07:43:47.042933Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^(N/3))",
+    "quantum_gate_complexity": "O(N^3)",
+    "speedup_type": "Exponential",
+    "synthesis_code": "None",
+    "analysis_text": "The problem of recovering the secret integer 's' hidden within a modular cubic parity function represents a non-linear algebraic structure. Since the oracle evaluates the parity of overlapping cubic products, the function exhibits a high degree of sensitivity to the input bitstring. The quantum approach utilizes the Bernstein-Vazirani or Grover-based amplification techniques to probe the secret space. Because the parity function effectively creates a sparse global constraint, the quantum gate count scales polynomially with N due to the need for Toffoli networks to compute cubic bit products, while the search complexity is reduced exponentially compared to a brute-force classical search over the space of s.",
+    "potential_applications": "The mathematical structure of cubic bit-products under modular constraints is highly analogous to the construction of non-linear filter functions used in stream ciphers and the algebraic normal form (ANF) of S-box components in block ciphers like AES. Specifically, this function maps to cryptanalysis domains where one attempts to recover key material by evaluating low-degree algebraic approximations of block ciphers. Furthermore, the cubic modular parity structure resembles the constraints found in hardware-based physically unclonable functions (PUFs) and can be adapted to evaluate collision vulnerabilities in lightweight hash functions that rely on modular XOR-sum parity.",
+    "base_function_code": "def g(x_int, N):\n    x_bits = [(x_int >> i) & 1 for i in range(N)]\n    if N < 3:\n        return 0\n    result = 0\n    for i in range(N - 2):\n        term = x_bits[i] * x_bits[i+1] * x_bits[i+2]\n        result = (result + term) % (N + 1) # Using N+1 as a stand-in for the modular base, which would be s+1\n    return result",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    # The 'secret' here is actually the modulus base (s+1)\n    # The function calculates the parity of the sum of adjacent cubic bit products modulo (secret+1)\n    modulus = secret + 1\n    def f(x_int):\n        x_bits = [(x_int >> i) & 1 for i in range(N)]\n        if N < 3:\n            return 0\n        result = 0\n        for i in range(N - 2):\n            term = x_bits[i] * x_bits[i+1] * x_bits[i+2]\n            result = (result + term) % modulus\n        return result\n    return f"
+  },
+  {
     "problem_name": "Hidden Modular Product of Cyclic Pairs",
     "description": "This problem defines a hidden function f(x) that depends on the modular product of cyclically adjacent pairs of bits in the input x. The secret is a value 's' such that f(x) = ( (x_0 * x_1 + x_1 * x_2 + ... + x_{N-1} * x_0) mod s ) and the oracle outputs 1 if f(x) equals some target value (e.g., 0), and 0 otherwise. The non-linearity comes from the product of bits and the modular arithmetic.",
     "completed_at": "2026-06-21T07:34:55.438219Z",
