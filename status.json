@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-21T07:16:07.617921Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic XOR of Adjacent Products",
-    "description": "This problem seeks to find a secret N-bit integer 's' where the oracle computes f(x) = (x XOR (x << 1)) & s, and then XORs the result with the XOR sum of adjacent bits of x. Specifically, f(x) = ((x XOR (x << 1)) & s) XOR (popcount(x ^ (x >> 1)) mod 2). We are given f(x) for various x and need to find s.",
-    "stage": "simulating",
-    "started_at": "2026-06-21T07:16:07.617943Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-21T07:16:09.180915Z",
+  "next_run_at": "2026-06-21T07:18:09.180876Z"
 }
