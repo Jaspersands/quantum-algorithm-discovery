@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-21T08:36:23.503097Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Polynomial Parity",
-    "description": "Given an oracle that computes the parity of a specific cyclic polynomial of degree 2 over GF(2), find the secret coefficients of the polynomial. The polynomial is of the form f(x) = sum_{i=0}^{N-1} (a_i * x_i * x_{(i+1) mod N} + b_i * x_i), where a_i and b_i are secret bits. The oracle computes f(x) mod 2.",
-    "stage": "simulating",
-    "started_at": "2026-06-21T08:36:23.503120Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-21T08:36:25.524579Z",
+  "next_run_at": "2026-06-21T08:38:25.524533Z"
 }
