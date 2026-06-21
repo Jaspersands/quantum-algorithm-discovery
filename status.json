@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-21T07:41:38.569063Z",
+  "last_updated": "2026-06-21T07:42:42.014361Z",
   "current_run": {
     "problem_name": "Hidden Modular Cubic Bit-Product Parity",
     "description": "This problem involves finding a secret integer 's' such that for a given N-bit input 'x', the function f(x) = (x[0]*x[1]*x[2] + x[1]*x[2]*x[3] + ... + x[N-3]*x[N-2]*x[N-1]) mod (s+1) is a specific target value (e.g., 0). This is a non-linear function involving cubic products of adjacent bits and modular arithmetic, making it distinct from linear or simpler quadratic functions.",
-    "stage": "simulating",
-    "started_at": "2026-06-21T07:41:38.569085Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-21T07:42:42.014519Z"
   }
 }
