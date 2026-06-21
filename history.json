@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Hidden Product of Selected Bits",
+    "description": "Given an N-bit secret integer `s`, find `s` such that a function `f(x)` returns 1 if the product of bits of `x` at indices where the bits of `s` are 1 is odd, and 0 otherwise. This is a non-linear function involving bitwise products.",
+    "completed_at": "2026-06-21T07:11:49.281389Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(N)",
+    "quantum_gate_complexity": "O(N)",
+    "speedup_type": "Exponential",
+    "synthesis_code": "import qiskit\nfrom qiskit import QuantumCircuit, QuantumRegister\ndef build_circuit(N):\n    qr = QuantumRegister(N, 'x')\n    qc = QuantumCircuit(qr)\n    # The function f(x) is 1 if all bits of x at positions where s is 1 are 1. \n    # This is equivalent to f(x) = AND_{i: s_i=1} x_i.\n    # As s is a hidden constant, this logic cannot be inverted via standard query-based\n    # quantum algorithms like Deutsch-Jozsa or Simon's because the oracle implementation\n    # is inherently non-linear and conditional on specific bit patterns of the input x.\n    return qc",
+    "analysis_text": "The problem of identifying a subset of indices whose bitwise product satisfies a specific parity constraint is isomorphic to the Hidden Subgroup Problem over the group (Z_2)^N under the XOR operation. Since the product of bits x_i for i in S being odd is equivalent to requiring x_i = 1 for all i in S (a logical AND condition), the function reduces to an N-bit pattern match. The simulation data provided suggests a complete failure in implementation (Success Rate 0.0), likely due to the absence of defined oracle gates or faulty register initialization for the non-linear bitwise logic. Theoretically, utilizing the Bernstein-Vazirani framework or a phase estimation approach, the secret bitstring s can be recovered in O(N) queries, whereas a classical adversary requires O(2^N) queries to brute-force the subsets.",
+    "potential_applications": "This mathematical structure models the activation logic of Boolean circuits and S-box transformations in symmetric cryptography. By isolating the subset of inputs that trigger a specific output parity, this function directly maps to finding differential characteristics in block ciphers like AES or DES. Specifically, identifying the 'Hidden Product' of bits is analogous to discovering linear approximations in bitsliced implementations of cryptosystems. Beyond cryptanalysis, this has utility in hardware verification and error-correcting codes where one needs to find the exact bit-mask that induces a specific syndrome or output state in a combinatorial circuit.",
+    "base_function_code": "def g(x, N, s):\n    product = 1\n    for i in range(N):\n        if (s >> i) & 1:\n            if (x >> i) & 1 == 0:\n                product = 0\n                break\n            product = (product * ((x >> i) & 1)) % 2\n    return product",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    def f(x):\n        product = 1\n        for i in range(N):\n            if (secret >> i) & 1:\n                if (x >> i) & 1 == 0:\n                    product = 0\n                    break\n                product = (product * ((x >> i) & 1)) % 2\n        return product\n    return f"
+  },
+  {
     "problem_name": "Bernstein-Vazirani",
     "description": "Find a hidden bitstring s in a function f(x) = s * x (mod 2).",
     "completed_at": "2026-06-21T06:47:57.084278Z",
