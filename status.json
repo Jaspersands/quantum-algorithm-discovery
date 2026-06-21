@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-21T08:32:04.963315Z",
-  "current_run": {
-    "problem_name": "Hidden Modular Product of Scattered Bits",
-    "description": "This problem involves finding a secret modular base 's' and a set of secret indices 'idx' for an N-bit integer. The oracle computes f(x) = (product of bits of x at indices in 'idx') mod s. The product is defined as 0 if any of the selected bits are 0.",
-    "stage": "simulating",
-    "started_at": "2026-06-21T08:32:04.963339Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-21T08:32:06.598053Z",
+  "next_run_at": "2026-06-21T08:34:06.598004Z"
 }
