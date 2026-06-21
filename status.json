@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-21T07:01:14.277039Z",
-  "current_run": {
-    "problem_name": "Hidden Modular Product with Offset",
-    "description": "This problem involves a secret modular multiplicative inverse. Given a prime p and an integer a, we want to find a secret integer s such that for a randomly chosen input x, f(x) = (x * s + a) mod p. The quantum advantage would come from efficiently finding s, particularly when p is large.",
-    "stage": "simulating",
-    "started_at": "2026-06-21T07:01:14.277071Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-21T07:01:16.114919Z",
+  "next_run_at": "2026-06-21T07:03:16.114804Z"
 }
