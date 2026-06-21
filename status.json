@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-21T08:04:29.874504Z",
-  "current_run": {
-    "problem_name": "Hidden XOR Sum of Rotated Quadratic Terms",
-    "description": "Given an oracle that computes f(x) = (x_N-1 x_0 + x_N-2 x_1 + ... + x_0 x_N-1) XOR (s . x), where s is a secret bitstring and '+' denotes XOR, find the secret s. This problem combines a cyclic quadratic term with a linear term, making it non-trivial.",
-    "stage": "simulating",
-    "started_at": "2026-06-21T08:04:29.874527Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-21T08:04:31.491762Z",
+  "next_run_at": "2026-06-21T08:06:31.491720Z"
 }
