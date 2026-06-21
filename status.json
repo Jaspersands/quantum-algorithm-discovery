@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-21T07:24:51.091053Z",
+  "last_updated": "2026-06-21T07:24:54.582529Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-21T07:24:51.091076Z"
+    "problem_name": "Hidden Modular Product of Cyclic Pairs",
+    "description": "This problem defines a hidden function f(x) that depends on the modular product of cyclically adjacent pairs of bits in the input x. The secret is a value 's' such that f(x) = ( (x_0 * x_1 + x_1 * x_2 + ... + x_{N-1} * x_0) mod s ) and the oracle outputs 1 if f(x) equals some target value (e.g., 0), and 0 otherwise. The non-linearity comes from the product of bits and the modular arithmetic.",
+    "stage": "simulating",
+    "started_at": "2026-06-21T07:24:54.582552Z"
   }
 }
