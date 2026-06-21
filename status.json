@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-21T07:39:28.561471Z",
-  "current_run": {
-    "problem_name": "Hidden Modular Quadratic Congruence",
-    "description": "This problem aims to find a secret integer 's' such that for a given set of inputs 'x', the function f(x) = (a*x^2 + b*x + c) mod M = s, where a, b, c, M are public parameters. The goal is to find 's'. This is a non-linear problem involving modular arithmetic and quadratic terms.",
-    "stage": "simulating",
-    "started_at": "2026-06-21T07:39:28.561496Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-21T07:39:30.389772Z",
+  "next_run_at": "2026-06-21T07:41:30.389734Z"
 }
