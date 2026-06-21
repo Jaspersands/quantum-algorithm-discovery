@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-21T07:37:02.240644Z",
+  "last_updated": "2026-06-21T07:37:06.669207Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-21T07:37:02.240667Z"
+    "problem_name": "Hidden Modular Product of Three Non-Adjacent Bits",
+    "description": "This problem seeks to find a secret integer 's' such that for a given N-bit input x, a function f(x) is computed based on the product of three non-adjacent bits of x, modulo s. Specifically, f(x) = (x_i * x_j * x_k) mod s, where i, j, and k are indices of non-adjacent bits determined by the secret 's'. The oracle reveals whether f(x) equals a target value (e.g., 0). This is a nonlinear problem involving modular arithmetic and bitwise operations.",
+    "stage": "simulating",
+    "started_at": "2026-06-21T07:37:06.669236Z"
   }
 }
