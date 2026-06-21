@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-21T08:21:26.100892Z",
-  "current_run": {
-    "problem_name": "Hidden Modular Product of Selected Bits with Offset",
-    "description": "This problem aims to find a secret integer 's' such that for a given input x, the function f(x) reveals information about the modular product of specific bits of x, determined by 's', plus a fixed offset. The novelty lies in the selection of bits based on 's' and the modular arithmetic, making it non-linear and non-trivial to solve classically. Specifically, f(x) = ( (x & s_mask) * (x & s_mask) ) % M + offset, where s_mask is derived from 's', and M and offset are fixed parameters.",
-    "stage": "simulating",
-    "started_at": "2026-06-21T08:21:26.100916Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-21T08:21:27.775985Z",
+  "next_run_at": "2026-06-21T08:23:27.775938Z"
 }
