@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-21T08:06:34.734094Z",
+  "last_updated": "2026-06-21T08:06:38.209580Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-21T08:06:34.734117Z"
+    "problem_name": "Hidden XOR of Rotated Quadratic Terms",
+    "description": "Given an N-bit integer secret s, we define a function f(x) = (x rotated left by 1) XOR (x^2 mod 2^N) XOR (x XOR s). We want to find s. The rotation introduces a non-linear dependency on adjacent bits, and the quadratic term and XOR with s ensures non-linearity and difficulty in standard algebraic manipulation.",
+    "stage": "simulating",
+    "started_at": "2026-06-21T08:06:38.209605Z"
   }
 }
