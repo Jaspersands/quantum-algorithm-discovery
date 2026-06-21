@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-21T08:23:36.788145Z",
+  "last_updated": "2026-06-21T08:26:38.399245Z",
   "current_run": {
     "problem_name": "Hidden Cyclic Majority of Pairs XOR",
     "description": "This problem aims to find a secret integer 's' such that for a given N-bit input x, the function f(x) = (majority(x_i XOR x_{i+1}) for i=0 to N-2) XOR (majority(x_i XOR x_{i+1}) for i=1 to N-1) = s, where the majority function returns 1 if more than half of the inputs are 1, and 0 otherwise. The indices are cyclic (N-1 XOR 0). The core difficulty lies in the non-linear and cyclic nature of the majority function applied to XORs of adjacent bits, combined with a further XOR of two overlapping majority outputs.",
-    "stage": "simulating",
-    "started_at": "2026-06-21T08:23:36.788171Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-21T08:26:38.399306Z"
   }
 }
