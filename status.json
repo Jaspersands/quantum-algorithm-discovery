@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-21T00:01:35.067545Z",
+  "last_updated": "2026-06-21T00:12:43.282114Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-21T00:01:35.067569Z"
+    "problem_name": "Hidden Modular Product of Pairs with Offset",
+    "description": "Given an N-bit integer x, compute f(x) = (secret1 * (x & (x >> 1)) + secret2) mod 2^k, where k is a small constant (e.g., 3) and secret1, secret2 are unknown secrets. The function is designed to hide a linear combination of products of adjacent bits, combined with a modular offset. The non-linearity arises from the bitwise AND of adjacent bits and the modular arithmetic.",
+    "stage": "simulating",
+    "started_at": "2026-06-21T00:12:43.282180Z"
   }
 }
