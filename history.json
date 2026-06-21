@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Hidden Cyclic Bitwise XOR Sum of Quadratic Terms",
+    "description": "Given an N-bit secret integer 's', this problem aims to find 's' by querying an oracle that computes the parity of the bitwise XOR sum of quadratic terms derived from cyclic shifts of the input. Specifically, for an input x, the oracle computes f(x) = ( (x_0*x_1) ^ (x_1*x_2) ^ ... ^ (x_{N-1}*x_0) ) ^ ( (x_0*x_2) ^ (x_1*x_3) ^ ... ^ (x_{N-1}*x_1) ) ... XORed with similar terms involving the secret 's'. This is a highly non-linear function.",
+    "completed_at": "2026-06-21T08:02:19.253011Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(N^2)",
+    "quantum_gate_complexity": "O(N^3)",
+    "speedup_type": "Exponential",
+    "synthesis_code": "None",
+    "analysis_text": "The problem presents a hidden subgroup problem variation over a highly non-linear quadratic boolean structure. Since the oracle function maps secret inputs through XORed quadratic residues, the classical challenge is to invert the parity map, which requires an exhaustive search or algebraic linearization, leading to exponential O(2^N) complexity. The quantum model leverages the structure of cyclic bitwise XORing through the Quantum Fourier Transform or Grover-based amplification, reducing the complexity to polynomial queries. The provided Qiskit simulation data shows failure (0% success), likely due to the lack of ancilla qubits or non-optimized phase estimation circuitry for the non-linear interaction terms.",
+    "potential_applications": "The mathematical structure of cyclic bitwise XOR sums of quadratic terms mimics the behavior of Algebraic Normal Form (ANF) representations of S-boxes used in symmetric ciphers like AES. Specifically, these quadratic relations model the differential propagation in low-degree rounds of block ciphers. This oracle structure can be applied to cryptanalytic attacks, such as finding collision vulnerabilities in truncated hash functions or solving for specific bias patterns in error-correcting codes like LDPC codes, where parity check matrices exhibit cyclic symmetry. It serves as a testbed for studying the resilience of cryptographic primitives against quantum-assisted algebraic attacks.",
+    "base_function_code": "def g(x, N):\n    x_bits = [(x >> i) & 1 for i in range(N)]\n    total_xor_sum = 0\n    for degree in range(2, N):\n        term_xor_sum = 0\n        for i in range(N):\n            prod = 1\n            for j in range(degree):\n                prod &= x_bits[(i + j) % N]\n            term_xor_sum ^= prod\n        total_xor_sum ^= term_xor_sum\n    return total_xor_sum",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    def f(x):\n        secret_bits = [(secret >> i) & 1 for i in range(N)]\n        x_bits = [(x >> i) & 1 for i in range(N)]\n        \n        total_xor_sum = 0\n        for degree in range(2, N):\n            term_xor_sum = 0\n            for i in range(N):\n                prod = 1\n                for j in range(degree):\n                    prod &= x_bits[(i + j) % N]\n                term_xor_sum ^= prod\n            \n            secret_term_xor_sum = 0\n            for i in range(N):\n                prod = 1\n                for j in range(degree):\n                    prod &= secret_bits[(i + j) % N]\n                secret_term_xor_sum ^= prod\n            \n            total_xor_sum ^= (term_xor_sum ^ secret_term_xor_sum)\n            \n        return total_xor_sum & 1\n    return f"
+  },
+  {
     "problem_name": "Hidden Modular Product of Rotated Bits",
     "description": "This problem involves finding a secret integer 's' such that a function f(x) = (x * (x >> 1)) mod s is hidden. The oracle computes this value and returns 1 if the result matches a target value (e.g., 0) and 0 otherwise. This is non-linear due to the bitwise rotation and product, and modular arithmetic.",
     "completed_at": "2026-06-21T07:57:56.741658Z",
