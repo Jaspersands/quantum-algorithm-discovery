@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-21T07:57:53.207363Z",
-  "current_run": {
-    "problem_name": "Hidden Modular Product of Rotated Bits",
-    "description": "This problem involves finding a secret integer 's' such that a function f(x) = (x * (x >> 1)) mod s is hidden. The oracle computes this value and returns 1 if the result matches a target value (e.g., 0) and 0 otherwise. This is non-linear due to the bitwise rotation and product, and modular arithmetic.",
-    "stage": "analyzing",
-    "started_at": "2026-06-21T07:57:53.207440Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-21T07:57:58.698713Z"
 }
