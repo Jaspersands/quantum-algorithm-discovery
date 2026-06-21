@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-21T07:03:19.306869Z",
+  "last_updated": "2026-06-21T07:03:22.994632Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-21T07:03:19.306892Z"
+    "problem_name": "Hidden Product of Selected Bits",
+    "description": "Given an N-bit secret integer `s`, find `s` such that a function `f(x)` returns 1 if the product of bits of `x` at indices where the bits of `s` are 1 is odd, and 0 otherwise. This is a non-linear function involving bitwise products.",
+    "stage": "simulating",
+    "started_at": "2026-06-21T07:03:22.994652Z"
   }
 }
