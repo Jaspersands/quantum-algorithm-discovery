@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-21T07:11:45.940496Z",
-  "current_run": {
-    "problem_name": "Hidden Product of Selected Bits",
-    "description": "Given an N-bit secret integer `s`, find `s` such that a function `f(x)` returns 1 if the product of bits of `x` at indices where the bits of `s` are 1 is odd, and 0 otherwise. This is a non-linear function involving bitwise products.",
-    "stage": "analyzing",
-    "started_at": "2026-06-21T07:11:45.940541Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-21T07:11:51.263309Z"
 }
