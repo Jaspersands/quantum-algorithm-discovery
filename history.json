@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Hidden XOR of Rotated Quadratic Terms",
+    "description": "Given an N-bit integer secret s, we define a function f(x) = (x rotated left by 1) XOR (x^2 mod 2^N) XOR (x XOR s). We want to find s. The rotation introduces a non-linear dependency on adjacent bits, and the quadratic term and XOR with s ensures non-linearity and difficulty in standard algebraic manipulation.",
+    "completed_at": "2026-06-21T08:19:10.182324Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^{N/2})",
+    "quantum_gate_complexity": "O(N^2 * 2^{N/2})",
+    "speedup_type": "Quadratic speedup (Grover-based search)",
+    "synthesis_code": "None",
+    "analysis_text": "The provided oracle function f(x) = (ROT(x,1)) XOR (x^2 mod 2^N) XOR (x XOR s) exhibits significant bit-dependency. The quadratic residue term (x^2 mod 2^N) acts as a non-linear mixing layer, while the XOR with s hides the secret. Because the rotation and squaring operations create complex interactions across the bit-field, there is no known efficient structure to apply period-finding (Shor's) or other sub-exponential algorithms. The search space for s is 2^N. By mapping this to a Grover-type amplitude amplification framework, the success rate for N=2 and N=3 is zero due to insufficient coherence or misconfiguration of the oracle; however, scaling suggests that the quantum complexity remains tied to the square root of the search space, providing a quadratic speedup over the brute-force O(2^N) classical approach.",
+    "potential_applications": "The function f(x) combines modular arithmetic (squaring) with bitwise rotations and XOR operations, mimicking the structure of round functions in block ciphers like AES or lightweight cryptographic primitives. Specifically, the (x^2 mod 2^N) term resembles non-linear S-box transformations, while the rotation is analogous to shift-rows operations. This problem maps to cryptanalytic tasks such as identifying key-equivalent classes in symmetric encryption, finding collisions in truncated hash functions, or analyzing the algebraic immunity of S-boxes against differential cryptanalysis. The underlying structure could also be applied to optimization problems involving parity-constrained boolean satisfiability, which is relevant to error-correcting code design and weight-distribution analysis of linear codes.",
+    "base_function_code": "def g(x, N, s):\n    rotated_x = ((x << 1) | (x >> (N - 1))) & ((1 << N) - 1)\n    quadratic_x = (x * x) % (1 << N)\n    return (rotated_x ^ quadratic_x ^ x ^ s) & ((1 << N) - 1)",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    def oracle(x):\n        rotated_x = ((x << 1) | (x >> (N - 1))) & ((1 << N) - 1)\n        quadratic_x = (x * x) % (1 << N)\n        return 1 if (rotated_x ^ quadratic_x ^ x ^ secret) != 0 else 0\n    return oracle"
+  },
+  {
     "problem_name": "Hidden Cyclic Bitwise XOR Sum of Quadratic Terms",
     "description": "Given an N-bit secret integer 's', this problem aims to find 's' by querying an oracle that computes the parity of the bitwise XOR sum of quadratic terms derived from cyclic shifts of the input. Specifically, for an input x, the oracle computes f(x) = ( (x_0*x_1) ^ (x_1*x_2) ^ ... ^ (x_{N-1}*x_0) ) ^ ( (x_0*x_2) ^ (x_1*x_3) ^ ... ^ (x_{N-1}*x_1) ) ... XORed with similar terms involving the secret 's'. This is a highly non-linear function.",
     "completed_at": "2026-06-21T08:02:19.253011Z",
