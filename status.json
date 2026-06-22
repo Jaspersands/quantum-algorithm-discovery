@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-22T07:22:39.876986Z",
-  "current_run": {
-    "problem_name": "Hidden XOR of Quadratic Terms with Offset",
-    "description": "This problem seeks to find a secret integer 's' such that for a given function f, f(x) = (x^2 XOR (x>>1)) + s (mod 2^N), where x is an N-bit integer. The '>>1' represents a bitwise right shift. The function involves a non-linear quadratic term and a linear shift.",
-    "stage": "simulating",
-    "started_at": "2026-06-22T07:22:39.877009Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-22T07:22:41.700407Z",
+  "next_run_at": "2026-06-22T07:24:41.700347Z"
 }
