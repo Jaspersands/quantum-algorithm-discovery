@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-22T07:42:54.978287Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic AND of Pairs with Offset",
-    "description": "Given an N-bit secret integer `s`, we define a function `f(x)` that computes the bitwise AND of adjacent pairs of bits in `x`, then applies a cyclic shift to these results, and finally adds a constant offset. The function returns 1 if the final result is equal to a specific secret value, and 0 otherwise. This problem is designed to be non-linear and not directly reducible to standard algorithms.",
-    "stage": "analyzing",
-    "started_at": "2026-06-22T07:42:54.978342Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-22T07:43:00.471861Z"
 }
