@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-22T07:38:34.715645Z",
+  "last_updated": "2026-06-22T07:38:43.331930Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-22T07:38:34.715667Z"
+    "problem_name": "Hidden Cyclic AND of Pairs with Offset",
+    "description": "Given an N-bit secret integer `s`, we define a function `f(x)` that computes the bitwise AND of adjacent pairs of bits in `x`, then applies a cyclic shift to these results, and finally adds a constant offset. The function returns 1 if the final result is equal to a specific secret value, and 0 otherwise. This problem is designed to be non-linear and not directly reducible to standard algorithms.",
+    "stage": "simulating",
+    "started_at": "2026-06-22T07:38:43.331956Z"
   }
 }
