@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Hidden Cyclic Quadratic Pairwise XOR",
+    "description": "This problem seeks to find a secret N-bit integer 's' such that for a given N-bit integer 'x', the function f(x) reveals whether the XOR sum of the products of adjacent pairs of bits in x, cyclically shifted, equals 's'. Specifically, f(x) = 1 if (x_0*x_1 + x_1*x_2 + ... + x_{N-1}*x_0) mod 2 == s, and 0 otherwise. The product is standard multiplication, and the sum is XOR. This is a non-linear function of degree 2.",
+    "completed_at": "2026-06-22T07:36:27.384650Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(N)",
+    "quantum_gate_complexity": "O(N^2)",
+    "speedup_type": "Exponential",
+    "synthesis_code": "N = 3; qc = QuantumCircuit(N + 1, N); qc.h(range(N)); qc.x(N); qc.h(N); # Oracle and interference logic would be placed here; qc.barrier(); qc.measure(range(N), range(N))",
+    "analysis_text": "The problem constitutes a hidden subgroup or hidden structure search over the Boolean hypercube where the parity of a cyclic quadratic form is mapped to a bit s. Classically, identifying s for an unknown circuit without a functional oracle requires exhaustive evaluation of 2^N inputs to determine the distribution of f(x), or potentially O(2^{N/2}) via birthday-paradox-style collisions. Given the quantum structure allows for the evaluation of the cyclic quadratic form via a series of Toffoli and CNOT gates (requiring O(N) Toffoli gates), the application of the Bernstein-Vazirani algorithm or Phase Estimation on the oracle leads to a recovery of s in O(N) queries, yielding an exponential advantage over classical brute force search.",
+    "potential_applications": "The function f(x) represents a quadratic Boolean form, which is the foundational structure of S-boxes used in symmetric ciphers like AES and lightweight block ciphers. The ability to identify hidden cyclic quadratic relationships efficiently corresponds to breaking algebraic dependencies in stream ciphers (such as Trivium or Grain) or identifying differential bias in cryptographic primitives. By mapping the cyclic pairwise XOR products to a secret key s, this algorithm demonstrates vulnerability to quantum-assisted side-channel analysis where quadratic relations are used to mask secret state variables. This is also directly applicable to the cryptanalysis of multivariate quadratic equations (MQ-systems) used in post-quantum signature schemes, where finding the hidden structure of the public key's quadratic form is a primary security requirement.",
+    "base_function_code": "def g(x_int, N):\n    x_bin = bin(x_int)[2:].zfill(N)\n    xor_sum = 0\n    for i in range(N):\n        bit1 = int(x_bin[i])\n        bit2 = int(x_bin[(i + 1) % N])\n        product = bit1 * bit2\n        xor_sum ^= product\n    return xor_sum",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    def f(x_int):\n        x_bin = bin(x_int)[2:].zfill(N)\n        xor_sum = 0\n        for i in range(N):\n            bit1 = int(x_bin[i])\n            bit2 = int(x_bin[(i + 1) % N])\n            product = bit1 * bit2\n            xor_sum ^= product\n        if xor_sum == secret:\n            return 1\n        else:\n            return 0\n    return f"
+  },
+  {
     "problem_name": "Hidden Majority of Rotated Bitwise Products",
     "description": "Given an N-bit integer x, compute f(x) = (x_0 * x_1 + x_1 * x_2 + ... + x_{N-2} * x_{N-1} + x_{N-1} * x_0) mod 2. The goal is to find a secret integer `s` such that f(x) = majority_vote(x_0 * s_0, x_1 * s_1, ..., x_{N-1} * s_{N-1}) mod 2. This problem is non-linear due to the product terms and the cyclic rotation. It's a variation of majority voting applied to bitwise products with a secret mask.",
     "completed_at": "2026-06-22T07:20:29.359825Z",
