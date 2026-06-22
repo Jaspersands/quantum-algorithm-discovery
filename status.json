@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-22T07:47:16.127462Z",
+  "last_updated": "2026-06-22T07:47:20.417948Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-22T07:47:16.127484Z"
+    "problem_name": "Hidden Cyclic Modular Sum of Quadratic Terms",
+    "description": "This problem aims to find a secret integer 's' in Z_M, where the function f(x) = (sum_{i=0}^{N-1} s * (x_i * x_{(i+1) mod N})) mod M is queried. This involves a cyclic dependency and a quadratic term modulo M, which is not a standard linear or simple quadratic function.",
+    "stage": "simulating",
+    "started_at": "2026-06-22T07:47:20.417968Z"
   }
 }
