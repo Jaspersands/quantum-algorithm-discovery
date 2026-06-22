@@ -1,5 +1,10 @@
 {
-  "status": "sleeping",
-  "last_updated": "2026-06-22T05:53:36.244923Z",
-  "next_run_at": "2026-06-22T05:55:36.244847Z"
+  "status": "searching",
+  "last_updated": "2026-06-22T05:55:39.676877Z",
+  "current_run": {
+    "problem_name": "Quantum Algorithm Proposal",
+    "description": "Querying Theorist for a new quantum problem...",
+    "stage": "theorist",
+    "started_at": "2026-06-22T05:55:39.676901Z"
+  }
 }
