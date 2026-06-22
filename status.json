@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-22T08:06:26.730197Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Polynomial Threshold",
-    "description": "Given a secret integer `s` and a polynomial $P(x) = ax^2 + bx + c \text{ (mod } 2^N)$, where $a, b, c$ are secret coefficients, the oracle computes $f(x) = 1$ if $P(x) \text{ (mod } 2^N) \text{ has exactly } s \text{ bits set to 1}$, and $f(x) = 0$ otherwise. The task is to find the secret coefficients $a, b, c$ and the threshold $s$. This is a non-linear problem involving a quadratic polynomial modulo $2^N$ and a bit count condition.",
-    "stage": "simulating",
-    "started_at": "2026-06-22T08:06:26.730218Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-22T08:06:28.559840Z",
+  "next_run_at": "2026-06-22T08:08:28.559801Z"
 }
