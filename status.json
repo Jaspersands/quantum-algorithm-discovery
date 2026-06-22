@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-22T07:52:39.993736Z",
-  "current_run": {
-    "problem_name": "Hidden XOR of Subset Quadratic Products",
-    "description": "This problem seeks to find a secret integer 's' such that for a given N-bit input 'x', the oracle computes f(x) = (x AND (x >> k1)) XOR (x AND (x >> k2)) XOR ... XOR (x AND (x >> km)) XOR s, where k1, k2, ..., km are fixed offsets and the AND operations are bitwise. The goal is to find 's' given access to the oracle.",
-    "stage": "simulating",
-    "started_at": "2026-06-22T07:52:39.993757Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-22T07:52:41.747474Z",
+  "next_run_at": "2026-06-22T07:54:41.747425Z"
 }
