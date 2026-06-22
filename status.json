@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-22T07:24:49.623752Z",
-  "current_run": {
-    "problem_name": "Hidden Majority of Cyclic Bitwise XOR Products",
-    "description": "Given an N-bit secret integer `s`, find `s` such that for a random bit `b` (0 or 1), the function `f(x)` returns 1 if the majority of `(x_i XOR x_{i+1}) AND s_i` (indices are cyclic mod N) is equal to `b`, and 0 otherwise. This is a non-linear function involving cyclic shifts, XOR, AND, and a majority vote, which is not a standard textbook problem.",
-    "stage": "simulating",
-    "started_at": "2026-06-22T07:24:49.623778Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-22T07:24:51.809543Z",
+  "next_run_at": "2026-06-22T07:26:51.809497Z"
 }
