@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-22T08:15:01.844052Z",
+  "last_updated": "2026-06-22T08:16:09.066733Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-22T08:15:01.844076Z"
+    "problem_name": "Hidden Cyclic Modular Sum of Quadratic Terms",
+    "description": "This problem searches for a secret modular base 'a' and a secret modular modulus 'm' by evaluating a function f(x) = (a*x^2 + a*x + a) mod m. The function is designed to be non-linear and involve modular arithmetic with a secret base and modulus, making it a novel challenge.",
+    "stage": "simulating",
+    "started_at": "2026-06-22T08:16:09.066759Z"
   }
 }
