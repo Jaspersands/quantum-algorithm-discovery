@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-22T07:16:05.466004Z",
-  "current_run": {
-    "problem_name": "Hidden Modular Product of Rotated Bits",
-    "description": "This problem seeks to find a secret integer 's' such that for a given N-bit integer 'x', the function f(x) = (x * (x >> 1)) mod s (if s is not zero, otherwise some default value) is revealed by an oracle. The rotation is cyclic, meaning bits shifted out from one end reappear at the other. This is a non-linear function of x and the rotation, and finding 's' might require a quantum approach due to the non-linear modular arithmetic and cyclic shift.",
-    "stage": "analyzing",
-    "started_at": "2026-06-22T07:16:05.466047Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-22T07:16:11.327876Z"
 }
