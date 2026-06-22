@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-22T08:04:11.930282Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Pairwise Bitwise AND with Offset",
-    "description": "Given an N-bit secret integer 's', the oracle computes f(x) = ((x AND (x >> 1)) & mask) ^ offset, where 'mask' is derived from 's' and 'offset' is a single bit determined by the parity of a subset of bits in 's'. The goal is to find 's'. This problem involves cyclic shifts and bitwise AND operations, with a twist on how the offset is determined, aiming for a non-linear structure.",
-    "stage": "analyzing",
-    "started_at": "2026-06-22T08:04:11.930326Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-22T08:04:17.494433Z"
 }
