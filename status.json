@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-22T07:54:48.403051Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Product of Adjacent Bits Modulo 3",
-    "description": "Given a secret integer s, find it by querying an oracle that computes f(x) = (x_0 * x_1 + x_1 * x_2 + ... + x_{N-2} * x_{N-1} + x_{N-1} * x_0) mod 3 where x_i is the i-th bit of x. The oracle is guaranteed to output 0 if and only if x is equal to the secret s. This problem is non-linear due to the product terms and cyclic dependency.",
-    "stage": "simulating",
-    "started_at": "2026-06-22T07:54:48.403076Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-22T07:54:50.118722Z",
+  "next_run_at": "2026-06-22T07:56:50.118680Z"
 }
