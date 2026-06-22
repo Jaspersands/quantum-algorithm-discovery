@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-22T08:08:37.455542Z",
+  "last_updated": "2026-06-22T08:09:38.808153Z",
   "current_run": {
     "problem_name": "Hidden Cyclic Modular Product Sum Parity",
     "description": "This problem seeks a secret integer 's' such that the parity of the sum of cyclic modular products of an N-bit input 'x' with 's' is revealed by an oracle. Specifically, the oracle computes ( (x_1*s_1 + x_2*s_2 + ... + x_N*s_N) mod M ) mod 2, where the indices are cyclic (x_{N+1} = x_1). This function is designed to be non-linear and involves modular arithmetic, making it a candidate for quantum speedup.",
-    "stage": "simulating",
-    "started_at": "2026-06-22T08:08:37.455565Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-22T08:09:38.808218Z"
   }
 }
