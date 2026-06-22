@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Hidden Cyclic AND of Pairs with Offset",
+    "description": "Given an N-bit secret integer `s`, we define a function `f(x)` that computes the bitwise AND of adjacent pairs of bits in `x`, then applies a cyclic shift to these results, and finally adds a constant offset. The function returns 1 if the final result is equal to a specific secret value, and 0 otherwise. This problem is designed to be non-linear and not directly reducible to standard algorithms.",
+    "completed_at": "2026-06-22T07:42:58.143439Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^(N/2))",
+    "quantum_gate_complexity": "O(N * 2^(N/2))",
+    "speedup_type": "Quadratic speedup (Grover-like)",
+    "synthesis_code": "None",
+    "analysis_text": "The problem defines a boolean function f(x) based on cyclic AND-pair operations. Given the success rate of 0.0 for N=2 and N=3, the oracle likely requires a non-trivial implementation of reversible bitwise logic. The search space is 2^N. Since this function is highly non-linear and lacks a clear algebraic structure like hidden subgroup problems, it is treated as an unstructured black-box search. A quantum algorithm would leverage Grover's iteration, providing a quadratic speedup by performing O(sqrt(2^N)) oracle queries, compared to the O(2^N) brute-force classical search.",
+    "potential_applications": "The cyclic AND-pair operation shares structural similarities with nonlinear feedback shift registers (NFSRs) and S-box constructions used in block ciphers like AES or lightweight cryptographic primitives. This oracle behaves as a constrained nonlinear boolean system, making it relevant to symmetric cryptanalysis, specifically in evaluating resistance against algebraic attacks. Furthermore, the bitwise cyclic mapping relates to error-correction coding techniques, particularly cyclic codes where bit-shifting properties are used to define parity-check matrices. In search optimization, this serves as a benchmark for quantum heuristic performance on non-convex search spaces where bit-dependencies make gradient-based classical methods converge poorly.",
+    "base_function_code": "def g(x, N):\n    if N < 2:\n        return 0\n    result = 0\n    for i in range(N - 1):\n        pair_and = (x >> i) & 1 and (x >> (i + 1)) & 1\n        result ^= pair_and << i\n    # Cyclic shift to the left by 1 position\n    if N > 1:\n        shifted_result = (result << 1) | ((result >> (N - 1)) & 1)\n    else:\n        shifted_result = result\n    # Add a constant offset, for example, 1\n    final_result = (shifted_result + 1) % (2**N)\n    return final_result",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    def f(x):\n        if N < 2:\n            return 0\n        result = 0\n        for i in range(N - 1):\n            pair_and = (x >> i) & 1 and (x >> (i + 1)) & 1\n            result ^= pair_and << i\n        # Cyclic shift to the left by 1 position\n        if N > 1:\n            shifted_result = (result << 1) | ((result >> (N - 1)) & 1)\n        else:\n            shifted_result = result\n        # The secret is the target value after the operations\n        target_value = secret\n        return 1 if (shifted_result == target_value) else 0\n    return f"
+  },
+  {
     "problem_name": "Hidden Cyclic Quadratic Pairwise XOR",
     "description": "This problem seeks to find a secret N-bit integer 's' such that for a given N-bit integer 'x', the function f(x) reveals whether the XOR sum of the products of adjacent pairs of bits in x, cyclically shifted, equals 's'. Specifically, f(x) = 1 if (x_0*x_1 + x_1*x_2 + ... + x_{N-1}*x_0) mod 2 == s, and 0 otherwise. The product is standard multiplication, and the sum is XOR. This is a non-linear function of degree 2.",
     "completed_at": "2026-06-22T07:36:27.384650Z",
