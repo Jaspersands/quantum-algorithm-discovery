@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-22T07:03:47.370924Z",
-  "current_run": {
-    "problem_name": "Hidden Modular Sum of Quadratic Terms",
-    "description": "This problem aims to find a secret integer 's' in a modular arithmetic setting. The function f(x) is defined as the sum of pairwise products of bits of x, modulo a prime 'p', plus a term involving the secret 's' and the XOR sum of bits of x. Specifically, f(x) = (sum_{i<j} x_i * x_j) + (s * (x_0 XOR x_1 XOR ... XOR x_{N-1})) mod p. The goal is to identify 's'. This problem is designed to be non-linear due to the quadratic term and the XOR sum, making it distinct from linear problems like Bernstein-Vazirani.",
-    "stage": "simulating",
-    "started_at": "2026-06-22T07:03:47.370944Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-22T07:03:49.317573Z",
+  "next_run_at": "2026-06-22T07:05:49.317530Z"
 }
