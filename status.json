@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-22T07:56:57.131573Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Shifted Majority of Products",
-    "description": "This problem defines a hidden function f(x) based on a cyclic shift and a majority vote of pairwise products of bits in an N-bit integer x. The secret is a cyclic shift amount `s`. The function output depends on whether the majority of products of shifted bits is equal to a secret offset `o`.",
-    "stage": "simulating",
-    "started_at": "2026-06-22T07:56:57.131601Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-22T07:56:58.946799Z",
+  "next_run_at": "2026-06-22T07:58:58.946757Z"
 }
