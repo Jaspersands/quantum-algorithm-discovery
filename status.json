@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-22T07:50:31.608052Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Majority of Pairwise Products",
-    "description": "This problem searches for a secret configuration of bits that determines the output of a function based on the cyclic majority of pairwise products of bits in a shifted input. Specifically, for an N-bit input x, we compute the pairwise products of adjacent bits (x_i * x_{i+1}) cyclically, then find the majority of these products. The secret determines if this majority matches a certain target value. This involves non-linear operations (products) and cyclic shifts, making it distinct from linear problems.",
-    "stage": "simulating",
-    "started_at": "2026-06-22T07:50:31.608078Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-22T07:50:33.353032Z",
+  "next_run_at": "2026-06-22T07:52:33.352988Z"
 }
