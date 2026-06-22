@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-22T08:12:51.990208Z",
+  "last_updated": "2026-06-22T08:12:56.363430Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-22T08:12:51.990232Z"
+    "problem_name": "Hidden Modular XOR Sum of Quadratic Terms",
+    "description": "Given an N-bit integer x and a secret N-bit integer 's', the oracle computes f(x) = (sum_{i<j} s_i * s_j * x_i * x_j) mod M, where M is a fixed prime. The goal is to find 's'. This is a non-linear problem involving quadratic terms and modular arithmetic.",
+    "stage": "simulating",
+    "started_at": "2026-06-22T08:12:56.363452Z"
   }
 }
