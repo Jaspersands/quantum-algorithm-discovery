@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-22T07:59:02.241042Z",
+  "last_updated": "2026-06-22T07:59:06.467634Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-22T07:59:02.241066Z"
+    "problem_name": "Hidden Cyclic Pairwise Bitwise AND with Offset",
+    "description": "Given an N-bit secret integer 's', the oracle computes f(x) = ((x AND (x >> 1)) & mask) ^ offset, where 'mask' is derived from 's' and 'offset' is a single bit determined by the parity of a subset of bits in 's'. The goal is to find 's'. This problem involves cyclic shifts and bitwise AND operations, with a twist on how the offset is determined, aiming for a non-linear structure.",
+    "stage": "simulating",
+    "started_at": "2026-06-22T07:59:06.467657Z"
   }
 }
