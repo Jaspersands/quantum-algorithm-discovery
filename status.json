@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-22T07:01:37.283278Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Modular Product of Pairs",
-    "description": "This problem hides a secret integer 's' modulo a prime 'p'. The oracle computes (x_i * x_{i+1} + s) mod p for adjacent pairs of bits (x_i, x_{i+1}) in the input x, where indices are taken cyclically. The goal is to find 's'. This is a non-linear problem involving modular arithmetic and cyclic dependencies.",
-    "stage": "simulating",
-    "started_at": "2026-06-22T07:01:37.283303Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-22T07:01:39.312150Z",
+  "next_run_at": "2026-06-22T07:03:39.312108Z"
 }
