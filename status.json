@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-23T07:04:41.142798Z",
+  "last_updated": "2026-06-23T07:05:49.813483Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-23T07:04:41.142824Z"
+    "problem_name": "Hidden Rotated Quadratic Bit Product Parity",
+    "description": "Given an N-bit secret integer 's', find 's' such that the function f(x) = (x_i * x_{i+1}) mod 2 for i from 0 to N-2, where indices are taken cyclically (i.e., x_{N-1} is multiplied by x_0), and 'x' is the bitwise rotation of 's' by some amount 'k', evaluates to a specific parity. Specifically, find 's' such that SUM[ ( (s ROT k)_i * (s ROT k)_{i+1} ) mod 2 ] mod 2 = target_parity, for a hidden 'k' and 'target_parity'. This problem is designed to be non-linear and involves cyclic shifts and bitwise products, making it distinct from linear problems like Bernstein-Vazirani.",
+    "stage": "simulating",
+    "started_at": "2026-06-23T07:05:49.813504Z"
   }
 }
