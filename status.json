@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-23T08:14:23.696762Z",
-  "current_run": {
-    "problem_name": "Hidden Twisted Cubic Bit Product Parity",
-    "description": "This problem involves finding a secret integer 's' such that for a given N-bit integer 'x', the function f(x) = (x_i * x_j * x_k) mod 2 is equivalent to (s_i * s_j * s_k) mod 2 for all i, j, k, where x_i, x_j, x_k are the i-th, j-th, and k-th bits of x, and s_i, s_j, s_k are the corresponding bits of 's'. The function is twisted by a cubic relationship where the parity of the product of three bits of x is related to the parity of the product of the corresponding bits of s. The 'secret' is a single integer s which defines the hidden cubic relationship.",
-    "stage": "analyzing",
-    "started_at": "2026-06-23T08:14:23.696804Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-23T08:14:29.478904Z"
 }
