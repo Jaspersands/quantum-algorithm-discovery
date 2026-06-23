@@ -7,7 +7,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Stylesheet -->
@@ -19,19 +19,24 @@
         <!-- Header -->
         <header>
             <div class="logo-container">
-                <div class="quantum-orb">
-                    <div class="nucleus"></div>
-                    <div class="electron orbit1"></div>
-                    <div class="electron orbit2"></div>
-                </div>
+                <svg class="quantum-logo-svg" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="4" y="4" width="40" height="40" stroke-dasharray="2 2" />
+                    <circle cx="24" cy="24" r="16" />
+                    <line x1="24" y1="4" x2="24" y2="44" stroke-dasharray="3 3" />
+                    <line x1="4" y1="24" x2="44" y2="24" stroke-dasharray="3 3" />
+                    <line x1="24" y1="24" x2="35" y2="13" stroke-width="2" />
+                    <polygon points="35,13 32,17 36,16" fill="currentColor" stroke="none" />
+                </svg>
                 <div>
                     <h1>Q-SEARCH</h1>
                     <p class="subtitle">Autonomous Quantum Algorithm Discovery Engine</p>
                 </div>
             </div>
             <div class="status-indicator-wrapper">
+                <span class="bracket">[</span>
                 <div class="pulse-indicator" id="global-pulse"></div>
                 <span id="global-status-text">CONNECTING TO VM...</span>
+                <span class="bracket">]</span>
             </div>
         </header>
 
@@ -58,22 +63,22 @@
                         <!-- Progress Stepper -->
                         <div class="stepper">
                             <div class="step" id="step-theorist">
-                                <div class="step-icon"><i class="fa-solid fa-brain"></i></div>
+                                <div class="step-icon">01</div>
                                 <span>Theorist</span>
                             </div>
                             <div class="step-connector"></div>
                             <div class="step" id="step-simulating">
-                                <div class="step-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+                                <div class="step-icon">02</div>
                                 <span>Simulator</span>
                             </div>
                             <div class="step-connector"></div>
                             <div class="step" id="step-synthesizing">
-                                <div class="step-icon"><i class="fa-solid fa-code"></i></div>
+                                <div class="step-icon">03</div>
                                 <span>Synthesis</span>
                             </div>
                             <div class="step-connector"></div>
                             <div class="step" id="step-analyzing">
-                                <div class="step-icon"><i class="fa-solid fa-chart-line"></i></div>
+                                <div class="step-icon">04</div>
                                 <span>Analyzer</span>
                             </div>
                         </div>
