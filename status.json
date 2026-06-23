@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-23T07:30:57.326519Z",
+  "last_updated": "2026-06-23T07:38:11.384499Z",
   "current_run": {
     "problem_name": "Hidden Cyclic XOR of Quadratic Terms with Offset",
     "description": "This problem defines a hidden function f(x) based on a cyclic XOR of quadratic terms of the input bits, with a secret offset added. The goal is to find the secret offset 's'. Specifically, f(x) = (x_0*x_1 XOR x_1*x_2 XOR ... XOR x_{N-2}*x_{N-1} XOR x_{N-1}*x_0) + s (mod 2), where x_i are the bits of x. This function is non-linear due to the quadratic terms and has a cyclic dependency.",
-    "stage": "simulating",
-    "started_at": "2026-06-23T07:30:57.326539Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-23T07:38:11.384560Z"
   }
 }
