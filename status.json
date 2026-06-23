@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-23T07:17:43.134870Z",
+  "last_updated": "2026-06-23T07:27:39.192150Z",
   "current_run": {
     "problem_name": "Hidden Weighted Quadratic Bit Pairing",
     "description": "This problem searches for a secret integer 's' (N bits) where the function f(x) is 1 if the weighted sum of pairwise products of bits of x, determined by 's', equals 1 (mod 2), and 0 otherwise. Specifically, f(x) = (SUM_{i<j} s_{ij} * x_i * x_j) mod 2, where s_ij are bits of the secret 's'. The secret 's' is encoded as a single integer where its bits represent the coefficients s_ij. The mapping from (i, j) to the bit index in 's' needs to be defined.",
-    "stage": "simulating",
-    "started_at": "2026-06-23T07:17:43.134893Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-23T07:27:39.192197Z"
   }
 }
