@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-23T07:59:20.661867Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Majority of Cubes",
-    "description": "This problem aims to find a secret integer 's' such that for a given N-bit integer 'x', the function f(x) returns 1 if the majority of the N bits in the bitwise cube of x are 1, and 0 otherwise. The 'cyclic' aspect implies a cyclic shift operation applied before cubing, making the function non-linear and dependent on the arrangement of bits.",
-    "stage": "analyzing",
-    "started_at": "2026-06-23T07:59:20.661912Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-23T07:59:26.569153Z"
 }
