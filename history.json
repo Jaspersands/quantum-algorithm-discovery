@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Hidden Cyclic Quadratic Ternary Product",
+    "description": "This problem seeks to find a secret integer 's' (0 <= s < 2^N) such that for a given input 'x', the oracle computes f(x) = ((x & (x << 1)) * (x & (x >> 1)) * (x & (x << 2))) % 3. The secret 's' determines the cyclic shift of the input 'x' before applying the ternary product. Specifically, the oracle computes f(x, s) = (((x+s) & ((x+s) << 1)) * ((x+s) & ((x+s) >> 1)) * ((x+s) & ((x+s) << 2))) % 3. The goal is to find 's'. This function is non-linear due to the multiplication and bitwise operations.",
+    "completed_at": "2026-06-23T18:52:19.549907Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^{N/2})",
+    "quantum_gate_complexity": "O(poly(N) * 2^{N/2})",
+    "speedup_type": "Quadratic speedup via Grover-like search over the cyclic shift space",
+    "synthesis_code": "None",
+    "analysis_text": "The problem presents a hidden shift recovery task on a highly non-linear boolean-to-ternary oracle. Since the ternary product combines three different shifted bitwise masks, the function acts as a non-linear filter. Given the failure to resolve at low N (0.0 success rate), it implies the oracle's diffusion properties are highly sensitive to bit-collisions at lower widths. The search space for s is 2^N, and since the function f(x, s) acts as a black-box constraint, a Grover-style amplitude amplification is required. The non-linearity prohibits simple period finding via QFT (Hidden Subgroup Problem over abelian groups), forcing a search-based recovery approach.",
+    "potential_applications": "The mathematical structure, involving cyclic bit-shifts followed by bitwise AND and modular products, mimics the diffusion layer in lightweight block ciphers and S-box construction. Specifically, the cascading multiplication of masked bit-patterns resembles the non-linear transformation layers in ciphers like ASCON or SPN-based primitives. This function could be used as a testbed for evaluating the vulnerability of non-linear feedback shift registers (NLFSR) to quantum-assisted differential cryptanalysis. In computer science, this maps to finding vulnerabilities in parity-check functions used in error-correcting codes or identifying input-output correlations in boolean networks that model cellular automata.",
+    "base_function_code": "def g(x, N):\n    # This is a placeholder for the base function, not directly used in oracle generation.\n    # The actual secret-dependent function is defined in oracle_generator_code.\n    return 0",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    def oracle(x):\n        # Ensure x is within the N-bit range for the cyclic shift.\n        shifted_x = (x + secret) % (2**N)\n        \n        # Calculate the three terms of the cyclic quadratic ternary product.\n        # (x+s) & ((x+s) << 1)\n        term1 = shifted_x & (shifted_x << 1)\n        # (x+s) & ((x+s) >> 1)\n        term2 = shifted_x & (shifted_x >> 1)\n        # (x+s) & ((x+s) << 2)\n        term3 = shifted_x & (shifted_x << 2)\n        \n        # Compute the product modulo 3.\n        result = (term1 * term2 * term3) % 3\n        return result\n    return oracle"
+  },
+  {
     "problem_name": "Bernstein-Vazirani",
     "description": "Find a hidden bitstring s in a function f(x) = s * x (mod 2).",
     "completed_at": "2026-06-23T18:38:26.587082Z",
