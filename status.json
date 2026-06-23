@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-23T06:59:28.968922Z",
+  "last_updated": "2026-06-23T07:02:35.789697Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-23T06:59:28.968945Z"
+    "problem_name": "Hidden Cyclic Non-Adjacent Quadratic Product Sum",
+    "description": "Given an N-bit secret integer 's', find 's' such that for a given N-bit input 'x', the function f(x) computes the parity of the sum of products of non-adjacent bits of x, weighted by 's'. Specifically, f(x) = (sum_{i=0 to N-1} s_i * x_i * x_{i+2 mod N}) mod 2, where s_i and x_i are the i-th bits of 's' and 'x' respectively. This problem is non-linear due to the product of bits and cyclic due to the modulo N indices. It is not a direct mapping to linear systems or simple modular arithmetic properties.",
+    "stage": "simulating",
+    "started_at": "2026-06-23T07:02:35.789726Z"
   }
 }
