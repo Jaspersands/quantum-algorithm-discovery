@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-23T18:41:42.449192Z",
+  "last_updated": "2026-06-23T18:51:13.410592Z",
   "current_run": {
     "problem_name": "Hidden Cyclic Quadratic Ternary Product",
     "description": "This problem seeks to find a secret integer 's' (0 <= s < 2^N) such that for a given input 'x', the oracle computes f(x) = ((x & (x << 1)) * (x & (x >> 1)) * (x & (x << 2))) % 3. The secret 's' determines the cyclic shift of the input 'x' before applying the ternary product. Specifically, the oracle computes f(x, s) = (((x+s) & ((x+s) << 1)) * ((x+s) & ((x+s) >> 1)) * ((x+s) & ((x+s) << 2))) % 3. The goal is to find 's'. This function is non-linear due to the multiplication and bitwise operations.",
-    "stage": "simulating",
-    "started_at": "2026-06-23T18:41:42.449223Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-23T18:51:13.410647Z"
   }
 }
