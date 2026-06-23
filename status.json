@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-23T07:14:29.186722Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic Modular Sum of Quadratic Terms",
-    "description": "This problem is designed to find a secret integer 's' such that for a given input 'x', the function f(x) = (sum_{i=0}^{N-1} (i*x_i + (i+1)*x_{i+1} + (i+2)*x_i*x_{i+1})) mod M, where x_i is the i-th bit of x and indices are taken cyclically (x_N = x_0), and the sum is over N terms. The oracle computes f(x) XOR (s . x) mod 2, where s is the secret and '.' denotes the dot product. This mixes cyclic quadratic terms with a linear secret component, making it non-linear and potentially challenging for classical algorithms.",
-    "stage": "simulating",
-    "started_at": "2026-06-23T07:14:29.186748Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-23T07:14:31.146885Z",
+  "next_run_at": "2026-06-23T07:16:31.146817Z"
 }
