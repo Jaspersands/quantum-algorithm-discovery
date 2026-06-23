@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-23T07:50:54.060806Z",
+  "last_updated": "2026-06-23T07:54:11.990464Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-23T07:50:54.060830Z"
+    "problem_name": "Hidden Cyclic Majority of Cubes",
+    "description": "This problem aims to find a secret integer 's' such that for a given N-bit integer 'x', the function f(x) returns 1 if the majority of the N bits in the bitwise cube of x are 1, and 0 otherwise. The 'cyclic' aspect implies a cyclic shift operation applied before cubing, making the function non-linear and dependent on the arrangement of bits.",
+    "stage": "simulating",
+    "started_at": "2026-06-23T07:54:11.990490Z"
   }
 }
