@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-23T07:41:56.234681Z",
-  "current_run": {
-    "problem_name": "Hidden Cyclic AND of Rotated Pairs",
-    "description": "This problem involves finding a secret integer 's' such that for a given N-bit input 'x', the function f(x) reveals information about the bitwise AND of rotated pairs of bits in 'x', XORed with a shifted version of 's'. Specifically, f(x) = ((x_i AND x_{i+k}) XOR (x_{i+1} AND x_{i+2})) ... (mod 2) for some rotation k and secret s.",
-    "stage": "simulating",
-    "started_at": "2026-06-23T07:41:56.234705Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-23T07:41:57.999817Z",
+  "next_run_at": "2026-06-23T07:43:57.999775Z"
 }
