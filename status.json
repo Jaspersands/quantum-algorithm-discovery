@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-23T19:40:06.404089Z",
+  "last_updated": "2026-06-23T19:43:14.080503Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-23T19:40:06.404114Z"
+    "problem_name": "Hidden Cyclic XOR of Quadratic Terms with Offset",
+    "description": "Given an N-bit secret integer 's', find 's' such that f(x) = (x & (x >> 1)) ^ ((x << 1) & x) ^ (x & s) ^ ((x >> 1) & s) mod 2, where '&' is bitwise AND, '^' is bitwise XOR, '>>' is right shift, and '<<' is left shift. The function f(x) is periodic with a period related to 's' or a combination of 's' and the cyclic structure.",
+    "stage": "simulating",
+    "started_at": "2026-06-23T19:43:14.080534Z"
   }
 }
