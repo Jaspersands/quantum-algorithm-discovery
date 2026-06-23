@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-23T07:12:17.392328Z",
-  "current_run": {
-    "problem_name": "Hidden XOR of Cyclically Shifted Quadratic Terms",
-    "description": "Given an oracle that computes f(x) = (x_0*x_1 + x_1*x_2 + ... + x_{N-2}*x_{N-1} + x_{N-1}*x_0) XOR (x_0*x_2 + x_1*x_3 + ... + x_{N-1}*x_1) mod 2, where the second term is cyclically shifted by 2 bits relative to the first, find the secret coefficients of the quadratic terms.",
-    "stage": "simulating",
-    "started_at": "2026-06-23T07:12:17.392351Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-23T07:12:19.253292Z",
+  "next_run_at": "2026-06-23T07:14:19.253245Z"
 }
