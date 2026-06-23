@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-23T07:44:23.661241Z",
+  "last_updated": "2026-06-23T07:45:29.272275Z",
   "current_run": {
     "problem_name": "Hidden Cyclic Bitwise AND of Ternary Products",
     "description": "Given an oracle that computes the cyclic bitwise AND of ternary products of an N-bit secret key s, find s. The function is f(x) = (x_0 * x_1 * x_2) & (x_1 * x_2 * x_3) & ... & (x_{N-2} * x_{N-1} * x_0) & s, where '*' denotes ternary product (0, 1, or 2) and '&' denotes bitwise AND. We are interested in the case where the output is a single bit.",
-    "stage": "simulating",
-    "started_at": "2026-06-23T07:44:23.661264Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-23T07:45:29.272341Z"
   }
 }
