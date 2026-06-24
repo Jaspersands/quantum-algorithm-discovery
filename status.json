@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-24T07:24:13.666781Z",
-  "current_run": {
-    "problem_name": "Hidden Balanced Ternary Cubic Product Parity",
-    "description": "This problem is inspired by exploring non-linear functions beyond simple quadratic or cubic forms. Here, we hide a secret integer `s` such that the oracle computes the parity of a balanced ternary representation of the cubic product of an input `x` with `s`. Specifically, the function is f(x) = ( (x*s)^3 mod 3 ) mod 2, where (x*s)^3 mod 3 involves mapping the input and secret to balanced ternary, performing the cubic product, and taking the result modulo 3.",
-    "stage": "analyzing",
-    "started_at": "2026-06-24T07:24:13.666835Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-24T07:24:21.846905Z"
 }
