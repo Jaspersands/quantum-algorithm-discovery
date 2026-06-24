@@ -1,14 +1,14 @@
 [
   {
-    "theme": "Variations of Hidden Balanced Ternary Cubic Product Parity",
+    "theme": "Variations of Nonlinear Cyclic Bit-wise AND-XOR Index",
     "priority": "High"
   },
   {
-    "theme": "Grover search under alternative diffusion operators",
+    "theme": "Alternative ansatz architectures for State Prep",
     "priority": "Medium"
   },
   {
-    "theme": "Multi-query Period Finding with S/T gates",
+    "theme": "Multi-controlled Unitary Synthesis using CX/H",
     "priority": "Low"
   }
 ]
