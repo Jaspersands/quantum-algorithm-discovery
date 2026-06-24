@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-24T07:31:48.554782Z",
+  "last_updated": "2026-06-24T07:32:53.629353Z",
   "current_run": {
     "problem_name": "Nonlinear Cyclic Bit-wise AND-XOR Index",
     "description": "A novel oracle problem where the secret is an index determined by a non-linear combination of cyclic bitwise AND and XOR operations on the input. This requires a custom oracle construction that combines different logical operations in a non-trivial way.",
-    "stage": "simulating",
-    "started_at": "2026-06-24T07:31:48.554827Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-24T07:32:53.629406Z"
   }
 }
