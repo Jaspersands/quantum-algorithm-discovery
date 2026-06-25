@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-25T04:11:59.110211Z",
+  "last_updated": "2026-06-25T04:13:07.632555Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-25T04:11:59.110216Z"
+    "problem_name": "Custom_Quadratic_Secret_Oracle",
+    "description": "Find a secret N-bit integer 's' such that for a given input 'x', the oracle computes f(x) = (x^2 + s) mod 2^N. This requires a non-linear oracle and potentially a linear solver to recover 's' from measurements.",
+    "stage": "simulating",
+    "started_at": "2026-06-25T04:13:07.632574Z"
   }
 }
