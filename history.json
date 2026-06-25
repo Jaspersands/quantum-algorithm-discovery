@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Ternary_Product_Secret_Oracle",
+    "description": "[Oracle Secret Finding] A novel oracle problem designed to find a secret ternary string. The oracle function f(x) is defined as (g(x) mod 3) where g(x) is the product of digits of x in base 3. This requires a modified approach to standard binary oracles and may benefit from a linear solver over GF(3) if the structure allows.",
+    "completed_at": "2026-06-25T04:21:06.573426Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(3^(N/2))",
+    "quantum_gate_complexity": "O(N * 3^(N/2))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit; qc = QuantumCircuit(3); qc.h(range(3)); # Oracle placeholder; qc.h(range(3)); print(qc.draw())",
+    "analysis_text": "The provided scaling data indicates a failure to converge for small N, suggesting that the circuit construction for the ternary product oracle has not been implemented or lacks necessary phase-kickback mechanisms. Theoretically, since the secret ternary string can be represented in a space of 3^N states, an unstructured search via Grover's algorithm would yield a quadratic speedup over the classical O(3^N) brute-force search, reducing the query complexity to O(sqrt(3^N)) or O(3^(N/2)). The transition to a modular arithmetic domain (GF(3)) implies that if the oracle exhibits linearity, a quantum algorithm analogous to Bernstein-Vazirani could achieve linear time complexity, but the current simulation failure suggests a misalignment between the oracle definition and the quantum state space transformation.",
+    "potential_applications": "This oracle_secret_finding problem maps to symmetric cryptanalysis where the ternary product acts as a non-linear component of a block cipher or a hash function primitive. Identifying the secret string is mathematically isomorphic to finding the pre-image of a modular product function, which is a common bottleneck in breaking weak message authentication codes (MACs) or specialized hash functions that utilize residue-based arithmetic structures.",
+    "base_function_code": "def g(x, N):\n    import numpy as np\n    if x == 0:\n        return 0\n    product = 1\n    temp_x = x\n    while temp_x > 0:\n        digit = temp_x % 3\n        product *= digit\n        temp_x //= 3\n    return product",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    import numpy as np\n    def f(x):\n        # Convert x to base 3 string of length N\n        x_str_base3 = np.base_repr(x, base=3).zfill(N)\n        \n        # Calculate the product of digits in base 3\n        product = 1\n        for digit_char in x_str_base3:\n            product *= int(digit_char)\n        \n        # The oracle reveals if the product mod 3 matches the secret mod 3\n        # For simplicity in this example, let's assume secret is also a base-3 number represented as an integer.\n        # The 'secret' here will be the target product mod 3.\n        return 1 if (product % 3) == (secret % 3) else 0\n    return f"
+  },
+  {
     "problem_name": "Nonlinear_Product_Secret_Oracle",
     "description": "[Oracle Secret Finding] Find a secret 3-bit integer N by querying an oracle that computes f(x) = (x * N) mod 2^3, where the result is 1 if the least significant bit of the product is 1, and 0 otherwise. This is a nonlinear oracle problem.",
     "completed_at": "2026-06-25T04:09:51.337719Z",
