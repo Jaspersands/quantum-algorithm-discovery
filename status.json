@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-25T07:24:26.458325Z",
+  "last_updated": "2026-06-25T07:24:35.498559Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-25T07:24:26.458331Z"
+    "problem_name": "Cyclic_Shift_Secret_Oracle",
+    "description": "A problem to find a secret integer N-bit using a non-linear oracle based on cyclic shifts. The oracle function f(x) will be 1 if x is a cyclic shift of the secret s, and 0 otherwise. This tests the ability to synthesize oracles for non-linear relations beyond simple XOR or product.",
+    "stage": "simulating",
+    "started_at": "2026-06-25T07:24:35.498587Z"
   }
 }
