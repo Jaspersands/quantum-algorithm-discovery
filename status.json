@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-25T09:04:51.978656Z",
+  "last_updated": "2026-06-25T09:05:02.908827Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-25T09:04:51.978662Z"
+    "problem_name": "PolynomialModuloSecretOracle",
+    "description": "Find a secret integer 's' in a specific range by evaluating a polynomial modulo 's'. The oracle will mark inputs 'x' for which P(x) mod s = 0, where P(x) is a custom polynomial.",
+    "stage": "simulating",
+    "started_at": "2026-06-25T09:05:02.908842Z"
   }
 }
