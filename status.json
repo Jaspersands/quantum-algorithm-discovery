@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-25T03:43:35.766156Z",
-  "current_run": {
-    "problem_name": "Quadratic_Residue_Secret_Oracle",
-    "description": "Find a secret integer 's' such that f(x) = (x^2 mod p) == s, where p is a prime number. This is a variation of an oracle problem where the function is non-linear and depends on modular arithmetic.",
-    "stage": "simulating",
-    "started_at": "2026-06-25T03:43:35.766166Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-25T03:43:37.581171Z",
+  "next_run_at": "2026-06-25T03:45:37.581120Z"
 }
