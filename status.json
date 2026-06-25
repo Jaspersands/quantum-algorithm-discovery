@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-25T04:35:37.083648Z",
+  "last_updated": "2026-06-25T04:36:38.675953Z",
   "current_run": {
     "problem_name": "Nonlinear_Modulo_Secret_Oracle",
     "description": "Find a secret integer k within a range [0, 2^N-1] by querying a non-linear oracle that computes (x + k)^2 mod 2^N. This is a novel variation of secret finding problems, introducing a quadratic non-linearity.",
-    "stage": "simulating",
-    "started_at": "2026-06-25T04:35:37.083667Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-25T04:36:38.676794Z"
   }
 }
