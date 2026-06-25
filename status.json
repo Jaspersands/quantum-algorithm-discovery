@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-25T22:27:30.450773Z",
+  "last_updated": "2026-06-25T22:28:32.572738Z",
   "current_run": {
     "problem_name": "LogarithmicSecretFinding",
     "description": "A novel oracle secret finding problem where the secret is determined by a logarithmic function of the input bitstring, making it non-linear and challenging for standard solvers.",
-    "stage": "simulating",
-    "started_at": "2026-06-25T22:27:30.450824Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-25T22:28:32.572967Z"
   }
 }
