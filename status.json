@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-25T05:20:29.898856Z",
-  "current_run": {
-    "problem_name": "Custom_Polynomial_Oracle_Secret_Finding",
-    "description": "Find a secret integer `s` in {0, 1, ..., 2^N-1} by querying a quantum oracle that computes `f(x) = (x^3 + 2x + s) mod 2^N`. This is a non-linear oracle and requires careful analysis beyond simple linear relations. The goal is to find `s` using a minimal number of queries.",
-    "stage": "simulating",
-    "started_at": "2026-06-25T05:20:29.898880Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-25T05:20:31.725557Z",
+  "next_run_at": "2026-06-25T05:22:31.725479Z"
 }
