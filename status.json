@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-25T05:25:40.691434Z",
-  "current_run": {
-    "problem_name": "Custom_Quadratic_Secret_Oracle",
-    "description": "A novel oracle-based problem to find a secret integer x in {0, 1, ..., 2^N - 1} by solving a quadratic congruence relation modulo a prime P.",
-    "stage": "simulating",
-    "started_at": "2026-06-25T05:25:40.691637Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-25T05:25:42.614577Z",
+  "next_run_at": "2026-06-25T05:27:42.614472Z"
 }
