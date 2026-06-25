@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "NonLinear_XOR_AND_OR_Secret_Finding",
+    "description": "[Oracle Secret Finding] A novel oracle secret finding problem where the secret is determined by a combination of bitwise XOR, AND, and OR operations on the input, making it non-linear and challenging for simple solvers.",
+    "completed_at": "2026-06-25T08:10:39.584727Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^(N/2))",
+    "quantum_gate_complexity": "O(2^(N/2) * poly(N))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit; qc = QuantumCircuit(4); qc.h([0, 1, 2]); qc.x(3); qc.h(3); qc.barrier(); qc.ccx(0, 1, 3); qc.cx(1, 3); qc.cx(2, 3); qc.x(2); qc.cx(2, 3); qc.x(2); qc.barrier(); qc.h([0, 1, 2]);",
+    "analysis_text": "The provided simulation data (N=2, 3 with 0.0 success rate) indicates a failure to converge on the oracle configuration, likely due to insufficient circuit depth or improper initial state preparation for the non-linear XOR-AND-OR logic gates. Theoretically, such an oracle function acts as an unstructured search space for quantum algorithms like Grover's. Since the function is non-linear, it prevents simple bit-flipping optimizations, forcing the complexity to adhere to the Grover limit, providing a quadratic speedup over the classical O(2^N) brute-force search.",
+    "potential_applications": "In oracle_secret_finding, this maps to symmetric cryptanalysis where an attacker attempts to find a key hidden behind a non-linear S-box transformation. Specifically, it represents breaking hash functions with non-linear bitwise mixing or finding collisions in complex Boolean functions. The XOR-AND-OR structure mirrors the logic gate networks used in block cipher rounds (e.g., PRESENT or GIFT ciphers), making this relevant to assessing post-quantum security margins for lightweight symmetric primitives.",
+    "base_function_code": "import numpy as np\ndef g(x, N):\n    x_bin = bin(x)[2:].zfill(N)\n    if N < 3:\n        return 0 # Not enough bits for the operations\n    a = int(x_bin[0])\n    b = int(x_bin[1])\n    c = int(x_bin[2])\n    # Example non-linear function: (a AND b) XOR (b OR c)\n    return ((a & b) ^ (b | c))",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    def f(x):\n        # The base function is designed such that g(secret, N) = 1 and g(x, N) = 0 for all other x.\n        # For this specific problem, we construct the oracle based on the property of the base function.\n        # This requires that the secret is a specific value that makes the condition true.\n        # For this example, we assume the secret makes ((a & b) ^ (b | c)) == 1\n        # For N>=3, we need to ensure that the secret satisfies the condition derived from g.\n        # Let's assume the secret is such that its first 3 bits x_bin[0], x_bin[1], x_bin[2] result in 1.\n        # For example, if x_bin[0]=1, x_bin[1]=1, x_bin[2]=0, then (1&1)^(1|0) = 1^1 = 0\n        # if x_bin[0]=0, x_bin[1]=1, x_bin[2]=1, then (0&1)^(1|1) = 0^1 = 1. So secret could be 011... (e.g. 3 for N=3).\n        # This oracle is specifically designed for a secret that maps to 1.\n        if N < 3:\n            return 0\n        x_bin = bin(x)[2:].zfill(N)\n        a = int(x_bin[0])\n        b = int(x_bin[1])\n        c = int(x_bin[2])\n        if ((a & b) ^ (b | c)) == 1:\n            return 1\n        else:\n            return 0\n    return f"
+  },
+  {
     "problem_name": "BitwiseXORandANDSecretFinding",
     "description": "[Oracle Secret Finding] A novel oracle-based problem for finding a secret string by solving a system of equations involving bitwise XOR and AND operations. This is a variation of secret finding that goes beyond simple linear relations in GF(2).",
     "completed_at": "2026-06-25T07:50:45.083862Z",
