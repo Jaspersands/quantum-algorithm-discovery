@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-25T03:34:48.991231Z",
+  "last_updated": "2026-06-25T03:34:53.838956Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-25T03:34:48.991252Z"
+    "problem_name": "Ternary_Secret_Oracle",
+    "description": "Find a secret integer N-bit string where the oracle function is f(x) = (x^3 mod 2^N == secret) ? 1 : 0. This is a non-linear function over GF(2^N).",
+    "stage": "simulating",
+    "started_at": "2026-06-25T03:34:53.838994Z"
   }
 }
