@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-25T07:22:21.789265Z",
-  "current_run": {
-    "problem_name": "Nonlinear_Quadratic_Secret_Oracle",
-    "description": "A novel oracle-based problem to find a secret integer N, where the oracle function f(x) is based on a non-linear quadratic relation modulo 2^N. Specifically, f(x) = (x^2 + a*x + b) mod 2^N, where 'a' and 'b' are fixed coefficients and the secret is N itself.",
-    "stage": "simulating",
-    "started_at": "2026-06-25T07:22:21.789285Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-25T07:22:23.557248Z",
+  "next_run_at": "2026-06-25T07:24:23.557205Z"
 }
