@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-25T20:49:05.237369Z",
+  "last_updated": "2026-06-25T20:50:09.036128Z",
   "current_run": {
     "problem_name": "NonLinear_Trigonometric_Secret_Oracle",
     "description": "Find a secret integer 's' of N bits by querying a non-linear oracle that computes f(x) = (sin(x) mod 2^N) == s. This requires a non-linear oracle and potentially a linear solver to reconstruct the secret from measurement outcomes if multiple queries are made.",
-    "stage": "synthesizing",
-    "started_at": "2026-06-25T20:49:05.237900Z"
+    "stage": "analyzing",
+    "started_at": "2026-06-25T20:50:09.036392Z"
   }
 }
