@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-25T07:46:02.930350Z",
-  "current_run": {
-    "problem_name": "Quadratic_Residue_Oracle_Secret_Finding",
-    "description": "Find a secret integer 's' such that for a given number 'N', the oracle marks inputs 'x' where x*x mod N == s.",
-    "stage": "analyzing",
-    "started_at": "2026-06-25T07:46:02.930517Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-25T07:46:10.044395Z"
 }
