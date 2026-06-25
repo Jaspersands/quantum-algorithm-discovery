@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-25T07:48:14.820662Z",
+  "last_updated": "2026-06-25T07:48:32.249080Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-25T07:48:14.820674Z"
+    "problem_name": "BitwiseXORandANDSecretFinding",
+    "description": "A novel oracle-based problem for finding a secret string by solving a system of equations involving bitwise XOR and AND operations. This is a variation of secret finding that goes beyond simple linear relations in GF(2).",
+    "stage": "simulating",
+    "started_at": "2026-06-25T07:48:32.249104Z"
   }
 }
