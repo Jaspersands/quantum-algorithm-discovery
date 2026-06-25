@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-25T03:37:02.011588Z",
-  "current_run": {
-    "problem_name": "Ternary_Secret_Oracle",
-    "description": "Find a secret integer N-bit string where the oracle function is f(x) = (x^3 mod 2^N == secret) ? 1 : 0. This is a non-linear function over GF(2^N).",
-    "stage": "analyzing",
-    "started_at": "2026-06-25T03:37:02.011639Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-25T03:37:09.638514Z"
 }
