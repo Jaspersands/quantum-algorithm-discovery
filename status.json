@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-25T04:21:02.091493Z",
-  "current_run": {
-    "problem_name": "Ternary_Product_Secret_Oracle",
-    "description": "A novel oracle problem designed to find a secret ternary string. The oracle function f(x) is defined as (g(x) mod 3) where g(x) is the product of digits of x in base 3. This requires a modified approach to standard binary oracles and may benefit from a linear solver over GF(3) if the structure allows.",
-    "stage": "analyzing",
-    "started_at": "2026-06-25T04:21:02.091578Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-25T04:21:09.658805Z"
 }
