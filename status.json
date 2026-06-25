@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-25T07:34:20.885822Z",
+  "last_updated": "2026-06-25T07:34:29.245630Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-25T07:34:20.885828Z"
+    "problem_name": "CustomPolynomialSecretOracle",
+    "description": "A quantum oracle secret finding problem where the secret is determined by a custom polynomial function over GF(2). This problem is designed to be non-linear and requires a specific oracle construction for efficient solution.",
+    "stage": "simulating",
+    "started_at": "2026-06-25T07:34:29.245655Z"
   }
 }
