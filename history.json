@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Nonlinear_Modulo_Secret_Oracle",
+    "description": "[Oracle Secret Finding] Find a secret integer k within a range [0, 2^N-1] by querying a non-linear oracle that computes (x + k)^2 mod 2^N. This is a novel variation of secret finding problems, introducing a quadratic non-linearity.",
+    "completed_at": "2026-06-25T04:52:54.538317Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^(N/2))",
+    "quantum_gate_complexity": "O(poly(N))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit, QuantumRegister; qr = QuantumRegister(2); qc = QuantumCircuit(qr); qc.h(0); qc.h(1); qc.barrier(); qc.rz(1.5707963267948966, 0); qc.rz(1.5707963267948966, 1); qc.cx(0, 1); qc.barrier(); qc.h(0); qc.h(1);",
+    "analysis_text": "The problem presents a hidden shift discovery task within a non-linear algebraic structure defined by f(x) = (x + k)^2 mod 2^N. Given that the oracle introduces quadratic non-linearity, it functions similarly to period finding or hidden shift problems where the target k is embedded in the phase or algebraic relation of the output. While a brute-force classical search requires O(2^N) queries, quantum amplitude amplification (Grover-style search) or specialized quantum phase estimation routines can extract the secret key k with quadratic speedup, reducing query complexity to O(2^(N/2)). The observed success rate of 0.0 at N=2 suggests insufficient circuit depth or lack of an appropriate unitary transformation to resolve the non-linear phase, likely requiring a phase kickback mechanism that incorporates the modular square operator.",
+    "potential_applications": "The oracle_secret_finding structure is directly applicable to symmetric cryptanalysis, specifically in evaluating the security of algebraic stream ciphers and hash functions that rely on quadratic residue properties. Recovering the secret k mirrors the process of breaking non-linear congruential generators used in pseudo-random number generation. By mapping the modular non-linearity to a quantum unitary, this analysis assists in assessing whether quantum adversaries can bypass classical exhaustive search constraints in cryptographic primitives based on non-linear transformation layers.",
+    "base_function_code": "import numpy as np\ndef g(x, N):\n    modulus = 2**N\n    return (x**2) % modulus",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    modulus = 2**N\n    def f(x):\n        return ((x + secret)**2) % modulus\n    return f"
+  },
+  {
     "problem_name": "Ternary_Product_Secret_Oracle",
     "description": "[Oracle Secret Finding] A novel oracle problem designed to find a secret ternary string. The oracle function f(x) is defined as (g(x) mod 3) where g(x) is the product of digits of x in base 3. This requires a modified approach to standard binary oracles and may benefit from a linear solver over GF(3) if the structure allows.",
     "completed_at": "2026-06-25T04:21:06.573426Z",
