@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-25T09:52:55.639853Z",
+  "last_updated": "2026-06-25T11:56:58.136109Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-25T09:52:55.639863Z"
+    "problem_name": "Bernstein-Vazirani",
+    "description": "Find a hidden bitstring s in a function f(x) = s * x (mod 2).",
+    "stage": "simulating",
+    "started_at": "2026-06-25T11:56:58.137028Z"
   }
 }
