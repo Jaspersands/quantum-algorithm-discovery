@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-25T22:57:25.610632Z",
-  "current_run": {
-    "problem_name": "ModularExponentialSecretFinding",
-    "description": "Find a secret integer 's' by solving the modular exponential equation a^x = b (mod N) using a quantum oracle. This is a variant of Shor's algorithm's core problem but framed as a secret finding task.",
-    "stage": "simulating",
-    "started_at": "2026-06-25T22:57:25.611186Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-25T22:57:28.502049Z",
+  "next_run_at": "2026-06-25T22:59:28.501953Z"
 }
