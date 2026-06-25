@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-25T05:16:07.878916Z",
+  "last_updated": "2026-06-25T05:17:20.341627Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-25T05:16:07.878923Z"
+    "problem_name": "Quintic_Modulo_Secret_Oracle",
+    "description": "A problem to find a secret integer N using a quintic polynomial modulo a prime, where the oracle encodes f(x) = (x^5 + a) mod p, with 'a' being the secret.",
+    "stage": "simulating",
+    "started_at": "2026-06-25T05:17:20.341641Z"
   }
 }
