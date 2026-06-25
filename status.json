@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-25T03:47:52.540274Z",
-  "current_run": {
-    "problem_name": "Nonlinear_Product_Secret_Oracle",
-    "description": "Find a secret 3-bit integer N by querying an oracle that computes f(x) = (x * N) mod 2^3, where the result is 1 if the least significant bit of the product is 1, and 0 otherwise. This is a nonlinear oracle problem.",
-    "stage": "analyzing",
-    "started_at": "2026-06-25T03:47:52.540308Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-25T04:09:54.606580Z"
 }
