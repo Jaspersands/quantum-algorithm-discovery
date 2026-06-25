@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-25T07:02:33.293077Z",
+  "last_updated": "2026-06-25T07:03:49.794567Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-25T07:02:33.293082Z"
+    "problem_name": "CustomQuadraticSecretOracle",
+    "description": "A quantum oracle problem to find a secret integer N where the oracle is based on a quadratic relation f(x) = (x^2 + a) mod P, where 'a' and 'P' are fixed parameters and 'x' is the input. This requires a non-linear oracle.",
+    "stage": "simulating",
+    "started_at": "2026-06-25T07:03:49.794595Z"
   }
 }
