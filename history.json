@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Quadratic_Residue_Oracle_Secret_Finding",
+    "description": "[Oracle Secret Finding] Find a secret integer 's' such that for a given number 'N', the oracle marks inputs 'x' where x*x mod N == s.",
+    "completed_at": "2026-06-25T07:46:07.008430Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(sqrt(N))",
+    "quantum_gate_complexity": "O(sqrt(N) * poly(log N))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit\n\n# Example for finding quadratic residues for N=4, secret=1\n# In this scenario, x^2 mod 4 == 1 implies x=1 or x=3\nqc = QuantumCircuit(3)\nqc.h([0, 1, 2])\n# Oracle would be implemented as a phase oracle here\n# This specific problem space requires a custom oracle gate construction\n# Since no successful circuit was found by the search, this is a conceptual placeholder\nprint(qc)",
+    "analysis_text": "The provided simulation data shows zero success rate for N=2 and N=3, indicating that the quantum implementation is not yet correctly executing the oracle-based search protocol. Theoretically, searching for a secret 's' that satisfies a quadratic residue condition x^2 mod N = s within a search space of size N is equivalent to an unstructured search problem. By applying Grover's algorithm, the quantum query complexity is O(sqrt(N)), providing a quadratic speedup over the classical brute-force search which is O(N). The lack of success in simulation suggests a deficit in state initialization or oracle operator construction.",
+    "potential_applications": "Oracle secret finding for quadratic residues maps directly to breaking symmetric-key primitives, specifically those relying on the hardness of discrete logarithms or modular square roots. This translates to cryptanalysis of protocols involving modular arithmetic where an attacker seeks a specific plaintext or key 's' given a black-box implementation of a transformation. It serves as a pedagogical model for collision finding and preimage attacks on hash functions where the internal compression function resembles modular mappings.",
+    "base_function_code": "import numpy as np\ndef g(x, N):\n    return (x * x) % N",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    def f(x):\n        if (x * x) % N == secret:\n            return 1\n        else:\n            return 0\n    return f"
+  },
+  {
     "problem_name": "CustomPolynomialSecretOracle",
     "description": "[Oracle Secret Finding] A quantum oracle secret finding problem where the secret is determined by a custom polynomial function over GF(2). This problem is designed to be non-linear and requires a specific oracle construction for efficient solution.",
     "completed_at": "2026-06-25T07:36:39.497720Z",
