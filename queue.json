@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "theme": "Variations of Nonlinear_Congruential_Secret_Oracle",
+    "priority": "High"
+  },
+  {
+    "theme": "Alternative ansatz architectures for State Prep",
+    "priority": "Medium"
+  },
+  {
+    "theme": "Multi-controlled Unitary Synthesis using CX/H",
+    "priority": "Low"
+  }
+]
