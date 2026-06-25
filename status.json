@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-25T05:30:51.066547Z",
+  "last_updated": "2026-06-25T05:31:56.613739Z",
   "current_run": {
     "problem_name": "CustomBitwiseXORSecretFinding",
     "description": "Find a secret N-bit integer by querying a non-linear oracle that reveals information about bitwise XOR operations on the secret.",
-    "stage": "simulating",
-    "started_at": "2026-06-25T05:30:51.066586Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-25T05:31:56.613808Z"
   }
 }
