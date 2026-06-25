@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-25T07:32:16.265728Z",
-  "current_run": {
-    "problem_name": "Nonlinear_Quadratic_Secret_Oracle",
-    "description": "A quantum oracle problem to find a secret integer N where the oracle encodes a function f(x) = (x^2 mod N) where the secret N is unknown and must be found using minimal queries.",
-    "stage": "simulating",
-    "started_at": "2026-06-25T07:32:16.265755Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-25T07:32:18.104099Z",
+  "next_run_at": "2026-06-25T07:34:18.104033Z"
 }
