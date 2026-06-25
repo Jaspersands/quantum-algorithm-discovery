@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-25T05:17:20.341627Z",
-  "current_run": {
-    "problem_name": "Quintic_Modulo_Secret_Oracle",
-    "description": "A problem to find a secret integer N using a quintic polynomial modulo a prime, where the oracle encodes f(x) = (x^5 + a) mod p, with 'a' being the secret.",
-    "stage": "simulating",
-    "started_at": "2026-06-25T05:17:20.341641Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-25T05:17:22.129698Z",
+  "next_run_at": "2026-06-25T05:19:22.129631Z"
 }
