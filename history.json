@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "DivisibilitySecretOracle",
+    "description": "[Oracle Secret Finding] Find a secret integer 's' such that for a given N-bit integer 'x', the oracle outputs 1 if x is divisible by 's' and 0 otherwise. This is a non-linear relationship based on modular arithmetic.",
+    "completed_at": "2026-06-26T07:52:59.737258Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^{N/2})",
+    "quantum_gate_complexity": "O(2^N * poly(N))",
+    "speedup_type": "None",
+    "synthesis_code": "from qiskit import QuantumCircuit\n\n# The search algorithm failed to find a valid quantum circuit for the DivisibilitySecretOracle problem.\n# Since the divisibility condition 'x % s == 0' is highly non-linear and non-periodic in a way that maps\n# poorly to standard hidden subgroup problem frameworks for small N, no circuit was generated.\nqc = QuantumCircuit(3)\n# No gates added as no valid circuit was found.",
+    "analysis_text": "The provided scaling data indicates a failure to maintain coherence or success as N increases from 2 to 3, yielding a 0% success rate. Theoretically, finding an unknown divisor 's' via an oracle that checks divisibility follows the structure of hidden subgroup problems or unstructured search depending on the oracle's construction. Given the non-linear nature of modular divisibility, the quantum approach typically requires amplitude amplification or period finding. However, since the quantum query complexity in such settings is constrained by the search space of 's', the absence of a constructive interference pattern results in no speedup over a classical brute-force search.",
+    "potential_applications": "The oracle_secret_finding structure is analogous to symmetric cryptanalysis where a key must be recovered by querying a function. Specifically, this maps to finding a secret divisor in a cryptographic hash function output or identifying the modulus in reduced-form RSA-like settings. It represents the difficulty of reverse-engineering hidden parameters from modular algebraic relations.",
+    "base_function_code": "def g(x, N, s):\n    if s == 0:\n        return 0\n    return 1 if x % s == 0 else 0",
+    "oracle_generator_code": "def make_oracle(secret, N):\n    def f(x):\n        return 1 if x % secret == 0 else 0\n    return f"
+  },
+  {
     "problem_name": "Bernstein-Vazirani",
     "description": "[Oracle Secret Finding] Find a hidden bitstring s in a function f(x) = s * x (mod 2).",
     "completed_at": "2026-06-26T06:49:36.144142Z",
