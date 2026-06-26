@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-26T08:25:45.567017Z",
+  "last_updated": "2026-06-26T08:26:49.773068Z",
   "current_run": {
     "problem_name": "NonLinearTernaryProductSumSecretFinding",
     "description": "Find a secret ternary number using a non-linear oracle based on a ternary product sum relation. The function f(x) = (x_0*x_1 + x_1*x_2 + x_2*x_0) mod 3, where x is a 3-bit ternary number (represented in binary). The secret is a specific ternary number such that f(secret) = 1.",
-    "stage": "synthesizing",
-    "started_at": "2026-06-26T08:25:45.567094Z"
+    "stage": "analyzing",
+    "started_at": "2026-06-26T08:26:49.773120Z"
   }
 }
