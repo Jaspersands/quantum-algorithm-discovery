@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-26T16:47:28.208381Z",
+  "last_updated": "2026-06-26T18:30:29.934829Z",
   "current_run": {
     "problem_name": "Novel_Fractional_Secret_Oracle",
     "description": "Find a secret integer N-bit secret using a non-linear oracle based on a fractional relationship. The oracle is 1 if x/secret is an integer and 0 otherwise. This is novel as it uses division and requires careful handling of divisibility.",
-    "stage": "simulating",
-    "started_at": "2026-06-26T16:47:28.208865Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-26T18:30:29.935715Z"
   }
 }
