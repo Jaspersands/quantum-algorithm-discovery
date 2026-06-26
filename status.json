@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-26T19:29:45.943373Z",
+  "last_updated": "2026-06-26T19:35:10.217408Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-26T19:29:45.943379Z"
+    "problem_name": "ModularExponentiationSecretFinding",
+    "description": "A secret finding problem where the oracle implements a modular exponentiation function, designed to be non-linear and challenging for classical brute-force. The secret is the exponent 'a' in (g^a mod p = y), where g, p, and y are known.",
+    "stage": "simulating",
+    "started_at": "2026-06-26T19:35:10.217455Z"
   }
 }
