@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Nonlinear_Bitwise_OR_SUM_Secret_Finding",
+    "description": "[Oracle Secret Finding] Find a secret integer N for a non-linear oracle function that combines bitwise OR and SUM operations.",
+    "completed_at": "2026-06-27T18:21:11.094808Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^(N/2))",
+    "quantum_gate_complexity": "O(2^(N/2) * poly(N))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit, QuantumRegister; qr = QuantumRegister(3); qc = QuantumCircuit(qr); # No circuit found for this non-linear function as the search space provided no valid mapping.",
+    "analysis_text": "The provided simulation data shows zero success rates for low qubit counts, which is consistent with the absence of a proper quantum circuit implementation for the defined oracle. Theoretically, for a secret-finding problem involving bitwise non-linear operators, a quantum search algorithm like Grover's provides a quadratic speedup over the classical O(2^N) brute-force search. The complexity is constrained by the oracle query depth required to unmask the hidden integer N within the non-linear bitwise landscape.",
+    "potential_applications": "In the context of oracle_secret_finding, this maps to symmetric cryptanalysis where an attacker attempts to invert a non-linear S-box or a bitwise-heavy hash function. Specifically, finding an input that satisfies a bitwise OR-SUM condition mirrors the pre-image attack scenario in lightweight cryptography or identifying weak keys in block ciphers that rely on mixed arithmetic-logical transformations.",
+    "base_function_code": "import numpy as np\ndef g(x, N):\n    bits_x = [(x >> i) & 1 for i in range(N.bit_length())]\n    or_result = 0\n    for bit in bits_x:\n        or_result |= bit\n    sum_bits = sum(bits_x)\n    return (or_result << (N.bit_length())) | sum_bits",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    secret_bits = [(secret >> i) & 1 for i in range(N.bit_length())]\n    target_value = 0\n    or_result = 0\n    for bit in secret_bits:\n        or_result |= bit\n    sum_bits = sum(secret_bits)\n    target_value = (or_result << (N.bit_length())) | sum_bits\n    def f(x):\n        current_or_result = 0\n        for i in range(N.bit_length()):\n            if (x >> i) & 1:\n                current_or_result |= 1\n        current_sum_bits = bin(x).count('1')\n        current_value = (current_or_result << (N.bit_length())) | current_sum_bits\n        return 1 if current_value == target_value else 0\n    return f"
+  },
+  {
     "problem_name": "Custom_Additive_Secret_Oracle",
     "description": "[Oracle Secret Finding] A novel oracle-based problem to find a secret integer N, where the oracle function f(x) = (x + secret) mod 2^n, for a specific range of x values.",
     "completed_at": "2026-06-27T03:56:09.821214Z",
