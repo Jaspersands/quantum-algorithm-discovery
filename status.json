@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-27T18:20:31.051997Z",
-  "current_run": {
-    "problem_name": "Nonlinear_Bitwise_OR_SUM_Secret_Finding",
-    "description": "Find a secret integer N for a non-linear oracle function that combines bitwise OR and SUM operations.",
-    "stage": "analyzing",
-    "started_at": "2026-06-27T18:20:31.052131Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-27T18:21:15.079874Z"
 }
