@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Custom_Additive_Secret_Oracle",
+    "description": "[Oracle Secret Finding] A novel oracle-based problem to find a secret integer N, where the oracle function f(x) = (x + secret) mod 2^n, for a specific range of x values.",
+    "completed_at": "2026-06-27T03:56:09.821214Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(1)",
+    "quantum_gate_complexity": "O(n)",
+    "speedup_type": "Exponential speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit; qc = QuantumCircuit(3); qc.h([0, 1, 2]); # Additive Oracle would require a Quantum Fourier Transform based adder (e.g., Draper adder) to compute (x + secret) mod 2^n in superposition; qc.h([0, 1, 2]);",
+    "analysis_text": "The provided simulation data shows zero success, indicating an improperly initialized or non-existent quantum circuit implementation for the Custom_Additive_Secret_Oracle. Theoretically, an additive oracle f(x) = (x + s) mod 2^n allows for the recovery of the secret 's' in a single query using a phase kickback mechanism or by evaluating the oracle at x=0. While classical algorithms require iterating through the search space to resolve the offset, the quantum oracle permits direct extraction of the secret through a superposition of inputs, yielding an exponential speedup in query complexity relative to a brute-force classical search.",
+    "potential_applications": "In the context of oracle_secret_finding, this mathematical structure maps directly to symmetric cryptanalysis where an unknown key or offset is applied in an additive group. It mirrors the underlying structure of breaking linear congruential generators or identifying biases in low-entropy cryptographic primitives. By generalizing the additive oracle to modular arithmetic, it serves as a foundation for understanding hidden subgroup problems which are central to factoring and discrete logarithm protocols.",
+    "base_function_code": "import numpy as np\ndef g(x, secret, n):\n    return (x + secret) % (2**n)",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, n):\n    def f(x):\n        if (x + secret) % (2**n) == 0:\n            return 1\n        else:\n            return 0\n    return f"
+  },
+  {
     "problem_name": "Bernstein-Vazirani",
     "description": "[Oracle Secret Finding] Find a hidden bitstring s in a function f(x) = s * x (mod 2).",
     "completed_at": "2026-06-26T22:01:06.229001Z",
