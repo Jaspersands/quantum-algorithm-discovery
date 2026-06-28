@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Novel_NonLinear_Bitwise_Rotation_Secret_Finding",
+    "description": "[Oracle Secret Finding] Find a secret N-bit integer where the oracle implements a non-linear bitwise rotation and XOR operation.",
+    "completed_at": "2026-06-28T23:58:26.494125Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(sqrt(2^N))",
+    "quantum_gate_complexity": "O(sqrt(2^N) * poly(N))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit; qc = QuantumCircuit(3); qc.h(range(3)); # Oracle logic would typically go here; qc.h(range(3)); qc.measure_all()",
+    "analysis_text": "The problem presents a non-linear bitwise rotation and XOR oracle, which maps directly to the search space defined by Grover's search algorithm. The simulation data provided currently shows a success rate of 0.0, indicating that the required quantum circuit implementation (likely involving a custom phase oracle for the non-linear transformation) has not yet been initialized or is missing the diffusion operator. Given the bitwise rotation structure, a quantum oracle would require at most O(poly(N)) gates per iteration, resulting in an overall O(sqrt(2^N)) complexity, providing a quadratic speedup over the brute-force classical O(2^N) search.",
+    "potential_applications": "The oracle_secret_finding structure corresponds to symmetric key cryptanalysis where the non-linear bitwise rotation acts as a simplified round function or S-box. Finding the secret N-bit integer is analogous to performing a collision search or preimage attack on a hash function with a truncated output, or reversing a lightweight cipher transformation.",
+    "base_function_code": "import numpy as np\ndef g(x, N):\n    secret = (x >> 1) | ((x & 1) << (N - 1))\n    return secret ^ x",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    def f(x):\n        rotated_x = (x >> 1) | ((x & 1) << (N - 1))\n        return 1 if (rotated_x ^ x) == secret else 0\n    return f"
+  },
+  {
     "problem_name": "Trinomial_Product_Secret_Finding",
     "description": "[Oracle Secret Finding] Find a secret integer N-bit integer by solving a problem based on a trinomial product relationship. The function f(x) is 1 if the product of the three most significant bits of x, when interpreted as a trinomial, equals a secret value, and 0 otherwise. This is a non-linear oracle.",
     "completed_at": "2026-06-28T23:51:16.524025Z",
