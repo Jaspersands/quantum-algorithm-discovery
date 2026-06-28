@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-28T02:13:19.882900Z",
-  "current_run": {
-    "problem_name": "QuinticPolynomialSecretOracle",
-    "description": "A novel oracle secret finding problem where the secret is determined by a quintic polynomial function over GF(2). This goes beyond typical linear or quadratic functions searched previously.",
-    "stage": "simulating",
-    "started_at": "2026-06-28T02:13:19.882940Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-28T02:13:21.983819Z",
+  "next_run_at": "2026-06-28T02:15:21.983749Z"
 }
