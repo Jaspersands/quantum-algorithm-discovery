@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-28T23:49:05.657122Z",
+  "last_updated": "2026-06-28T23:50:08.002268Z",
   "current_run": {
     "problem_name": "Trinomial_Product_Secret_Finding",
     "description": "Find a secret integer N-bit integer by solving a problem based on a trinomial product relationship. The function f(x) is 1 if the product of the three most significant bits of x, when interpreted as a trinomial, equals a secret value, and 0 otherwise. This is a non-linear oracle.",
-    "stage": "simulating",
-    "started_at": "2026-06-28T23:49:05.657149Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-28T23:50:08.003761Z"
   }
 }
