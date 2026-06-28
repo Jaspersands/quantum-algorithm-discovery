@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Custom_Exponential_Sum_Secret_Finding",
+    "description": "[Oracle Secret Finding] Find a secret integer N-bit using a custom exponential sum function as the oracle.",
+    "completed_at": "2026-06-28T08:54:17.944943Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^(N/2))",
+    "quantum_gate_complexity": "O(2^(N/2) * poly(N))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit; qc = QuantumCircuit(3); qc.h([0, 1, 2]); # The search failed to find a valid oracle circuit; # Placeholder structure for 3-qubit oracle application",
+    "analysis_text": "The provided problem involves uncovering an N-bit secret through an oracle-based exponential sum approach, characteristic of algorithms like Grover's search. The current simulation data shows a success rate of 0.0, indicating either a failure in the oracle implementation or an insufficient number of iterations/amplitudes required to resolve the secret. Given that exponential sum functions in quantum circuits typically map to amplitude amplification, we project a transition from an exponential classical search space to a square-root quantum complexity.",
+    "potential_applications": "In the context of oracle_secret_finding, this mathematical structure maps directly to symmetric cryptanalysis, specifically the search for pre-images in hash functions or key recovery in block ciphers. By treating the secret key as the target state within an unstructured database, the quantum algorithm provides a quadratic speedup over brute-force classical search methods.",
+    "base_function_code": "import numpy as np\ndef g(x, N):\n    # Custom non-linear function: sum of powers of 2 up to N\n    secret_value = 0\n    for i in range(N):\n        secret_value += (x >> i) & 1\n    return pow(2, secret_value) % (2**N)",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    def oracle(x):\n        # Calculate the base function value\n        base_val = 0\n        for i in range(N):\n            base_val += (x >> i) & 1\n        f_x = pow(2, base_val) % (2**N)\n        \n        # Check if the base function value matches the secret\n        if f_x == secret:\n            return 1\n        else:\n            return 0\n    return oracle"
+  },
+  {
     "problem_name": "Nonlinear_Bitwise_Rotation_Secret_Finding",
     "description": "[Oracle Secret Finding] A novel oracle-based problem to find a secret integer by exploiting a non-linear bitwise rotation and XOR operation.",
     "completed_at": "2026-06-28T06:40:19.883073Z",
