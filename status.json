@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-28T03:18:57.350667Z",
+  "last_updated": "2026-06-28T03:37:05.340389Z",
   "current_run": {
     "problem_name": "Custom_Exponential_Sum_Secret_Finding",
     "description": "Find a secret integer N-bit using an oracle based on a custom exponential sum function.",
-    "stage": "synthesizing",
-    "started_at": "2026-06-28T03:18:57.350716Z"
+    "stage": "analyzing",
+    "started_at": "2026-06-28T03:37:05.341158Z"
   }
 }
