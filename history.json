@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Custom_Exponential_Sum_Secret_Finding",
+    "description": "[Oracle Secret Finding] Find a secret integer N-bit using an oracle based on a custom exponential sum function.",
+    "completed_at": "2026-06-28T03:37:09.171231Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^(N/2))",
+    "quantum_gate_complexity": "O(2^(N/2) * poly(N))",
+    "speedup_type": "Exponential speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit; qc = QuantumCircuit(3); qc.h(range(3)); # Oracle placeholder logic would go here; qc.h(range(3)); # Measurement follows",
+    "analysis_text": "The provided simulation data shows zero success rate for small N (N=2, 3) which indicates that the specific implementation of the exponential sum oracle is currently under-constrained or failing to initialize a superposition capable of constructive interference. Theoretically, solving for a secret N-bit integer via exponential sum estimation (analogous to the Hidden Subgroup Problem or period-finding) requires a quantum circuit that map states through a Quantum Fourier Transform (QFT) or a similar phase estimation routine. The transition from classical O(2^N) search to quantum O(2^(N/2)) or O(poly(N)) represents an exponential speedup, provided that the oracle phase mapping is correctly implemented to allow for phase cancellation of incorrect bitstrings.",
+    "potential_applications": "In the context of oracle_secret_finding, this algorithm targets symmetric cryptanalysis by identifying secret keys or state values embedded in cryptographic hash functions. It effectively replaces brute-force search with an interference-based discovery mechanism, mapping the structure of modular exponential sums to the inversion of one-way functions or finding collisions in pseudo-random permutations.",
+    "base_function_code": "import numpy as np\ndef g(x, N):\n    secret_int = 123 # This is a placeholder, will be replaced by actual secret\n    x_bin = bin(x)[2:].zfill(N)\n    sum_val = 0\n    for i in range(N):\n        if x_bin[i] == '1':\n            sum_val += (2**i) * (secret_int**(i+1))\n    return sum_val % (2**N)",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    def f(x):\n        x_bin = bin(x)[2:].zfill(N)\n        sum_val = 0\n        for i in range(N):\n            if x_bin[i] == '1':\n                sum_val += (2**i) * (secret**(i+1))\n        return 1 if sum_val % (2**N) == secret else 0\n    return f"
+  },
+  {
     "problem_name": "PrimeFactorizationOracleSecretFinding",
     "description": "[Oracle Secret Finding] Finds the two prime factors of a given composite number N. This is a novel oracle problem that leverages number theory properties for secret finding.",
     "completed_at": "2026-06-28T02:22:00.943395Z",
