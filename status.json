@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-28T23:46:48.377521Z",
+  "last_updated": "2026-06-28T23:46:51.566076Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-28T23:46:48.377527Z"
+    "problem_name": "NonLinear_Bitwise_Rotational_Secret_Finding",
+    "description": "Find a secret integer N-bit using a non-linear oracle based on bitwise rotation and addition.",
+    "stage": "simulating",
+    "started_at": "2026-06-28T23:46:51.566103Z"
   }
 }
