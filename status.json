@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-28T07:06:05.565783Z",
+  "last_updated": "2026-06-28T07:06:09.638387Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-28T07:06:05.565792Z"
+    "problem_name": "Custom_Exponential_Sum_Secret_Finding",
+    "description": "Find a secret integer N-bit using a custom exponential sum function as the oracle.",
+    "stage": "simulating",
+    "started_at": "2026-06-28T07:06:09.638407Z"
   }
 }
