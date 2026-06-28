@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-28T23:09:20.489553Z",
-  "current_run": {
-    "problem_name": "AsymmetricPolynomialSecretOracle",
-    "description": "Find a secret integer N using an oracle based on an asymmetric polynomial function.",
-    "stage": "simulating",
-    "started_at": "2026-06-28T23:09:20.489733Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-28T23:09:31.243498Z",
+  "next_run_at": "2026-06-28T23:11:31.243249Z"
 }
