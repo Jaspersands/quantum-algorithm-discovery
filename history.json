@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Nonlinear_Bitwise_Rotation_Secret_Finding",
+    "description": "[Oracle Secret Finding] A novel oracle-based problem to find a secret integer by exploiting a non-linear bitwise rotation and XOR operation.",
+    "completed_at": "2026-06-28T06:40:19.883073Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^{N/2})",
+    "quantum_gate_complexity": "O(2^{N/2} * poly(N))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "",
+    "analysis_text": "The provided simulation data shows zero success rates for N=2 and N=3, indicating that the implemented circuit fails to correctly account for the phase-inversion requirements of the non-linear bitwise rotation oracle. Based on the problem definition, this falls into the Grover-like oracle search category. Theoretically, the search for a secret integer across a domain of size 2^N can be reduced to O(2^{N/2}) using amplitude amplification. The classical baseline is O(2^N) for exhaustive black-box searching. The observed zero success suggests that the unitary decomposition of the non-linear rotation is either missing the necessary ancillary phase encoding or the oracle itself is not correctly implementing the sign-flip operator required for the Grover operator to converge.",
+    "potential_applications": "The 'oracle_secret_finding' for bitwise rotations maps directly to symmetric cryptanalysis where an attacker attempts to find a key or secret state that satisfies a specific non-linear transformation. In software concepts, this mirrors preimage attacks on cryptographic hash functions where the rotation and XOR operations are used as the primary mixing and diffusion primitives. Solving this problem efficiently allows for breaking ciphers that rely on linear-feedback shift registers (LFSRs) or similar bit-shuffling architectures, providing a quantum advantage in evaluating the security margins of lightweight cryptographic protocols.",
+    "base_function_code": "import numpy as np\ndef g(x, N):\n    mask = (1 << N) - 1\n    rotated_x = ((x << 1) | (x >> (N - 1))) & mask\n    return (rotated_x ^ x) & mask",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    mask = (1 << N) - 1\n    def f(x):\n        rotated_x = ((x << 1) | (x >> (N - 1))) & mask\n        return 1 if (rotated_x ^ x) & mask == secret else 0\n    return f"
+  },
+  {
     "problem_name": "NonLinear_Bitwise_Majority_AND_SecretFinding",
     "description": "[Oracle Secret Finding] Find a secret N-bit integer by exploiting a non-linear oracle that checks if the majority of bits in the input are 1 AND if the bitwise AND of the input with the secret is non-zero. This tests a combination of majority logic and AND-based constraints.",
     "completed_at": "2026-06-28T04:13:16.675031Z",
