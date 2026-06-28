@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-28T03:54:24.178667Z",
+  "last_updated": "2026-06-28T04:03:52.373019Z",
   "current_run": {
     "problem_name": "NonLinear_Bitwise_Majority_AND_SecretFinding",
     "description": "Find a secret N-bit integer by exploiting a non-linear oracle that checks if the majority of bits in the input are 1 AND if the bitwise AND of the input with the secret is non-zero. This tests a combination of majority logic and AND-based constraints.",
-    "stage": "simulating",
-    "started_at": "2026-06-28T03:54:24.178694Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-28T04:03:52.373073Z"
   }
 }
