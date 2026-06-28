@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-28T02:13:03.022323Z",
+  "last_updated": "2026-06-28T02:13:19.882900Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-28T02:13:03.022339Z"
+    "problem_name": "QuinticPolynomialSecretOracle",
+    "description": "A novel oracle secret finding problem where the secret is determined by a quintic polynomial function over GF(2). This goes beyond typical linear or quadratic functions searched previously.",
+    "stage": "simulating",
+    "started_at": "2026-06-28T02:13:19.882940Z"
   }
 }
