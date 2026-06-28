@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-28T02:19:51.035090Z",
+  "last_updated": "2026-06-28T02:20:53.737540Z",
   "current_run": {
     "problem_name": "PrimeFactorizationOracleSecretFinding",
     "description": "Finds the two prime factors of a given composite number N. This is a novel oracle problem that leverages number theory properties for secret finding.",
-    "stage": "simulating",
-    "started_at": "2026-06-28T02:19:51.035115Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-28T02:20:53.738440Z"
   }
 }
