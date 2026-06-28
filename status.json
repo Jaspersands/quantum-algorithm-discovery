@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-28T23:46:51.566076Z",
-  "current_run": {
-    "problem_name": "NonLinear_Bitwise_Rotational_Secret_Finding",
-    "description": "Find a secret integer N-bit using a non-linear oracle based on bitwise rotation and addition.",
-    "stage": "simulating",
-    "started_at": "2026-06-28T23:46:51.566103Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-28T23:46:53.229688Z",
+  "next_run_at": "2026-06-28T23:48:53.229619Z"
 }
