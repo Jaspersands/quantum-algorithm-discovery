@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-28T02:51:02.081651Z",
+  "last_updated": "2026-06-28T02:51:06.190574Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-28T02:51:02.081658Z"
+    "problem_name": "Custom_Bitwise_Cyclic_Shift_Secret_Oracle",
+    "description": "Find a secret integer s by querying an oracle that implements a function f(x) = (x <<< k) mod 2^N, where k is a secret shift amount and <<< denotes a cyclic left shift.",
+    "stage": "simulating",
+    "started_at": "2026-06-28T02:51:06.190611Z"
   }
 }
