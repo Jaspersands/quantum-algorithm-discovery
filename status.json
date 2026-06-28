@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-28T02:15:29.707624Z",
-  "current_run": {
-    "problem_name": "CustomCubicModuloSecretOracle",
-    "description": "Find a secret integer N represented by n qubits, where the oracle encodes a function f(x) = (ax^3 + bx + c) mod 2^n, with a, b, c unknown and chosen such that a unique solution exists for x within the search space.",
-    "stage": "simulating",
-    "started_at": "2026-06-28T02:15:29.707645Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-28T02:15:31.611631Z",
+  "next_run_at": "2026-06-28T02:17:31.611579Z"
 }
