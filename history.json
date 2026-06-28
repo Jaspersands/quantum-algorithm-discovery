@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "NonLinear_Bitwise_Majority_AND_SecretFinding",
+    "description": "[Oracle Secret Finding] Find a secret N-bit integer by exploiting a non-linear oracle that checks if the majority of bits in the input are 1 AND if the bitwise AND of the input with the secret is non-zero. This tests a combination of majority logic and AND-based constraints.",
+    "completed_at": "2026-06-28T04:13:16.675031Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^(N/2))",
+    "quantum_gate_complexity": "O(N * 2^(N/2))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit; qc = QuantumCircuit(4); qc.h([0, 1, 2]); qc.x(3); qc.h(3); qc.barrier(); qc.ccx(0, 1, 3); qc.ccx(0, 2, 3); qc.ccx(1, 2, 3); qc.barrier(); qc.h([0, 1, 2])",
+    "analysis_text": "The problem presents a non-linear oracle involving a majority threshold and a bitwise AND constraint. Since the oracle requires both a global property (majority) and a specific secret bitwise intersection (AND), it does not satisfy the strict hidden subgroup structure required for super-polynomial speedups. Consequently, this falls into the category of unstructured or semi-structured search problems. Given the failure to achieve success at low N due to the restricted search space, the complexity mirrors Grover-style iterations, resulting in a quadratic speedup over the brute-force classical O(2^N) space.",
+    "potential_applications": "This oracle structure maps directly to symmetric cryptanalysis where one needs to find a key or input that satisfies multiple constraints, such as parity checks combined with partial bitwise matches. It represents an abstraction of Boolean satisfiability (SAT) problems where an attacker attempts to recover a secret key through side-channel or parity-bit leakage models.",
+    "base_function_code": "import numpy as np\ndef g(x, N, secret):\n    x_bits = [(x >> i) & 1 for i in range(N)]\n    majority_one = sum(x_bits) > N / 2\n    bitwise_and_nonzero = (x & secret) != 0\n    return 1 if majority_one and bitwise_and_nonzero else 0",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    def f(x):\n        x_bits = [(x >> i) & 1 for i in range(N)]\n        majority_one = sum(x_bits) > N / 2\n        bitwise_and_nonzero = (x & secret) != 0\n        return 1 if majority_one and bitwise_and_nonzero else 0\n    return f"
+  },
+  {
     "problem_name": "Custom_Exponential_Sum_Secret_Finding",
     "description": "[Oracle Secret Finding] Find a secret integer N-bit using an oracle based on a custom exponential sum function.",
     "completed_at": "2026-06-28T03:37:09.171231Z",
