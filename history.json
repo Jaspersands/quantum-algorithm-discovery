@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Custom_Logarithmic_Secret_Finding",
+    "description": "[Oracle Secret Finding] Find a secret integer 's' by solving a modified logarithmic function where the oracle marks inputs 'x' such that floor(log2(x)) == floor(log2(s)) for x > 0, and 0 for x = 0. This is a variation on standard secret finding problems by introducing a non-linear, non-bitwise logarithmic relationship.",
+    "completed_at": "2026-06-29T00:13:57.369331Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(sqrt(2^N))",
+    "quantum_gate_complexity": "O(sqrt(2^N) * poly(N))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit; qc = QuantumCircuit(3); qc.h(range(3)); qc.barrier(); # Oracle for secret s=3 (log2(3)=1) marks x in [2,3]; qc.cz(1, 2); qc.barrier(); qc.h(range(3));",
+    "analysis_text": "The problem defines an oracle that performs a mapping based on floor(log2(x)), effectively partitioning the search space into logarithmic bins. Since this is an unstructured search variation where the objective is to locate the bin containing the secret 's', the search remains fundamentally governed by the Grover-like search paradigm. The quadratic speedup is achieved by the quantum amplitude amplification of states within the identified logarithmic interval compared to a classical brute-force sampling which requires linear time relative to the search space size.",
+    "potential_applications": "In the context of oracle_secret_finding, this logarithmic partitioning models a search within hashed metadata or structured memory registers where the search key is defined by an order-of-magnitude range rather than an exact bitwise match. This is applicable to symmetric cryptanalysis where an attacker attempts to narrow down a key range or identify the correct block in a hash-based lookup table without performing exhaustive searches across the entire space.",
+    "base_function_code": "import numpy as np\ndef g(x, N):\n    if x == 0:\n        return 0\n    else:\n        return np.floor(np.log2(x))",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    def f(x):\n        if x == 0:\n            return 0\n        else:\n            # The oracle marks inputs x such that floor(log2(x)) == floor(log2(secret))\n            # This means x and secret are in the same power-of-2 interval [2^k, 2^(k+1)-1]\n            # For x=0, the secret is not found.\n            if secret == 0:\n                return 0 # secret is 0, so no x > 0 will match.\n            return 1 if np.floor(np.log2(x)) == np.floor(np.log2(secret)) else 0\n    return f"
+  },
+  {
     "problem_name": "Quartic_XOR_Secret_Finding",
     "description": "[Oracle Secret Finding] A novel oracle-based problem for finding a secret integer using a quartic XOR relationship. The oracle will evaluate f(x) = (x^4 XOR secret) mod 2. This requires a non-linear oracle and is a variation of polynomial-based secret finding but with XOR and a higher power.",
     "completed_at": "2026-06-29T00:09:32.440965Z",
