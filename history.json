@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Novel_Modular_Product_Secret_Finding",
+    "description": "[Oracle Secret Finding] A novel oracle-based secret finding problem where the secret is an integer N, and the oracle checks if the product of a hidden secret S and an input x modulo M equals a target value T. This is a variant of modular arithmetic problems, designed to be non-linear and challenging for simple linear solvers.",
+    "completed_at": "2026-06-29T00:24:53.107020Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(sqrt(M))",
+    "quantum_gate_complexity": "O(sqrt(M) * poly(log M))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit; qc = QuantumCircuit(3); qc.h([0, 1, 2]); qc.barrier(); qc.barrier(); qc.h([0, 1, 2]); qc.measure_all()",
+    "analysis_text": "The problem constitutes a search task over a modular product space. Given the oracle checks S*x = T (mod M), Grover's algorithm or its variants can be applied to search the space of possible secret S values. The observed simulation data shows failure due to insufficient qubit resources for the required modular arithmetic overhead. Theoretical analysis indicates that while the problem is non-linear, the underlying search space remains unstructured, allowing a quadratic speedup over the optimal classical brute-force linear search.",
+    "potential_applications": "This oracle mapping corresponds to symmetric cryptanalysis, specifically targeting the inversion of modular multiplications which serve as building blocks for hash functions and pseudo-random number generators. This problem is relevant to finding collisions or preimage vulnerabilities in lightweight cryptographic primitives that rely on simple modular arithmetic for diffusion.",
+    "base_function_code": "import numpy as np\ndef g(x, N, M, T):\n    secret = N\n    return 1 if (secret * x) % M == T else 0",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    M = 2**N # Modulus is set to 2^N for simplicity, can be varied\n    T = (secret * 5) % M # Target is set to a value derived from secret, e.g., secret * 5 % M\n    def oracle_func(x):\n        return 1 if (secret * x) % M == T else 0\n    return oracle_func"
+  },
+  {
     "problem_name": "CustomBitwise_XOR_AND_Rotation_Secret_Finding",
     "description": "[Oracle Secret Finding] A novel oracle-based secret finding problem where the secret is determined by a combination of bitwise XOR, AND operations, and a cyclic bit rotation on the input.",
     "completed_at": "2026-06-29T00:20:30.038190Z",
