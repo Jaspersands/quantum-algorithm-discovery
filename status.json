@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-29T06:23:18.152360Z",
-  "current_run": {
-    "problem_name": "Custom_Polynomial_Residue_Secret_Finding",
-    "description": "Find a secret integer 's' by solving a system of equations f(x) = (x^3 + ax + b) mod N = s, where 'a' and 'b' are fixed coefficients, and N is a power of 2. This problem is designed to be non-linear and requires solving modular arithmetic relations.",
-    "stage": "simulating",
-    "started_at": "2026-06-29T06:23:18.152386Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-29T06:23:19.789685Z",
+  "next_run_at": "2026-06-29T06:25:19.789629Z"
 }
