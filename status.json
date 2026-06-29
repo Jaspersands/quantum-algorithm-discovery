@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-29T00:00:39.879746Z",
+  "last_updated": "2026-06-29T00:01:46.004052Z",
   "current_run": {
     "problem_name": "Nonlinear_Bitwise_Polynomial_Secret_Finding",
     "description": "Find a secret N-bit integer using a nonlinear polynomial oracle. The oracle computes a polynomial function of the input bits, with coefficients chosen non-linearly. This is a variation of secret finding where the relationship is more complex than simple XOR or AND operations.",
-    "stage": "simulating",
-    "started_at": "2026-06-29T00:00:39.879768Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-29T00:01:46.005587Z"
   }
 }
