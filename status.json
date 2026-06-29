@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-29T00:27:00.107843Z",
+  "last_updated": "2026-06-29T00:27:06.759080Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-29T00:27:00.107847Z"
+    "problem_name": "Custom_Permutation_Secret_Finding",
+    "description": "A novel oracle-based secret finding problem where the secret is a permutation of a bit string, and the oracle checks if a given bit string x, when permuted according to the secret, results in a fixed target value.",
+    "stage": "simulating",
+    "started_at": "2026-06-29T00:27:06.759097Z"
   }
 }
