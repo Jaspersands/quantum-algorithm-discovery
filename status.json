@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-29T00:27:06.759080Z",
-  "current_run": {
-    "problem_name": "Custom_Permutation_Secret_Finding",
-    "description": "A novel oracle-based secret finding problem where the secret is a permutation of a bit string, and the oracle checks if a given bit string x, when permuted according to the secret, results in a fixed target value.",
-    "stage": "simulating",
-    "started_at": "2026-06-29T00:27:06.759097Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-29T00:27:08.374627Z",
+  "next_run_at": "2026-06-29T00:29:08.374569Z"
 }
