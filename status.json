@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-29T00:35:34.276411Z",
+  "last_updated": "2026-06-29T00:36:40.368293Z",
   "current_run": {
     "problem_name": "Custom_Circular_Shift_Sum_Secret_Finding",
     "description": "A novel oracle secret finding problem based on a circular shift and sum operation in GF(2). The oracle marks states where a secret integer N-bit value is found based on the sum of circularly shifted versions of the input.",
-    "stage": "synthesizing",
-    "started_at": "2026-06-29T00:35:34.276603Z"
+    "stage": "analyzing",
+    "started_at": "2026-06-29T00:36:40.368346Z"
   }
 }
