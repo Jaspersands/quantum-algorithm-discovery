@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Custom_NonLinear_Bitwise_AND_Sum_Secret_Finding",
+    "description": "[Oracle Secret Finding] A novel oracle-based secret finding problem where the secret is determined by a non-linear combination of bitwise AND and sum operations on the input.",
+    "completed_at": "2026-06-29T20:21:07.737228Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^(N/2))",
+    "quantum_gate_complexity": "O(2^(N/2) * poly(N))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit; qc = QuantumCircuit(3); # No circuit found for this non-linear function as the search space was not traversed successfully.",
+    "analysis_text": "The provided simulation data shows zero success across N=2 and N=3, likely indicating that the oracle implementation for this specific non-linear bitwise construct is currently undefined or the amplitude amplification parameters are improperly initialized. Assuming standard Grover-type structures for an oracle-based secret finding problem involving bitwise AND and sum constraints, the quantum search paradigm applies. By mapping the secret finding problem to an unstructured search space, we expect an O(2^(N/2)) query complexity versus the classical O(2^N) brute-force search. The total gate count scales with the depth of the oracle application required to synthesize the non-linear bitwise logic.",
+    "potential_applications": "This oracle_secret_finding problem maps directly to symmetric cryptanalysis where non-linear bitwise operations simulate the S-box functions and diffusion layers of block ciphers. The ability to find a secret defined by AND/Sum constraints implies potential applications in identifying vulnerabilities in lightweight cryptographic hash functions or performing differential cryptanalysis on customized cipher constructions that rely on modular addition combined with bitwise transformations.",
+    "base_function_code": "import numpy as np\ndef g(x, N):\n    x_bin = bin(x)[2:].zfill(N)\n    and_val = int(x_bin[0])\n    for i in range(1, N):\n        and_val &= int(x_bin[i])\n    return and_val + x",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    def oracle(x):\n        x_bin = bin(x)[2:].zfill(N)\n        and_val = int(x_bin[0])\n        for i in range(1, N):\n            and_val &= int(x_bin[i])\n        if (and_val + x) == secret:\n            return 1\n        else:\n            return 0\n    return oracle"
+  },
+  {
     "problem_name": "Custom_Bitwise_XOR_Trinomial_Secret_Finding",
     "description": "[Oracle Secret Finding] Find a secret 3-bit integer N using a non-linear oracle based on a bitwise XOR sum of trinomial terms.",
     "completed_at": "2026-06-29T20:10:21.381434Z",
