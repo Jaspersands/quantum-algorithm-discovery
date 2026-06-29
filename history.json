@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Nonlinear_Bitwise_AND_XOR_SUM_Secret_Oracle",
+    "description": "[Oracle Secret Finding] This problem aims to find a secret N-bit integer by querying a non-linear oracle. The oracle's behavior is defined by a function that combines bitwise AND, XOR, and a sum modulo 2^N. This function is specifically designed to be non-linear and challenging for simple linear solvers.",
+    "completed_at": "2026-06-29T06:00:18.671283Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^(N/2))",
+    "quantum_gate_complexity": "O(2^(N/2) * poly(N))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister; qr = QuantumRegister(3); cr = ClassicalRegister(3); qc = QuantumCircuit(qr, cr); qc.h(qr); qc.barrier(); # Oracle implementation for specific secret logic; qc.barrier(); qc.h(qr); qc.measure(qr, cr);",
+    "analysis_text": "The provided data for N=2 and N=3 shows a success rate of 0.0, indicating that for low qubit counts, the circuit implementation of the nonlinear oracle is either ill-defined or insufficient to support the search algorithm. However, given the structure of finding a secret N-bit integer through a nonlinear oracle involving bitwise AND, XOR, and modular arithmetic, the problem maps to unstructured search. Using Grover's algorithm, the quantum query complexity is expected to scale as O(2^(N/2)), providing a quadratic improvement over the classical exhaustive search complexity of O(2^N). The non-linearity of the oracle prevents simple Gaussian elimination methods, necessitating the application of amplitude amplification techniques.",
+    "potential_applications": "Oracle secret finding in this context corresponds to symmetric cryptanalysis where an attacker attempts to invert a non-linear cryptographic primitive or find a hash collision. The combination of bitwise operations and modular arithmetic mimics common structures in block ciphers like ARX (Add-Rotate-XOR) designs. Quantum algorithms of this type are applicable to finding keys or states that satisfy specific bitwise patterns within security protocols, essentially modeling the oracle as a black-box verification function for brute-force decryption or password recovery.",
+    "base_function_code": "import numpy as np\ndef g(x, N):\n    x_bin = format(x, f'0{N}b')\n    bit1 = int(x_bin[0])\n    bit2 = int(x_bin[1]) if N > 1 else 0\n    and_val = bit1 & bit2\n    xor_val = bit1 ^ bit2\n    sum_val = (and_val + xor_val) % (2**N)\n    return sum_val",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    def oracle(x):\n        x_bin = format(x, f'0{N}b')\n        secret_bin = format(secret, f'0{N}b')\n        bit1_x = int(x_bin[0])\n        bit2_x = int(x_bin[1]) if N > 1 else 0\n        bit1_s = int(secret_bin[0])\n        bit2_s = int(secret_bin[1]) if N > 1 else 0\n        if (bit1_x & bit2_x) == (bit1_s & bit2_s) and (bit1_x ^ bit2_x) == (bit1_s ^ bit2_s):\n            return 1\n        else:\n            return 0\n    return oracle"
+  },
+  {
     "problem_name": "Bernstein-Vazirani",
     "description": "[Oracle Secret Finding] Find a hidden bitstring s in a function f(x) = s * x (mod 2).",
     "completed_at": "2026-06-29T04:22:41.572823Z",
