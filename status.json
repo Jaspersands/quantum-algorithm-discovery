@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-29T00:07:14.740251Z",
+  "last_updated": "2026-06-29T00:07:18.134425Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-29T00:07:14.740259Z"
+    "problem_name": "Quartic_XOR_Secret_Finding",
+    "description": "A novel oracle-based problem for finding a secret integer using a quartic XOR relationship. The oracle will evaluate f(x) = (x^4 XOR secret) mod 2. This requires a non-linear oracle and is a variation of polynomial-based secret finding but with XOR and a higher power.",
+    "stage": "simulating",
+    "started_at": "2026-06-29T00:07:18.134451Z"
   }
 }
