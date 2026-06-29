@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-29T17:20:53.248110Z",
-  "current_run": {
-    "problem_name": "Novel_Bitwise_XOR_Majority_Secret_Finding",
-    "description": "Find a secret integer N using a non-linear oracle that combines bitwise XOR and majority logic. The oracle returns 1 if the XOR sum of the bits of N is greater than the majority of the bits of N, and 0 otherwise.",
-    "stage": "analyzing",
-    "started_at": "2026-06-29T17:20:53.248205Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-29T17:21:01.436863Z"
 }
