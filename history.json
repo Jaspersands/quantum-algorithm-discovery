@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Custom_Bitwise_Trinomial_Secret_Finding",
+    "description": "[Oracle Secret Finding] Find a secret integer 's' for N bits using a custom bitwise trinomial function. The oracle checks if (x1 * x2 + x3) mod 3 == s mod 3, where x1, x2, x3 are specific bits derived from the input integer x. This introduces a non-linearity and modular arithmetic constraint not found in standard bitwise problems.",
+    "completed_at": "2026-06-29T02:20:42.631848Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(sqrt(2^N))",
+    "quantum_gate_complexity": "O(2^{N/2} * poly(N))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit; qc = QuantumCircuit(3); qc.h([0, 1, 2]); # Oracle would be implemented here as a controlled phase shift based on (x1 * x2 + x3) % 3 == secret % 3; qc.h([0, 1, 2]); # Measurement follows.",
+    "analysis_text": "The problem presents an unstructured search space over 2^N possible integers where the secret 's' is hidden behind a trinomial modular oracle. Given the constraint (x1 * x2 + x3) mod 3 = s mod 3, the search space is effectively partitioned into three regions. A quantum approach utilizing Grover's algorithm will achieve a quadratic speedup over the classical brute-force approach, reducing the query complexity from linear in the size of the search space to the square root of the space. The current data (N=3, success 0.0) indicates that the oracle implementation is not yet correctly accounting for the modular arithmetic logic or the amplitude amplification phase.",
+    "potential_applications": "This oracle_secret_finding problem maps directly to symmetric cryptanalysis where modular constraints act as round constants or non-linear S-box equivalents. It is analogous to finding a collision or preimage in a simplified hash function or identifying a specific key in a reduced-round cipher. In broader computer science terms, this represents a constraint satisfaction problem where the quantum solver acts as an efficient search agent for non-linear systems of equations.",
+    "base_function_code": "import numpy as np\ndef g(x, N, s):\n    # Extract three bits, x1, x2, x3 in a specific, non-trivial way.\n    # Example: x1 is the most significant bit, x2 is the least, x3 is the middle bit.\n    # Ensure N >= 3 for this example.\n    if N < 3:\n        raise ValueError(\"N must be at least 3 for this function.\")\n    x1 = (x >> (N - 1)) & 1\n    x2 = x & 1\n    x3 = (x >> (N // 2)) & 1\n    return (x1 * x2 + x3) % 3 == s % 3",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    def oracle(x):\n        if N < 3:\n            raise ValueError(\"N must be at least 3 for this oracle.\")\n        x1 = (x >> (N - 1)) & 1\n        x2 = x & 1\n        x3 = (x >> (N // 2)) & 1\n        return 1 if (x1 * x2 + x3) % 3 == secret % 3 else 0\n    return oracle"
+  },
+  {
     "problem_name": "NonLinear_Trigonometric_Shift_Secret_Finding",
     "description": "[Oracle Secret Finding] Find a secret integer N-bit string by querying a non-linear oracle based on a trigonometric function and bitwise operations.",
     "completed_at": "2026-06-29T02:02:53.741329Z",
