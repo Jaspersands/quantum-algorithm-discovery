@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-29T21:33:53.814306Z",
+  "last_updated": "2026-06-29T21:35:03.427343Z",
   "current_run": {
     "problem_name": "Custom_Trigonometric_Product_Secret_Finding",
     "description": "A novel oracle secret finding problem based on a custom trigonometric product function, aiming to find a secret integer within a specified range.",
-    "stage": "simulating",
-    "started_at": "2026-06-29T21:33:53.814777Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-29T21:35:03.427523Z"
   }
 }
