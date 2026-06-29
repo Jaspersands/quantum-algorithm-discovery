@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-29T11:31:08.687996Z",
-  "current_run": {
-    "problem_name": "CustomNonLinearBitwiseProductSumSecretFinding",
-    "description": "A novel oracle problem designed to find a secret integer N by exploiting a non-linear combination of bitwise product and sum operations.",
-    "stage": "analyzing",
-    "started_at": "2026-06-29T11:31:08.688197Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-29T11:43:36.198942Z"
 }
