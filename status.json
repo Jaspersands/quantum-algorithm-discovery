@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-29T18:19:44.185789Z",
+  "last_updated": "2026-06-29T18:23:22.433325Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-29T18:19:44.185795Z"
+    "problem_name": "Custom_Polynomial_Modulo_Secret_Finding",
+    "description": "Find a secret integer 's' by solving a system of congruences derived from a polynomial evaluation modulo N. This problem is a variation of secret finding where the oracle's behavior is determined by a polynomial function evaluated modulo a composite number N, requiring a non-linear oracle and potentially a linear solver if the polynomial is low-degree.",
+    "stage": "simulating",
+    "started_at": "2026-06-29T18:23:22.433356Z"
   }
 }
