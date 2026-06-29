@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-29T05:59:44.803215Z",
-  "current_run": {
-    "problem_name": "Nonlinear_Bitwise_AND_XOR_SUM_Secret_Oracle",
-    "description": "This problem aims to find a secret N-bit integer by querying a non-linear oracle. The oracle's behavior is defined by a function that combines bitwise AND, XOR, and a sum modulo 2^N. This function is specifically designed to be non-linear and challenging for simple linear solvers.",
-    "stage": "analyzing",
-    "started_at": "2026-06-29T05:59:44.803378Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-29T06:00:21.466592Z"
 }
