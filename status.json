@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-29T00:22:40.201454Z",
+  "last_updated": "2026-06-29T00:23:44.484013Z",
   "current_run": {
     "problem_name": "Novel_Modular_Product_Secret_Finding",
     "description": "A novel oracle-based secret finding problem where the secret is an integer N, and the oracle checks if the product of a hidden secret S and an input x modulo M equals a target value T. This is a variant of modular arithmetic problems, designed to be non-linear and challenging for simple linear solvers.",
-    "stage": "simulating",
-    "started_at": "2026-06-29T00:22:40.201486Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-29T00:23:44.484073Z"
   }
 }
