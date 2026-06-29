@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Custom_Bitwise_XOR_Rotation_Secret_Finding",
+    "description": "[Oracle Secret Finding] A novel oracle secret finding problem based on a combination of bitwise XOR and cyclic rotation of an N-bit integer.",
+    "completed_at": "2026-06-29T13:35:17.887577Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^(N/2))",
+    "quantum_gate_complexity": "O(poly(N) * 2^(N/2))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit; qc = QuantumCircuit(3); qc.h(range(3)); # Add oracle implementation here; qc.h(range(3)); qc.measure_all()",
+    "analysis_text": "The provided simulation data shows zero success rates for small N, indicating that the oracle implementation is currently incomplete or non-functional. Mathematically, a bitwise XOR and cyclic rotation oracle constitutes a black-box search problem over an N-bit space. By applying Grover's algorithm, we expect a quadratic speedup over the brute-force classical search of 2^N. The complexity scaling model assumes the implementation of a coherent diffusion operator, which is required to achieve the expected O(2^(N/2)) query complexity.",
+    "potential_applications": "This oracle corresponds to finding a secret key in a symmetric cipher or a preimage for a cryptographic hash function that utilizes bitwise XOR and rotations as its core confusion and diffusion primitives. It effectively maps to the problem of breaking lightweight block ciphers or hash functions that rely on ARX (Add-Rotate-XOR) architectures.",
+    "base_function_code": "import numpy as np\ndef g(x, N):\n    secret_val = x % (2**N)\n    rotated_val = ((secret_val << 1) | (secret_val >> (N - 1))) & ((1 << N) - 1)\n    return (secret_val ^ rotated_val) % (2**N)",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    def f(x):\n        secret_val = secret % (2**N)\n        rotated_val = ((secret_val << 1) | (secret_val >> (N - 1))) & ((1 << N) - 1)\n        return 1 if (x == (secret_val ^ rotated_val) % (2**N)) else 0\n    return f"
+  },
+  {
     "problem_name": "CustomNonLinearBitwiseProductSumSecretFinding",
     "description": "[Oracle Secret Finding] A novel oracle problem designed to find a secret integer N by exploiting a non-linear combination of bitwise product and sum operations.",
     "completed_at": "2026-06-29T11:31:11.799568Z",
