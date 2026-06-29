@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-29T00:16:08.298698Z",
-  "current_run": {
-    "problem_name": "Complex_Bitwise_Polynomial_Secret_Finding",
-    "description": "A novel oracle problem to find a secret integer by evaluating a complex bitwise polynomial function. The function involves a mix of XOR, AND, and rotation operations, making it non-linear and challenging to solve classically. The secret is encoded in the coefficients of this polynomial.",
-    "stage": "simulating",
-    "started_at": "2026-06-29T00:16:08.298733Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-29T00:16:09.828532Z",
+  "next_run_at": "2026-06-29T00:18:09.828483Z"
 }
