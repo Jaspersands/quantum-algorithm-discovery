@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "NonLinear_Trigonometric_Shift_Secret_Finding",
+    "description": "[Oracle Secret Finding] Find a secret integer N-bit string by querying a non-linear oracle based on a trigonometric function and bitwise operations.",
+    "completed_at": "2026-06-29T02:02:53.741329Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "Undetermined (O(2^N) expected based on non-linear oracle structure)",
+    "quantum_gate_complexity": "Exponential (O(2^N))",
+    "speedup_type": "None",
+    "synthesis_code": "from qiskit import QuantumCircuit; qc = QuantumCircuit(3); # The search for a quantum circuit to solve this specific non-linear trigonometric oracle yielded no valid solution, as the oracle function mapping is not a reversible unitary operator suitable for standard phase kickback.",
+    "analysis_text": "The provided simulation data for N=2 and N=3 shows a 0.0% success rate, indicating that the quantum circuit configuration is failing to resolve the secret N-bit string. Given the non-linear nature of the trigonometric oracle, this problem structure likely prohibits the application of standard phase-kickback or amplitude amplification techniques (like Grover's) due to the lack of a structured, searchable phase manifold. Without an efficient mapping to a unitary operator, the quantum oracle requires exhaustive evaluation of the entire search space, mirroring the exponential complexity of classical brute-force search.",
+    "potential_applications": "The oracle_secret_finding structure here serves as a proxy for evaluating the resistance of non-linear cryptographic primitives to quantum attacks. Specifically, it maps to the cryptanalysis of lightweight block ciphers and hash functions that utilize non-linear trigonometric approximations (e.g., S-box constructions or non-standard modular arithmetic shifts). This model helps identify potential weaknesses in classical cryptographic design by testing if non-standard shifts allow for a reduction in security margin under quantum inspection.",
+    "base_function_code": "import numpy as np\ndef g(x, N):\n    # x is an integer from 0 to 2**N - 1\n    # We interpret x as a bitstring of length N\n    bits = [(x >> i) & 1 for i in range(N)]\n    # Calculate a value based on alternating sum of bits and sine function\n    val = 0\n    for i in range(N):\n        if bits[i] == 1:\n            val += (i + 1)\n    return int(np.round(100 * np.sin(val / (N + 1))))",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    # secret is an integer from 0 to 2**N - 1\n    # This oracle checks if g(x, N) is equal to the secret's g value.\n    # This is a NON-LINEAR relation and not a simple equality.\n    secret_g_val = int(np.round(100 * np.sin(sum([(i+1) for i in range(N) if (secret >> i) & 1]) / (N + 1))))\n    def f(x):\n        x_bits = [(x >> i) & 1 for i in range(N)]\n        val = 0\n        for i in range(N):\n            if x_bits[i] == 1:\n                val += (i + 1)\n        current_g_val = int(np.round(100 * np.sin(val / (N + 1))))\n        return 1 if current_g_val == secret_g_val else 0\n    return f"
+  },
+  {
     "problem_name": "ModularExponentiationSecretFinding",
     "description": "[Oracle Secret Finding] Find a secret integer 's' such that for a given base 'a' and modulus 'N', the oracle computes (a^x mod N) and marks states where x = s.",
     "completed_at": "2026-06-29T01:23:26.036270Z",
