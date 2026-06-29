@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Novel_Bitwise_Cyclic_Shift_Secret_Finding",
+    "description": "[Oracle Secret Finding] This problem involves finding a secret N-bit integer x_s by exploiting a function that combines bitwise cyclic shifts and addition modulo 2^N. The function f(x) = ( (x <<< 1) + (x >>> 1) ) mod 2^N, where <<< is left cyclic shift and >>> is right cyclic shift. We aim to find x_s such that f(x_s) = secret_output, where secret_output is a predefined value. This is a non-linear function due to the cyclic shift operations.",
+    "completed_at": "2026-06-29T18:17:36.783630Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^(N/2))",
+    "quantum_gate_complexity": "O(2^(N/2) * poly(N))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit; qc = QuantumCircuit(3); qc.h([0, 1, 2]); # Oracle construction depends on the specific target_output; # Since the oracle function for the bitwise shift and add is non-linear and results in a non-injective mapping for many inputs, finding a unique secret x_s via standard quantum phase kickback is not directly possible for this specific function as the search failed to find a valid gate sequence.",
+    "analysis_text": "The problem presents a non-linear oracle function involving bitwise cyclic shifts and addition modulo 2^N. Given the periodicity and the structure of the function, the search space of size 2^N can be explored using Grover-style amplitude amplification. Current simulation data (N=2,3) shows zero success rate, likely due to insufficient circuit depth for implementing the non-linear bitwise logic. Theoretically, utilizing amplitude amplification achieves a quadratic speedup over the brute-force classical search of O(2^N).",
+    "potential_applications": "In the context of 'oracle_secret_finding', this function mirrors the algebraic structure found in non-linear feedback shift registers (NLFSRs) and hash function internal components. Specifically, it maps to cryptanalysis of lightweight block ciphers where bitwise permutations (rotations) are combined with modular addition to create diffusion. This analysis is relevant for identifying potential collisions or pre-image vulnerabilities in simplified cryptographic hash primitives.",
+    "base_function_code": "import numpy as np\ndef g(x, N):\n    mask = (1 << N) - 1\n    left_shifted = ((x << 1) | (x >> (N - 1))) & mask\n    right_shifted = ((x >> 1) | (x << (N - 1))) & mask\n    return (left_shifted + right_shifted) & mask",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret_output, N):\n    mask = (1 << N) - 1\n    def f(x):\n        left_shifted = ((x << 1) | (x >> (N - 1))) & mask\n        right_shifted = ((x >> 1) | (x << (N - 1))) & mask\n        return 1 if ((left_shifted + right_shifted) & mask) == secret_output else 0\n    return f"
+  },
+  {
     "problem_name": "Nonlinear_Bitwise_XNOR_SUM_Secret_Finding",
     "description": "[Oracle Secret Finding] Find a secret N-bit integer where the oracle computes a non-linear function involving bitwise XNOR and SUM.",
     "completed_at": "2026-06-29T18:07:05.655705Z",
