@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-29T20:16:46.784114Z",
-  "current_run": {
-    "problem_name": "Custom_Permutation_Parity_Oracle",
-    "description": "Find a secret permutation of a given length by querying a parity-based oracle.",
-    "stage": "simulating",
-    "started_at": "2026-06-29T20:16:46.784145Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-29T20:16:48.532976Z",
+  "next_run_at": "2026-06-29T20:18:48.532911Z"
 }
