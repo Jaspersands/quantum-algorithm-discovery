@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-29T01:23:22.586603Z",
-  "current_run": {
-    "problem_name": "ModularExponentiationSecretFinding",
-    "description": "Find a secret integer 's' such that for a given base 'a' and modulus 'N', the oracle computes (a^x mod N) and marks states where x = s.",
-    "stage": "analyzing",
-    "started_at": "2026-06-29T01:23:22.586649Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-29T01:23:29.273495Z"
 }
