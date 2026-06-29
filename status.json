@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-29T07:45:00.614165Z",
+  "last_updated": "2026-06-29T08:09:17.435562Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-29T07:45:00.614173Z"
+    "problem_name": "Custom_Hyperbolic_Sine_Secret_Oracle",
+    "description": "Find a secret integer `s` by exploiting the property of a custom non-linear function based on the hyperbolic sine of a bitwise XOR sum. The function is `g(x, N) = sinh(x XOR s) mod 2^N`.",
+    "stage": "simulating",
+    "started_at": "2026-06-29T08:09:17.435594Z"
   }
 }
