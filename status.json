@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-29T02:18:29.185509Z",
+  "last_updated": "2026-06-29T02:19:33.642699Z",
   "current_run": {
     "problem_name": "Custom_Bitwise_Trinomial_Secret_Finding",
     "description": "Find a secret integer 's' for N bits using a custom bitwise trinomial function. The oracle checks if (x1 * x2 + x3) mod 3 == s mod 3, where x1, x2, x3 are specific bits derived from the input integer x. This introduces a non-linearity and modular arithmetic constraint not found in standard bitwise problems.",
-    "stage": "simulating",
-    "started_at": "2026-06-29T02:18:29.186335Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-29T02:19:33.643040Z"
   }
 }
