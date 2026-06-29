@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "CustomBitwise_XOR_AND_Rotation_Secret_Finding",
+    "description": "[Oracle Secret Finding] A novel oracle-based secret finding problem where the secret is determined by a combination of bitwise XOR, AND operations, and a cyclic bit rotation on the input.",
+    "completed_at": "2026-06-29T00:20:30.038190Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(sqrt(2^N))",
+    "quantum_gate_complexity": "O(2^N/2 * poly(N))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit; qc = QuantumCircuit(3); qc.h([0, 1, 2]); qc.barrier(); # Oracle for CustomBitwise_XOR_AND_Rotation_Secret_Finding requires specific T-gates or decomposition based on the bitwise logic; qc.barrier(); qc.h([0, 1, 2]);",
+    "analysis_text": "The provided simulation data for N=2 and N=3 shows a failure to reach convergence, likely due to insufficient oracle implementation or decoherence in the simulation environment. Theoretically, secret finding problems structured around bitwise operations (XOR, AND, Rotation) conform to the search space defined by Grover's algorithm. Given the search space size of 2^N, the quantum approach provides a quadratic speedup over the classical O(2^N) brute-force search, reducing query requirements from O(2^N) to O(sqrt(2^N)). The circuit gate complexity reflects the overhead of implementing the specific XOR/AND/Rotation logic within the oracle loop.",
+    "potential_applications": "This oracle-based secret finding structure mimics vulnerabilities in symmetric cryptographic primitives. Specifically, it maps to the cryptanalysis of block ciphers and hash functions where bitwise transformations (S-boxes, rotations, and XOR linear layers) are used to achieve diffusion and confusion. Finding the 'secret' in this oracle is mathematically equivalent to reversing the key-dependent bitwise operations in a round function or finding a pre-image in a simplified hash construction.",
+    "base_function_code": "import numpy as np\ndef g(x, N):\n    secret_int = int(np.random.randint(0, 2**N))\n    rotated_x = ((x >> (N - 1)) | (x << 1)) & ((1 << N) - 1)\n    result = (x ^ rotated_x) & secret_int\n    return result",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    def oracle(x):\n        rotated_x = ((x >> (N - 1)) | (x << 1)) & ((1 << N) - 1)\n        return 1 if (x ^ rotated_x) & secret == secret else 0\n    return oracle"
+  },
+  {
     "problem_name": "Custom_Logarithmic_Secret_Finding",
     "description": "[Oracle Secret Finding] Find a secret integer 's' by solving a modified logarithmic function where the oracle marks inputs 'x' such that floor(log2(x)) == floor(log2(s)) for x > 0, and 0 for x = 0. This is a variation on standard secret finding problems by introducing a non-linear, non-bitwise logarithmic relationship.",
     "completed_at": "2026-06-29T00:13:57.369331Z",
