@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-29T20:21:04.149939Z",
-  "current_run": {
-    "problem_name": "Custom_NonLinear_Bitwise_AND_Sum_Secret_Finding",
-    "description": "A novel oracle-based secret finding problem where the secret is determined by a non-linear combination of bitwise AND and sum operations on the input.",
-    "stage": "analyzing",
-    "started_at": "2026-06-29T20:21:04.150047Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-29T20:21:10.854387Z"
 }
