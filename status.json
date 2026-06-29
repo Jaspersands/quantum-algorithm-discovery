@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-29T20:13:34.355596Z",
-  "current_run": {
-    "problem_name": "Custom_Modular_Arithmetic_Secret_Finding",
-    "description": "Find a secret integer 's' using a quantum oracle that checks if (a*x + s) mod N = 0 for a given 'a' and 'x'. This is a novel variation of modular arithmetic problems.",
-    "stage": "simulating",
-    "started_at": "2026-06-29T20:13:34.355649Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-29T20:13:39.344469Z",
+  "next_run_at": "2026-06-29T20:15:39.344388Z"
 }
