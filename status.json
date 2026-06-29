@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-29T17:40:04.945665Z",
+  "last_updated": "2026-06-29T17:49:45.454614Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-29T17:40:04.945673Z"
+    "problem_name": "Custom_Bivariate_Polynomial_Secret_Finding",
+    "description": "Find the secret coefficients of a bivariate polynomial f(x,y) = a*x + b*y + c*x*y mod 2, where a, b, and c are the secret bits.",
+    "stage": "simulating",
+    "started_at": "2026-06-29T17:49:45.454669Z"
   }
 }
