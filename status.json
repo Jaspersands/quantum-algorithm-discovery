@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-29T01:49:31.961902Z",
+  "last_updated": "2026-06-29T02:00:40.310005Z",
   "current_run": {
     "problem_name": "NonLinear_Trigonometric_Shift_Secret_Finding",
     "description": "Find a secret integer N-bit string by querying a non-linear oracle based on a trigonometric function and bitwise operations.",
-    "stage": "simulating",
-    "started_at": "2026-06-29T01:49:31.961951Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-29T02:00:40.310261Z"
   }
 }
