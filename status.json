@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-29T08:09:17.435562Z",
+  "last_updated": "2026-06-29T09:27:11.434047Z",
   "current_run": {
     "problem_name": "Custom_Hyperbolic_Sine_Secret_Oracle",
     "description": "Find a secret integer `s` by exploiting the property of a custom non-linear function based on the hyperbolic sine of a bitwise XOR sum. The function is `g(x, N) = sinh(x XOR s) mod 2^N`.",
-    "stage": "simulating",
-    "started_at": "2026-06-29T08:09:17.435594Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-29T09:27:11.434275Z"
   }
 }
