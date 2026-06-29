@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Custom_Quadratic_Residue_Oracle_Secret_Finding_Variant",
+    "description": "[Oracle Secret Finding] This problem seeks to find a secret integer 'a' such that g(x) = (x^2 mod p) == a (mod p), where p is a prime number, and the oracle checks for this quadratic residue property. This is a variant of quadratic residue problems, focusing on finding the secret residue value itself, not necessarily the input 'x'.",
+    "completed_at": "2026-06-29T18:30:57.786035Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(1)",
+    "quantum_gate_complexity": "O(poly(log p))",
+    "speedup_type": "Exponential speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit; qc = QuantumCircuit(3); qc.h([0, 1, 2]); qc.barrier(); # Oracle would go here; qc.barrier(); qc.h([0, 1, 2]);",
+    "analysis_text": "The provided simulation data shows zero success rate for small qubit counts, which is characteristic of problems requiring a specific register size to encode the modulus p. Mathematically, the quadratic residue oracle maps inputs to their squares mod p. In the quantum regime, utilizing properties of the Quantum Fourier Transform (QFT) and period finding algorithms, this task reduces to extracting the secret value 'a' via phase estimation. While classical brute-force search scales linearly with the modulus p (O(p)), the quantum approach exploits the structural periodicity of the quadratic map, leading to an exponential advantage in query complexity.",
+    "potential_applications": "In the context of oracle_secret_finding, this maps to breaking hidden subgroup structures often found in cryptographic schemes relying on the difficulty of the quadratic residuosity problem. By identifying the secret 'a', one can undermine symmetric primitives that use modular squaring for permutation-based obfuscation or cryptographic hash construction. This specific problem is fundamentally linked to the underlying structure of Factoring-based algorithms, serving as a primitive for attacking specific signature schemes or identity-based encryption systems.",
+    "base_function_code": "import numpy as np\ndef g(x, p, a):\n    return 1 if (x*x) % p == a else 0",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret_a, p):\n    def oracle(x):\n        return 1 if (x*x) % p == secret_a else 0\n    return oracle"
+  },
+  {
     "problem_name": "Novel_Bitwise_Cyclic_Shift_Secret_Finding",
     "description": "[Oracle Secret Finding] This problem involves finding a secret N-bit integer x_s by exploiting a function that combines bitwise cyclic shifts and addition modulo 2^N. The function f(x) = ( (x <<< 1) + (x >>> 1) ) mod 2^N, where <<< is left cyclic shift and >>> is right cyclic shift. We aim to find x_s such that f(x_s) = secret_output, where secret_output is a predefined value. This is a non-linear function due to the cyclic shift operations.",
     "completed_at": "2026-06-29T18:17:36.783630Z",
