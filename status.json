@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-29T13:35:13.386554Z",
-  "current_run": {
-    "problem_name": "Custom_Bitwise_XOR_Rotation_Secret_Finding",
-    "description": "A novel oracle secret finding problem based on a combination of bitwise XOR and cyclic rotation of an N-bit integer.",
-    "stage": "analyzing",
-    "started_at": "2026-06-29T13:35:13.386847Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-29T13:35:22.172683Z"
 }
