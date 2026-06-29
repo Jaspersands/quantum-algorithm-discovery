@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-29T18:04:53.539305Z",
+  "last_updated": "2026-06-29T18:05:58.709657Z",
   "current_run": {
     "problem_name": "Nonlinear_Bitwise_XNOR_SUM_Secret_Finding",
     "description": "Find a secret N-bit integer where the oracle computes a non-linear function involving bitwise XNOR and SUM.",
-    "stage": "simulating",
-    "started_at": "2026-06-29T18:04:53.539467Z"
+    "stage": "synthesizing",
+    "started_at": "2026-06-29T18:05:58.710076Z"
   }
 }
