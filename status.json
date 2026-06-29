@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-29T17:02:41.173247Z",
-  "current_run": {
-    "problem_name": "Custom_Bitwise_Tetranomial_Secret_Finding",
-    "description": "Find a secret integer N within a range defined by a custom bitwise tetranomial function. This involves a non-linear relationship between input bits and output values, requiring a non-trivial oracle.",
-    "stage": "simulating",
-    "started_at": "2026-06-29T17:02:41.173456Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-29T17:05:19.773030Z",
+  "next_run_at": "2026-06-29T17:07:19.772910Z"
 }
