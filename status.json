@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-29T18:30:51.182901Z",
-  "current_run": {
-    "problem_name": "Custom_Quadratic_Residue_Oracle_Secret_Finding_Variant",
-    "description": "This problem seeks to find a secret integer 'a' such that g(x) = (x^2 mod p) == a (mod p), where p is a prime number, and the oracle checks for this quadratic residue property. This is a variant of quadratic residue problems, focusing on finding the secret residue value itself, not necessarily the input 'x'.",
-    "stage": "analyzing",
-    "started_at": "2026-06-29T18:30:51.182954Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-29T18:31:00.796690Z"
 }
