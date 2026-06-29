@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Custom_Circular_Shift_Sum_Secret_Finding",
+    "description": "[Oracle Secret Finding] A novel oracle secret finding problem based on a circular shift and sum operation in GF(2). The oracle marks states where a secret integer N-bit value is found based on the sum of circularly shifted versions of the input.",
+    "completed_at": "2026-06-29T00:36:46.733208Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(sqrt(2^N))",
+    "quantum_gate_complexity": "O(N^2 * sqrt(2^N))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit; qc = QuantumCircuit(3); qc.h([0, 1, 2]); # Oracle would be inserted here; qc.h([0, 1, 2]);",
+    "analysis_text": "The provided simulation data shows zero success rates for N=2 and N=3, indicating that the oracle implementation or the amplitude amplification routine requires refinement. Mathematically, the 'Custom_Circular_Shift_Sum_Secret_Finding' problem corresponds to unstructured search in an N-dimensional binary space. By utilizing Grover's algorithm, the quantum query complexity is reduced to O(sqrt(2^N)), providing a quadratic speedup over the classical brute-force approach which necessitates O(2^N) evaluations.",
+    "potential_applications": "In the context of oracle secret finding, this maps directly to symmetric cryptanalysis where the 'circular shift and sum' structure acts as a weakened cryptographic primitive. It models scenarios such as breaking simple hash-based authentication mechanisms or identifying weak keys in stream ciphers where the internal state transition is a linear circular shift. This abstraction is fundamental to assessing the vulnerability of lightweight cryptographic hardware designs against quantum search attacks.",
+    "base_function_code": "import numpy as np\ndef g(x, N):\n    secret = 42 # Placeholder, actual secret is set in oracle generator\n    shifted_x = (x >> (N - 1)) | (x << 1) & ((1 << N) - 1)\n    return (x + shifted_x) % (2**N) == secret",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    def f(x):\n        shifted_x = (x >> (N - 1)) | (x << 1) & ((1 << N) - 1)\n        return 1 if (x + shifted_x) % (2**N) == secret else 0\n    return f"
+  },
+  {
     "problem_name": "Novel_Modular_Product_Secret_Finding",
     "description": "[Oracle Secret Finding] A novel oracle-based secret finding problem where the secret is an integer N, and the oracle checks if the product of a hidden secret S and an input x modulo M equals a target value T. This is a variant of modular arithmetic problems, designed to be non-linear and challenging for simple linear solvers.",
     "completed_at": "2026-06-29T00:24:53.107020Z",
