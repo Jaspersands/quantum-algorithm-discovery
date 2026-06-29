@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-29T06:25:40.824485Z",
+  "last_updated": "2026-06-29T06:25:52.880443Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-29T06:25:40.824491Z"
+    "problem_name": "CustomQuadraticModularSecretFinding",
+    "description": "A non-linear oracle-based problem to find a secret integer using a quadratic function modulo a prime.",
+    "stage": "simulating",
+    "started_at": "2026-06-29T06:25:52.880646Z"
   }
 }
