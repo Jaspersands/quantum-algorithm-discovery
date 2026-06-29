@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-29T21:54:56.690347Z",
-  "current_run": {
-    "problem_name": "Custom_NonLinear_Bitwise_Product_XOR_Secret_Finding",
-    "description": "Find a secret integer N, where the oracle implements a non-linear function involving bitwise product and XOR of the input register with the secret.",
-    "stage": "simulating",
-    "started_at": "2026-06-29T21:54:56.690382Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-29T21:54:58.418022Z",
+  "next_run_at": "2026-06-29T21:56:58.417940Z"
 }
