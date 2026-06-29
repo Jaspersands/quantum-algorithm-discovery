@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Nonlinear_Bitwise_Polynomial_Secret_Finding",
+    "description": "[Oracle Secret Finding] Find a secret N-bit integer using a nonlinear polynomial oracle. The oracle computes a polynomial function of the input bits, with coefficients chosen non-linearly. This is a variation of secret finding where the relationship is more complex than simple XOR or AND operations.",
+    "completed_at": "2026-06-29T00:02:53.337656Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^(N/2))",
+    "quantum_gate_complexity": "O(Poly(N) * 2^(N/2))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister; qc = QuantumCircuit(3, 3); qc.h([0, 1, 2]); qc.barrier(); # No oracle found for nonlinear polynomial; qc.barrier(); qc.h([0, 1, 2]); qc.measure([0, 1, 2], [0, 1, 2])",
+    "analysis_text": "The provided scaling data for N=2 and N=3 shows a success rate of 0.0, which indicates that the oracle implementation is currently failing to initialize or converge for small N. Theoretically, finding a secret N-bit integer within a non-linear polynomial oracle is analogous to the hidden shift or unstructured search problem. Using Grover's algorithm or its variants (e.g., amplitude amplification), the quantum query complexity is O(2^(N/2)), whereas the classical brute-force approach requires O(2^N) queries to identify the specific secret bitstring. The success failure at low N likely points to a lack of proper state superposition preparation or incorrect oracle encoding of the nonlinear polynomial coefficients.",
+    "potential_applications": "In the context of 'oracle_secret_finding', this mathematical structure maps directly to symmetric cryptanalysis where an attacker attempts to invert a nonlinear S-box or a bit-oriented cipher function. By representing the secret key as the target bitstring, the nonlinear oracle acts as the decryption or hash function verification step. A quantum solver for this structure provides a generalized framework for attacking hash functions with bitwise nonlinear transformations (like those found in SHA-3 or Keccak variants) and accelerating the preimage search beyond the classical birthday bound limits.",
+    "base_function_code": "import numpy as np\ndef g(x, N):\n    bits = [(x >> i) & 1 for i in range(N)]\n    secret_bits = [(x >> i) & 1 for i in range(N)]\n    \n    # Example: a nonlinear polynomial based on bit positions and values\n    # This polynomial is designed to be non-linear and hard to guess without knowing the secret\n    poly_val = 0\n    for i in range(N):\n        for j in range(N):\n            if (i + j) % N == secret_bits[i] * secret_bits[j]:\n                poly_val = (poly_val + bits[i] * bits[j] * (i + 1)) % 2\n    return poly_val",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    def oracle(x):\n        bits = [(x >> i) & 1 for i in range(N)]\n        secret_bits = [(secret >> i) & 1 for i in range(N)]\n        \n        poly_val = 0\n        for i in range(N):\n            for j in range(N):\n                # A non-linear function that depends on both bits and secret bits' property\n                if (i + j) % N == secret_bits[i] * secret_bits[j]:\n                    poly_val = (poly_val + bits[i] * bits[j] * (i + 1)) % 2\n        return poly_val\n    return oracle"
+  },
+  {
     "problem_name": "Novel_NonLinear_Bitwise_Rotation_Secret_Finding",
     "description": "[Oracle Secret Finding] Find a secret N-bit integer where the oracle implements a non-linear bitwise rotation and XOR operation.",
     "completed_at": "2026-06-28T23:58:26.494125Z",
