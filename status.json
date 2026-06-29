@@ -1,10 +1,10 @@
 {
   "status": "searching",
-  "last_updated": "2026-06-29T18:15:19.576428Z",
+  "last_updated": "2026-06-29T18:15:25.781078Z",
   "current_run": {
-    "problem_name": "Quantum Algorithm Proposal",
-    "description": "Querying Theorist for a new quantum problem...",
-    "stage": "theorist",
-    "started_at": "2026-06-29T18:15:19.576434Z"
+    "problem_name": "Novel_Bitwise_Cyclic_Shift_Secret_Finding",
+    "description": "This problem involves finding a secret N-bit integer x_s by exploiting a function that combines bitwise cyclic shifts and addition modulo 2^N. The function f(x) = ( (x <<< 1) + (x >>> 1) ) mod 2^N, where <<< is left cyclic shift and >>> is right cyclic shift. We aim to find x_s such that f(x_s) = secret_output, where secret_output is a predefined value. This is a non-linear function due to the cyclic shift operations.",
+    "stage": "simulating",
+    "started_at": "2026-06-29T18:15:25.781104Z"
   }
 }
