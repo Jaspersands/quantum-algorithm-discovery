@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-29T18:17:33.416452Z",
-  "current_run": {
-    "problem_name": "Novel_Bitwise_Cyclic_Shift_Secret_Finding",
-    "description": "This problem involves finding a secret N-bit integer x_s by exploiting a function that combines bitwise cyclic shifts and addition modulo 2^N. The function f(x) = ( (x <<< 1) + (x >>> 1) ) mod 2^N, where <<< is left cyclic shift and >>> is right cyclic shift. We aim to find x_s such that f(x_s) = secret_output, where secret_output is a predefined value. This is a non-linear function due to the cyclic shift operations.",
-    "stage": "analyzing",
-    "started_at": "2026-06-29T18:17:33.416524Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-29T18:17:39.642528Z"
 }
