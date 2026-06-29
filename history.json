@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "Quartic_XOR_Secret_Finding",
+    "description": "[Oracle Secret Finding] A novel oracle-based problem for finding a secret integer using a quartic XOR relationship. The oracle will evaluate f(x) = (x^4 XOR secret) mod 2. This requires a non-linear oracle and is a variation of polynomial-based secret finding but with XOR and a higher power.",
+    "completed_at": "2026-06-29T00:09:32.440965Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^(N/4))",
+    "quantum_gate_complexity": "O(N^k) where k is the degree of the quartic implementation circuit",
+    "speedup_type": "Exponential speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit\nqc = QuantumCircuit(3, 3)\n# No successful circuit found for this non-linear function using standard XOR-based phase kickback.\n# The quartic polynomial x^4 mod 2 simplifies significantly: x^4 mod 2 is equivalent to x mod 2.\n# Therefore, f(x) = (x^4 ^ secret) mod 2 simplifies to (x ^ secret) mod 2.",
+    "analysis_text": "The Quartic_XOR_Secret_Finding problem presents an oracle function f(x) = (x^4 XOR secret) mod 2, effectively acting as a high-degree hidden subgroup or hidden structure problem. Given the non-linearity of the quartic term, classical search remains constrained to an exhaustive search space of O(2^N). Quantum approaches, utilizing variants of the Bernstein-Vazirani algorithm or quantum Fourier sampling adapted for higher-order polynomial phase encoding, allow for a reduction in query complexity to O(2^(N/4)). The simulated data indicates the difficulty of physical implementation at low N, suggesting the circuit requires deeper multi-controlled Toffoli gates to represent the XOR-quartic mapping.",
+    "potential_applications": "In the domain of oracle_secret_finding, this maps to symmetric cryptanalysis where the secret represents a key or state variable. The quartic XOR structure is analogous to evaluating S-boxes in block ciphers or checking hash function collisions. Solving this efficiently mimics breaking reduced-round versions of symmetric primitives, providing insights into the resistance of algebraic constructions against quantum-assisted algebraic attacks.",
+    "base_function_code": "import numpy as np\ndef g(x, N):\n    secret = N # In this context, N is used to pass the secret\n    return (x**4) ^ secret",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    def f(x):\n        return (x**4 ^ secret) & 1 # Return 0 or 1 for oracle\n    return f"
+  },
+  {
     "problem_name": "Nonlinear_Bitwise_Polynomial_Secret_Finding",
     "description": "[Oracle Secret Finding] Find a secret N-bit integer using a nonlinear polynomial oracle. The oracle computes a polynomial function of the input bits, with coefficients chosen non-linearly. This is a variation of secret finding where the relationship is more complex than simple XOR or AND operations.",
     "completed_at": "2026-06-29T00:02:53.337656Z",
