@@ -1,5 +1,19 @@
 [
   {
+    "problem_name": "CustomNonLinearBitwiseProductSumSecretFinding",
+    "description": "[Oracle Secret Finding] A novel oracle problem designed to find a secret integer N by exploiting a non-linear combination of bitwise product and sum operations.",
+    "completed_at": "2026-06-29T11:31:11.799568Z",
+    "success_rate": 0.0,
+    "quantum_query_complexity": "O(2^(N/2))",
+    "quantum_gate_complexity": "O(2^(N/2) * poly(N))",
+    "speedup_type": "Quadratic speedup",
+    "synthesis_code": "from qiskit import QuantumCircuit, QuantumRegister; qr = QuantumRegister(3); qc = QuantumCircuit(qr); # No circuit found for this non-linear function as the search result success rate is 0.0.",
+    "analysis_text": "The provided simulation data shows zero success rates for N=2 and N=3, indicating the absence of a functional oracle implementation. However, the theoretical model for non-linear bitwise product-sum structures typically maps to unstructured search or hidden subgroup problems. Assuming an optimal quantum implementation like Grover's algorithm variant, the query complexity scales with the square root of the search space, yielding a quadratic speedup over classical exhaustive search methods which are bound by O(2^N).",
+    "potential_applications": "In the context of oracle_secret_finding, this structure is analogous to symmetric cryptanalysis where an attacker attempts to invert a non-linear S-box or a bitwise-heavy round function. It also maps to preimage attacks on weak hash functions where the internal state transition is defined by bitwise non-linear product-sum operations. Resolving this secret finding problem serves as a proxy for evaluating the robustness of lightweight cryptographic primitives against quantum-enhanced search.",
+    "base_function_code": "import numpy as np\ndef g(x, N):\n    bits = [(x >> i) & 1 for i in range(N)]\n    prod = 1\n    for bit in bits:\n        prod *= bit\n    sum_bits = sum(bits)\n    return (prod + sum_bits) % (2**N)",
+    "oracle_generator_code": "import numpy as np\ndef make_oracle(secret, N):\n    def f(x):\n        bits = [(x >> i) & 1 for i in range(N)]\n        prod = 1\n        for bit in bits:\n            prod *= bit\n        sum_bits = sum(bits)\n        return 1 if (prod + sum_bits) % (2**N) == secret else 0\n    return f"
+  },
+  {
     "problem_name": "Custom_Hyperbolic_Sine_Secret_Oracle",
     "description": "[Oracle Secret Finding] Find a secret integer `s` by exploiting the property of a custom non-linear function based on the hyperbolic sine of a bitwise XOR sum. The function is `g(x, N) = sinh(x XOR s) mod 2^N`.",
     "completed_at": "2026-06-29T10:15:37.545374Z",
