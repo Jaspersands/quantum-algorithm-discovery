@@ -1,10 +1,5 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-29T06:25:52.880443Z",
-  "current_run": {
-    "problem_name": "CustomQuadraticModularSecretFinding",
-    "description": "A non-linear oracle-based problem to find a secret integer using a quadratic function modulo a prime.",
-    "stage": "simulating",
-    "started_at": "2026-06-29T06:25:52.880646Z"
-  }
+  "status": "sleeping",
+  "last_updated": "2026-06-29T06:25:54.789236Z",
+  "next_run_at": "2026-06-29T06:27:54.789174Z"
 }
