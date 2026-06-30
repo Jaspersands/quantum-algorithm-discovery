@@ -1,10 +1,4 @@
 {
-  "status": "searching",
-  "last_updated": "2026-06-30T00:46:26.751001Z",
-  "current_run": {
-    "problem_name": "Novel_Bitwise_Ternary_Product_Secret_Finding",
-    "description": "Find a secret ternary number in a given range using a quantum oracle based on a non-linear function involving bitwise multiplication and ternary representation.",
-    "stage": "analyzing",
-    "started_at": "2026-06-30T00:46:26.751053Z"
-  }
+  "status": "idle",
+  "last_updated": "2026-06-30T00:46:32.843448Z"
 }
